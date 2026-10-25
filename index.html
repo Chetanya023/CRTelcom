@@ -8,13 +8,10 @@
 <meta name="theme-color" content="#0A3CD0">
 <meta property="og:type" content="website">
 <meta property="og:title" content="CR Telecom — Powering your business conversations">
-<meta property="og:description" content="Voice, SMS, RCS and WhatsApp in one place. Compliance-ready for India.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:description" content="CR Telecom helps businesses in India reach customers on Voice, SMS, RCS and WhatsApp from one platform, with DLT-ready onboarding, fallback routing and a developer-friendly API.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%20%20%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%228%22%20y1=%220%22%20x2=%2256%22%20y2=%2264%22%20gradientUnits=%22userSpaceOnUse%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%233A93FF%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%230A3CD0%22/%3E%3C/linearGradient%3E%3C/defs%3E%20%20%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2215%22%20fill=%22url(%23g)%22/%3E%20%20%3Cg%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-width=%227.5%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%3E%20%20%20%20%3Cpath%20d=%22M31%2022.4A13.4%2013.4%200%201%200%2031%2041.6%22/%3E%20%20%20%20%3Cpath%20d=%22M41%2021.5V43M41%2021.5h5.4a5.6%205.6%200%200%201%200%2011.2H41M47.2%2032.7%2053%2043%22/%3E%20%20%3C/g%3E%3Cg%20fill=%22none%22%20stroke=%22%238FE6FF%22%20stroke-width=%222.6%22%20stroke-linecap=%22round%22%3E%3Cpath%20d=%22M44.5%2011.5a7%207%200%200%201%207%207%22/%3E%3Cpath%20d=%22M44.5%206.5a12%2012%200%200%201%2012%2012%22/%3E%3C/g%3E%3Ccircle%20cx=%2244.5%22%20cy=%2218.5%22%20r=%220%22%20fill=%22%238FE6FF%22/%3E%3C/svg%3E" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="48x48">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -29,6 +26,10 @@
   --sms:#0E9F86;   --sms-ink:#0A7766;   --sms-50:#E4F6F2;
   --rcs:#6C4DE6;   --rcs-ink:#5636D1;   --rcs-50:#EFEBFD;
   --wa:#22AD55;    --wa-ink:#168443;    --wa-50:#E6F7EC;
+  --seo:#6C4DE6;   --seo-ink:#5636D1;   --seo-50:#EFEBFD;
+  --web:#C13FA0;   --web-ink:#A02A83;   --web-50:#FBEAF6;
+  --ads:#EE5F10;   --ads-ink:#B8430A;   --ads-50:#FFEDE2;
+  --obd:#2B7BFF;   --obd-ink:#1457D8;   --obd-50:#EAF2FF;
   --warn:#B86E00; --warn-50:#FFF4E0; --bad:#C0392B;
   --r-s:8px; --r-m:14px; --r-l:22px; --r-xl:30px;
   --sh-1:0 1px 2px rgba(10,22,51,.05),0 10px 28px -14px rgba(10,50,140,.2);
@@ -74,21 +75,21 @@ ul{margin:0;padding:0;list-style:none}
 /* ============ Header ============ */
 .hdr{position:sticky;top:0;z-index:50;height:var(--hdr);background:rgba(255,255,255,.88);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
 .hdr.scrolled{border-color:var(--line);box-shadow:0 8px 24px -18px rgba(10,40,120,.4)}
-.hdr .wrap{height:100%;display:flex;align-items:center;gap:28px}
+.hdr .wrap{height:100%;display:flex;align-items:center;gap:12px}
 .logo{display:flex;align-items:center;gap:11px;color:var(--ink);font-family:var(--f-display);font-weight:800;font-size:21px;letter-spacing:-.02em;line-height:1}
 .logo:hover{text-decoration:none}
 .logo svg{width:40px;height:40px}
 .logo small{display:block;font:600 11px/1 var(--f-body);letter-spacing:.34em;color:var(--navy-2);margin-top:5px;padding-left:1px}
 .nav{display:flex;align-items:center;gap:2px;margin-left:auto}
 .nav>li{position:relative}
-.nav-link{display:flex;align-items:center;gap:5px;height:40px;padding:0 14px;border:0;background:none;border-radius:10px;color:var(--ink);font:500 15px/1 var(--f-body)}
+.nav-link{display:flex;align-items:center;gap:5px;height:40px;padding:0 10px;border:0;background:none;border-radius:10px;color:var(--ink);font:500 15px/1 var(--f-body)}
 .nav-link:hover{background:var(--blue-50);text-decoration:none}
 .nav-link .ic{font-size:14px;transition:transform .2s}
 .nav-link[aria-expanded="true"] .ic{transform:rotate(180deg)}
 .nav-link.cur{color:var(--blue);position:relative}
 .nav-link.cur::after{content:"";position:absolute;left:14px;right:14px;bottom:2px;height:2px;border-radius:2px;background:var(--blue)}
-.panel{position:absolute;top:calc(100% + 10px);left:-12px;min-width:540px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh-2);padding:10px;display:none;grid-template-columns:1fr 1fr;gap:2px}
-.panel.one{min-width:320px;grid-template-columns:1fr}
+.panel{position:absolute;top:calc(100% + 10px);left:-12px;min-width:540px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh-2);padding:10px;display:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}
+.panel.one{min-width:320px;grid-template-columns:minmax(0,1fr)}
 .nav li.open>.panel{display:grid}
 .pi{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:12px;color:var(--ink);border:0;background:none;text-align:left;width:100%}
 .pi:hover{background:var(--mist);text-decoration:none}
@@ -96,7 +97,7 @@ ul{margin:0;padding:0;list-style:none}
 .pi b{display:block;font-size:14.5px;line-height:1.3}
 .pi span{display:block;font-size:13px;color:var(--ink-3);line-height:1.4;margin-top:2px}
 .pi .b.n{background:var(--blue-50);color:var(--blue)}
-.hdr-actions{display:flex;align-items:center;gap:8px;margin-left:12px}
+.hdr-actions{display:flex;align-items:center;gap:6px;margin-left:4px}
 .hdr-actions .login{height:40px;padding:0 14px;border:0;background:none;border-radius:10px;font-weight:600;font-size:15px}
 .hdr-actions .login:hover{background:var(--blue-50)}
 .burger{display:none;width:44px;height:44px;border:1px solid var(--line);background:#fff;border-radius:12px;align-items:center;justify-content:center;font-size:22px;margin-left:auto}
@@ -533,7 +534,7 @@ dialog[open]{animation:dlg .28s cubic-bezier(.3,1.2,.5,1)}
 .dlg-x:hover{background:var(--blue-100)}
 .dlg-in h2{font-size:30px;margin-bottom:8px;padding-right:44px}
 .dlg-in>p{color:var(--ink-3);margin-bottom:22px}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.frow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}
 .fld .err{display:none;font-size:12.5px;color:var(--bad);font-weight:600}
 .fld.bad input,.fld.bad select{border-color:var(--bad)}
 .fld.bad .err{display:block}
@@ -559,9 +560,7 @@ dialog[open]{animation:dlg .28s cubic-bezier(.3,1.2,.5,1)}
   .pl{padding:6px 16px}
 }
 @media (max-width:1060px){
-  .nav,.hdr-actions{display:none}
-  .burger{display:flex}
-  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:34px}
   .hero{padding-top:32px}
   .stage{padding:8px 0 24px}
   .orbit,.bub{display:none}
@@ -570,44 +569,44 @@ dialog[open]{animation:dlg .28s cubic-bezier(.3,1.2,.5,1)}
   .strip-grid{grid-template-columns:repeat(2,1fr)}
   .chan:nth-child(3){border-left:0}
   .chan:nth-child(n+3){border-top:1px solid var(--line-2)}
-  .pillars-grid,.cpanel,.orch,.sol,.dev-grid,.cmp,.faq-grid{grid-template-columns:1fr}
+  .pillars-grid,.cpanel,.orch,.sol,.dev-grid,.cmp,.faq-grid{grid-template-columns:minmax(0,1fr)}
   .cpanel{gap:34px}
   .sol-list{position:static;grid-template-columns:repeat(3,1fr)}
   .ctl{position:static}
-  .models{grid-template-columns:1fr}
+  .models{grid-template-columns:minmax(0,1fr)}
   .model.hot{margin:0}
-  .est{grid-template-columns:1fr}
+  .est{grid-template-columns:minmax(0,1fr)}
   .est .out{border-left:0;border-top:1px solid var(--line)}
-  .cta-box{grid-template-columns:1fr;padding:48px 34px}
+  .cta-box{grid-template-columns:minmax(0,1fr);padding:48px 34px}
 }
 @media (max-width:760px){
   .wrap,.hero .wrap{width:calc(100% - 32px)}
   .sec{padding:68px 0}
-  .console{grid-template-columns:1fr;width:100%}
+  .console{grid-template-columns:minmax(0,1fr);width:100%}
   .side{display:none}
   .stage .chips-m{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
   .phone{position:relative;right:auto;bottom:auto;margin:-24px auto 0;width:min(260px,100%)}
   .chips-m{margin-bottom:14px}
   .strip{margin-top:-20px}
-  .strip-grid{grid-template-columns:1fr}
+  .strip-grid{grid-template-columns:minmax(0,1fr)}
   .chan+.chan{border-left:0;border-top:1px solid var(--line-2)}
-  .pillars .three{grid-template-columns:1fr;gap:22px}
+  .pillars .three{grid-template-columns:minmax(0,1fr);gap:22px}
   .pl{padding:0}.pl+.pl{border-left:0}
-  .wgrid{grid-template-columns:1fr}
+  .wgrid{grid-template-columns:minmax(0,1fr)}
   .mini-phone{margin:0 auto}
   .widget{padding:20px}
-  .tabs{display:grid;grid-template-columns:1fr 1fr;width:100%}
+  .tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
   .tab{padding:0 12px 0 8px;font-size:14px}
   .hop{grid-template-columns:auto 40px minmax(0,1fr);}
   .hop .sw,.hop .st{grid-column:2/-1}
   .hop .st{justify-self:start}
-  .sol-list{grid-template-columns:1fr 1fr}
+  .sol-list{grid-template-columns:repeat(2,minmax(0,1fr))}
   .sol-panel{padding:24px 20px}
-  .jr li{grid-template-columns:1fr;gap:4px}
+  .jr li{grid-template-columns:minmax(0,1fr);gap:4px}
   .est .in,.est .out{padding:26px 22px}
-  .frow{grid-template-columns:1fr}
+  .frow{grid-template-columns:minmax(0,1fr)}
   .dlg-in{padding:28px 20px 24px}
-  .ftr-grid{grid-template-columns:1fr 1fr}
+  .ftr-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .ftr-grid>:first-child{grid-column:1/-1}
   .cta-box{padding:40px 24px;border-radius:26px}
   .step{grid-template-columns:28px minmax(0,1fr)}
@@ -619,14 +618,74 @@ dialog[open]{animation:dlg .28s cubic-bezier(.3,1.2,.5,1)}
   *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
 }
 
-.msg.static,.rcard.static{animation:none}
-.car{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px;scrollbar-width:none}
-.car::-webkit-scrollbar{display:none}
-.car .rcard{flex:none;width:76%;scroll-snap-align:start}
+/* ============ Vertical switcher (Products | Digital Marketing) ============ */
+.vsw{display:flex;gap:3px;padding:4px;background:var(--mist);border:1px solid var(--line);border-radius:14px;margin-left:2px;flex:none}
+.vs{display:flex;align-items:center;gap:8px;height:36px;padding:0 14px;border-radius:10px;font:600 14px/1 var(--f-body);color:var(--ink-2);white-space:nowrap;transition:background .2s,color .2s,box-shadow .2s}
+.vs:hover{text-decoration:none;background:#fff;color:var(--ink)}
+.vs i{width:8px;height:8px;border-radius:50%;background:var(--vc);opacity:.5;transition:opacity .2s,box-shadow .2s}
+.vs.vp{--vc:var(--blue)}.vs.vm{--vc:var(--ads)}
+.vs[aria-current="page"]{background:#fff;color:var(--ink);box-shadow:0 5px 14px -8px rgba(10,50,140,.5),0 0 0 1px var(--line)}
+.vs[aria-current="page"] i{opacity:1;box-shadow:0 0 0 4px color-mix(in srgb,var(--vc) 22%,transparent)}
+.mvsw{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:4px;background:var(--mist);border:1px solid var(--line);border-radius:14px;margin:6px 0 10px}
+.mvsw .vs{justify-content:center;height:44px;padding:0 8px;font-size:14px}
+
+/* ============ Bridge band (Products -> Digital Marketing) ============ */
+.bridge{padding:0 0 84px}
+.bridge-box{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:center;padding:52px 56px;border-radius:32px;background:linear-gradient(125deg,#FFF5EC 0%,#F4F8FF 58%,#fff 100%);border:1px solid var(--line)}
+.bridge-tag{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:var(--ads-50);color:var(--ads-ink);font-weight:700;font-size:13px;margin-bottom:16px}
+.bridge-tag i{width:7px;height:7px;border-radius:50%;background:var(--ads)}
+.bridge h2{font-size:clamp(28px,3.3vw,42px);margin-bottom:14px}
+.bridge-txt>p:not(.bridge-tag){font-size:17px;color:var(--ink-2);max-width:34em}
+.bridge-chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 26px}
+.bridge-chips a{display:inline-flex;align-items:center;gap:7px;height:38px;padding:0 14px 0 11px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:600;font-size:14px;color:var(--ink-2);transition:border-color .15s,color .15s}
+.bridge-chips a:hover{text-decoration:none;border-color:var(--ads);color:var(--ads-ink)}
+.bridge-chips .ic{font-size:16px}
+.bridge-vis{display:flex;align-items:center;justify-content:center}
+.bv-node{display:grid;justify-items:center;gap:4px;text-align:center;min-width:96px}
+.bv-node span{width:64px;height:64px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;font-size:28px;box-shadow:0 16px 28px -14px var(--c)}
+.bv-node b{font-size:15px;margin-top:6px}
+.bv-node small{font-size:12.5px;color:var(--ink-3);line-height:1.3}
+.bv-link{flex:1;min-width:20px;max-width:52px;border-top:2px dashed #9DBEF5;margin-bottom:46px}
+@media (max-width:1180px){
+  .vs{padding:0 11px;font-size:13.5px}
+}
+@media (max-width:1060px){
+  .bridge-box{grid-template-columns:minmax(0,1fr);padding:40px 34px}
+}
+@media (max-width:760px){
+  .vsw{display:none}
+  .bridge-box{padding:32px 22px;border-radius:26px}
+  .bv-node{min-width:78px}.bv-node span{width:54px;height:54px;font-size:24px}
+}
+
+/* header adapts progressively so the switcher + nav never collide */
+.vs .sh{display:none}
+.mvsw .vs .lg{display:inline!important}.mvsw .vs .sh{display:none!important}
+@media (max-width:1340px){
+  .vs .lg{display:none}.vs .sh{display:inline}
+  .vs{padding:0 12px}
+  .nav-link{padding:0 9px;font-size:14.5px}
+  .hdr-actions .login{padding:0 10px}
+}
+@media (max-width:1230px){
+  .nav,.hdr-actions{display:none}
+  .burger{display:flex}
+  .vs .lg{display:inline}.vs .sh{display:none}
+}
+/* the logo must never be squeezed by a crowded header */
+.logo{flex:none}
+.logo svg{flex:none;width:40px;height:40px}
+@media (max-width:420px){
+  .bv-node{min-width:0}.bv-link{min-width:10px}
+  .bridge-box{padding:28px 18px}
+}
+@media (max-width:420px){
+  .bridge .btn{white-space:normal;text-align:center;height:auto;min-height:46px;padding:12px 18px;line-height:1.25}
+}
 
 </style>
 </head>
-<body>
+<body data-v="products">
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- ======== Icon sprite ======== -->
@@ -666,18 +725,33 @@ dialog[open]{animation:dlg .28s cubic-bezier(.3,1.2,.5,1)}
     <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m21 16-5-5-8 8"/></symbol>
     <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14-4L4 9M4 4v5h5M4 13a8 8 0 0 0 14 4l2-2M20 20v-5h-5"/></symbol>
     <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M16 7l3 3"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-web" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></symbol>
+    <symbol id="i-ads" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15 9a4 4 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11"/></symbol>
+    <symbol id="i-obd" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M16 3h5v5M21 3l-6 6"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.2l-5.5 3 1-6.2L3 9.6l6.2-.9z"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
   </defs>
 </svg>
 
-<!-- ======== Header ======== -->
+
 <header class="hdr" id="hdr">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="CR Telecom home">
       <svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mark"/></svg>
       <span>CR<small>TELECOM</small></span>
     </a>
+    <nav class="vsw" aria-label="Business verticals">
+      <a class="vs vp" href="index.html" aria-current="page"><i></i>Products</a>
+      <a class="vs vm" href="digital-marketing.html"><i></i><span class="lg">Digital Marketing</span><span class="sh">Marketing</span></a>
+    </nav>
     <ul class="nav" id="nav">
-      <li><a class="nav-link cur" href="#top">Home</a></li>
       <li>
         <button class="nav-link" aria-expanded="false" aria-haspopup="true">Products <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
         <div class="panel">
@@ -688,8 +762,7 @@ dialog[open]{animation:dlg .28s cubic-bezier(.3,1.2,.5,1)}
           <a class="pi" href="#orchestration"><span class="b n"><svg class="ic"><use href="#i-route"/></svg></span><span><b>Smart fallback</b><span>One send, the best channel wins</span></span></a>
           <a class="pi" href="#developers"><span class="b n"><svg class="ic"><use href="#i-code"/></svg></span><span><b>APIs and webhooks</b><span>One integration for all four channels</span></span></a>
         </div>
-      </li>
-      <li>
+      </li><li>
         <button class="nav-link" aria-expanded="false" aria-haspopup="true">Solutions <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
         <div class="panel">
           <a class="pi" href="#solutions" data-open-sol="bfsi"><span class="b n"><svg class="ic"><use href="#i-shield"/></svg></span><span><b>Banking and finance</b><span>OTPs, alerts, EMI and KYC</span></span></a>
@@ -699,24 +772,21 @@ dialog[open]{animation:dlg .28s cubic-bezier(.3,1.2,.5,1)}
           <a class="pi" href="#solutions" data-open-sol="edu"><span class="b n"><svg class="ic"><use href="#i-bolt"/></svg></span><span><b>Education</b><span>Admissions, fees and results</span></span></a>
           <a class="pi" href="#solutions" data-open-sol="travel"><span class="b n"><svg class="ic"><use href="#i-scale"/></svg></span><span><b>Travel and hospitality</b><span>Bookings, delays and feedback</span></span></a>
         </div>
-      </li>
-      <li>
+      </li><li>
         <button class="nav-link" aria-expanded="false" aria-haspopup="true">Developers <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
         <div class="panel one">
           <a class="pi" href="#developers"><span class="b n"><svg class="ic"><use href="#i-code"/></svg></span><span><b>API quickstart</b><span>Send your first message</span></span></a>
           <a class="pi" href="#developers"><span class="b n"><svg class="ic"><use href="#i-hook"/></svg></span><span><b>Webhooks and receipts</b><span>Delivery events in real time</span></span></a>
           <a class="pi" href="#compliance"><span class="b n"><svg class="ic"><use href="#i-shield"/></svg></span><span><b>India compliance checklist</b><span>DLT, WABA, RCS and number series</span></span></a>
         </div>
-      </li>
-      <li>
+      </li><li>
         <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
         <div class="panel one">
           <a class="pi" href="#compliance"><span class="b n"><svg class="ic"><use href="#i-shield"/></svg></span><span><b>Readiness checker</b><span>What to register before you send</span></span></a>
           <a class="pi" href="#faq"><span class="b n"><svg class="ic"><use href="#i-sms"/></svg></span><span><b>Questions and answers</b><span>DLT, templates, number series</span></span></a>
           <button class="pi" data-modal="contact"><span class="b n"><svg class="ic"><use href="#i-voice"/></svg></span><span><b>Talk to an expert</b><span>Get help choosing channels</span></span></button>
         </div>
-      </li>
-      <li><a class="nav-link" href="#pricing">Pricing</a></li>
+      </li><li><a class="nav-link" href="#pricing">Pricing</a></li>
     </ul>
     <div class="hdr-actions">
       <button class="login" data-modal="login">Login</button>
@@ -727,7 +797,7 @@ dialog[open]{animation:dlg .28s cubic-bezier(.3,1.2,.5,1)}
 </header>
 
 <nav class="mnav" id="mnav" aria-label="Mobile">
-  <a href="#top">Home</a>
+  <div class="mvsw"><a class="vs vp" href="index.html" aria-current="page"><i></i>Products</a><a class="vs vm" href="digital-marketing.html"><i></i><span class="lg">Digital Marketing</span><span class="sh">Marketing</span></a></div>
   <details><summary>Products <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><div class="sub">
     <a href="#channels" data-open-ch="voice">Voice</a><a href="#channels" data-open-ch="sms">SMS</a><a href="#channels" data-open-ch="rcs">RCS</a><a href="#channels" data-open-ch="wa">WhatsApp</a><a href="#orchestration">Smart fallback</a></div></details>
   <details><summary>Solutions <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><div class="sub">
@@ -1058,6 +1128,26 @@ dialog[open]{animation:dlg .28s cubic-bezier(.3,1.2,.5,1)}
   </div>
 </section>
 
+<!-- ======== Bridge to Digital Marketing ======== -->
+<section class="bridge" aria-labelledby="br-h">
+  <div class="wrap"><div class="bridge-box">
+    <div class="bridge-txt">
+      <p class="bridge-tag"><i></i>New vertical</p>
+      <h2 id="br-h">Need more people to message?</h2>
+      <p>Our Digital Marketing team builds the websites, search presence and campaigns that fill your pipeline, including OBD and IVR voice campaigns. The platform you just explored follows up on every lead.</p>
+      <div class="bridge-chips"><a href="digital-marketing.html#seo"><svg class="ic"><use href="#i-search"/></svg>SEO</a><a href="digital-marketing.html#web"><svg class="ic"><use href="#i-web"/></svg>Website building</a><a href="digital-marketing.html#ads"><svg class="ic"><use href="#i-ads"/></svg>Ads and social</a><a href="digital-marketing.html#obd"><svg class="ic"><use href="#i-obd"/></svg>OBD and IVR</a></div>
+      <a class="btn btn-primary" href="digital-marketing.html">Explore Digital Marketing <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="bridge-vis" aria-hidden="true">
+      <div class="bv-node" style="--c:var(--ads)"><span><svg class="ic"><use href="#i-ads"/></svg></span><b>Found</b><small>SEO and ads</small></div>
+      <div class="bv-link"></div>
+      <div class="bv-node" style="--c:var(--web)"><span><svg class="ic"><use href="#i-web"/></svg></span><b>Converted</b><small>Website and forms</small></div>
+      <div class="bv-link"></div>
+      <div class="bv-node" style="--c:var(--wa)"><span><svg class="ic"><use href="#i-wa"/></svg></span><b>Followed up</b><small>WhatsApp, SMS, voice</small></div>
+    </div>
+  </div></div>
+</section>
+
 <!-- ======== CTA ======== -->
 <section class="cta" aria-labelledby="ct-h">
   <div class="wrap"><div class="cta-box">
@@ -1067,22 +1157,20 @@ dialog[open]{animation:dlg .28s cubic-bezier(.3,1.2,.5,1)}
 </section>
 </main>
 
-<!-- ======== Footer ======== -->
 <footer class="ftr">
   <div class="wrap">
     <div class="ftr-grid">
-      <div><a class="logo" href="#top"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mark"/></svg><span>CR<small>TELECOM</small></span></a><p>Voice, SMS, RCS and WhatsApp for businesses in India, on one platform.</p></div>
-      <div><h4>Products</h4><ul><li><a href="#channels" data-open-ch="voice">Voice</a></li><li><a href="#channels" data-open-ch="sms">SMS</a></li><li><a href="#channels" data-open-ch="rcs">RCS</a></li><li><a href="#channels" data-open-ch="wa">WhatsApp</a></li><li><a href="#orchestration">Smart fallback</a></li></ul></div>
-      <div><h4>Solutions</h4><ul><li><a href="#solutions" data-open-sol="bfsi">Banking and finance</a></li><li><a href="#solutions" data-open-sol="ecom">E-commerce</a></li><li><a href="#solutions" data-open-sol="logi">Logistics</a></li><li><a href="#solutions" data-open-sol="health">Healthcare</a></li></ul></div>
-      <div><h4>Developers</h4><ul><li><a href="#developers">API quickstart</a></li><li><a href="#compliance">Compliance checklist</a></li><li><a href="#faq">FAQs</a></li></ul></div>
-      <div><h4>Company</h4><ul><li><button class="lk" data-modal="contact">Contact us</button></li><li><a href="#pricing">Pricing</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of service</a></li></ul></div>
+      <div><a class="logo" href="#top"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mark"/></svg><span>CR<small>TELECOM</small></span></a><p>Business communications and digital marketing for businesses in India.</p></div>
+      <div><h4>Products</h4><ul><li><a href="#voice">Voice</a></li><li><a href="#sms">SMS</a></li><li><a href="#rcs">RCS</a></li><li><a href="#wa">WhatsApp</a></li><li><a href="#orchestration">Smart fallback</a></li></ul></div>
+      <div><h4>Digital Marketing</h4><ul><li><a href="digital-marketing.html#seo">SEO</a></li><li><a href="digital-marketing.html#web">Website building</a></li><li><a href="digital-marketing.html#ads">Ads and social</a></li><li><a href="digital-marketing.html#obd">OBD and IVR</a></li><li><a href="digital-marketing.html#plans">Plan builder</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="#developers">API quickstart</a></li><li><a href="#compliance">Messaging compliance</a></li><li><a href="digital-marketing.html#rules">Campaign rules</a></li><li><a href="#faq">Products FAQs</a></li><li><a href="digital-marketing.html#faq">Marketing FAQs</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><button class="lk" data-modal="contact">Contact us</button></li><li><a href="#pricing">Products pricing</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of service</a></li></ul></div>
     </div>
     <div class="ftr-bot"><span>© 2026 CR Telecom. All rights reserved.</span><span>WhatsApp is a trademark of Meta Platforms, Inc. RCS is delivered via carrier and Google networks.</span></div>
   </div>
 </footer>
 
-<!-- ======== Modal ======== -->
-<dialog id="dlg" aria-labelledby="dlgTitle">
+<dialog id="dlg" aria-labelledby="dlgTitle" data-title="Let's plan your launch." data-sub="Share a few details and we'll come back with the channels, registrations and timeline that fit." data-subject="CR Telecom enquiry from" data-vol-label="Expected monthly volume">
   <div class="dlg-in">
     <button class="dlg-x" id="dlgX" aria-label="Close dialog"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
     <div id="dlgForm">
@@ -1098,16 +1186,12 @@ dialog[open]{animation:dlg .28s cubic-bezier(.3,1.2,.5,1)}
           <div class="fld"><label for="f-ph">Mobile number</label><input id="f-ph" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91" required><span class="err">Enter a valid mobile number.</span></div>
         </div>
         <div class="fld"><label id="f-chl">What do you want to start with?</label>
-          <div class="fchips" role="group" aria-labelledby="f-chl">
-            <label><input type="checkbox" name="ch" value="Voice"><span>Voice</span></label>
-            <label><input type="checkbox" name="ch" value="SMS"><span>SMS</span></label>
-            <label><input type="checkbox" name="ch" value="RCS"><span>RCS</span></label>
-            <label><input type="checkbox" name="ch" value="WhatsApp"><span>WhatsApp</span></label>
-          </div></div>
+          <div class="fchips" role="group" aria-labelledby="f-chl"><label><input type="checkbox" name="ch" value="Voice"><span>Voice</span></label><label><input type="checkbox" name="ch" value="SMS"><span>SMS</span></label><label><input type="checkbox" name="ch" value="RCS"><span>RCS</span></label><label><input type="checkbox" name="ch" value="WhatsApp"><span>WhatsApp</span></label></div></div>
         <div class="frow">
           <div class="fld"><label for="f-vol">Expected monthly volume</label><select id="f-vol" name="volume"><option>Not sure yet</option><option>Under 10,000</option><option>10,000 to 1 lakh</option><option>1 lakh to 10 lakh</option><option>Over 10 lakh</option></select></div>
           <div class="fld"><label for="f-ind">Industry</label><select id="f-ind" name="industry"><option>Other</option><option>Banking and finance</option><option>E-commerce and retail</option><option>Logistics</option><option>Healthcare</option><option>Education</option><option>Travel and hospitality</option></select></div>
         </div>
+        
         <div class="fld"><label for="f-msg">Anything we should know?</label><textarea id="f-msg" name="message" placeholder="For example: OTPs for a lending app, about 2 lakh a month."></textarea></div>
         <label class="consent"><input type="checkbox" id="f-consent" required><span>I agree to be contacted by CR Telecom about its services. See the <a href="privacy.html">privacy policy</a>.</span></label>
         <div class="fld" id="consentErr" style="margin:-10px 0 14px"><span class="err">Please confirm so we can contact you.</span></div>
@@ -1126,6 +1210,7 @@ dialog[open]{animation:dlg .28s cubic-bezier(.3,1.2,.5,1)}
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
+/* CR Telecom — shared core (header, menus, modal, helpers). Loaded on every page. */
 (() => {
 'use strict';
 
@@ -1135,8 +1220,6 @@ const CONFIG = {
   LEAD_ENDPOINT: '',                    // e.g. a Formspree / Netlify / your API URL that accepts JSON POST
   CONSOLE_URL: ''                       // e.g. 'https://console.crtelecom.com' — enables the Login button
 };
-/* Meta's published India list rates (INR, excl. GST). Verify against Meta's current rate card before launch. */
-const RATES = { marketing: 0.8631, utility: 0.115, authentication: 0.115, service: 0.115, freeService: 1000 };
 
 /* ================= Helpers ================= */
 const $ = (s, r = document) => r.querySelector(s);
@@ -1146,14 +1229,7 @@ const ic = (id, cls = '') => `<svg class="ic ${cls}" aria-hidden="true"><use hre
 const inr = n => Math.round(n).toLocaleString('en-IN');
 const rupee = (n, d = 0) => '₹' + n.toLocaleString('en-IN', { minimumFractionDigits: d, maximumFractionDigits: d });
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const key = c => (c === 'whatsapp' ? 'wa' : c);
 const sleep = ms => new Promise(r => setTimeout(r, reduce ? Math.min(ms, 30) : ms));
-const CH = {
-  voice: { n: 'Voice', icon: 'voice', color: 'var(--voice)' },
-  sms: { n: 'SMS', icon: 'sms', color: 'var(--sms)' },
-  rcs: { n: 'RCS', icon: 'rcs', color: 'var(--rcs)' },
-  wa: { n: 'WhatsApp', icon: 'wa', color: 'var(--wa)' }
-};
 let toastT;
 function toast(msg) {
   const t = $('#toast'); t.textContent = msg; t.classList.add('show');
@@ -1169,6 +1245,38 @@ function countTo(el, target, fmt, dur = 800) {
   };
   requestAnimationFrame(step);
 }
+/* chart + sample-data helpers shared by both dashboards */
+const DAY_MS = 86400000;
+const fmtDate = d => d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
+const seeded = seed => { let s = seed >>> 0; return () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296; };
+const todayStart = () => { const d = new Date(); d.setHours(0, 0, 0, 0); return d; };
+function niceScale(maxV) {
+  const pow = Math.pow(10, Math.floor(Math.log10(maxV / 4)));
+  const step = [1, 2, 2.5, 5, 10].map(m => m * pow).find(s => s * 4 >= maxV * 1.04);
+  return { step, max: step * 4 };
+}
+const short = v => v >= 1000 ? (+(v / 1000).toFixed(1)) + 'k' : String(v);
+function smooth(pts) {
+  let d = `M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
+  for (let i = 0; i < pts.length - 1; i++) {
+    const p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6], c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    d += ` C${c1[0].toFixed(1)},${c1[1].toFixed(1)} ${c2[0].toFixed(1)},${c2[1].toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
+  }
+  return d;
+}
+/* keyboard-accessible tab helper: arrows / Home / End move between tabs */
+function tabKeys(list, onPick, horizontal = true) {
+  list.forEach((t, i) => t.addEventListener('keydown', e => {
+    const next = horizontal ? 'ArrowRight' : 'ArrowDown', prev = horizontal ? 'ArrowLeft' : 'ArrowUp';
+    let n = null;
+    if (e.key === next || e.key === (horizontal ? 'ArrowDown' : 'ArrowRight')) n = (i + 1) % list.length;
+    else if (e.key === prev || e.key === (horizontal ? 'ArrowUp' : 'ArrowLeft')) n = (i - 1 + list.length) % list.length;
+    else if (e.key === 'Home') n = 0; else if (e.key === 'End') n = list.length - 1;
+    if (n !== null) { e.preventDefault(); onPick(list[n]); }
+  }));
+}
+window.CR = { CONFIG, $, $$, reduce, ic, inr, rupee, esc, sleep, toast, countTo, DAY_MS, fmtDate, seeded, todayStart, niceScale, short, smooth, tabKeys };
 
 /* ================= Header, menus ================= */
 const hdr = $('#hdr');
@@ -1186,7 +1294,7 @@ navItems.forEach(li => {
   const hoverable = matchMedia('(hover:hover)').matches;
   btn.addEventListener('click', () => (li.classList.contains('open') && !hoverable) ? close() : open());
   let ht;
-  if (matchMedia('(hover:hover)').matches) {
+  if (hoverable) {
     li.addEventListener('mouseenter', () => { clearTimeout(ht); open(); });
     li.addEventListener('mouseleave', () => { ht = setTimeout(close, 140); });
   }
@@ -1203,15 +1311,81 @@ burger.addEventListener('click', () => {
 });
 mnav.addEventListener('click', e => { if (e.target.closest('a,button.btn')) closeMobile(); });
 
+/* ================= Shared click hooks ================= */
+document.addEventListener('click', e => {
+  const m = e.target.closest('[data-modal]');
+  if (m) { e.preventDefault(); openModal(m.dataset.modal, m.dataset.ctx); }
+  const s = e.target.closest('[data-soon]');
+  if (s) toast(s.getAttribute('data-soon') || 'This preview shows the main views only. Reports, Billing and Settings are not part of it.');
+});
+
+/* ================= Modal / lead form ================= */
+const dlg = $('#dlg'), form = $('#leadForm');
+let ctx = '';
+function openModal(type, c) {
+  ctx = c || '';
+  if (type === 'login' && CONFIG.CONSOLE_URL) { location.href = CONFIG.CONSOLE_URL; return; }
+  $('#dlgForm').hidden = false; $('#dlgOk').hidden = true;
+  $('#dlgTitle').textContent = type === 'login' ? 'Request console access.' : dlg.dataset.title;
+  $('#dlgSub').textContent = type === 'login' ? 'Tell us who you are and we will set up your access.' : dlg.dataset.sub;
+  $$('.fld', form).forEach(f => f.classList.remove('bad'));
+  if (!dlg.open) dlg.showModal();
+  setTimeout(() => $('#f-name').focus(), 60);
+}
+const closeModal = () => dlg.open && dlg.close();
+$('#dlgX').addEventListener('click', closeModal); $('#okClose').addEventListener('click', closeModal);
+dlg.addEventListener('click', e => { if (e.target === dlg) closeModal(); });
+function bad(id, on) { $('#' + id).closest('.fld').classList.toggle('bad', on); return !on; }
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(form)); d.interests = $$('input[name=ch]:checked', form).map(i => i.value).join(', ') || 'Not specified';
+  let ok = true;
+  ok = bad('f-name', !d.name.trim()) && ok;
+  ok = bad('f-email', !/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(d.email)) && ok;
+  ok = bad('f-co', !d.company.trim()) && ok;
+  ok = bad('f-ph', d.phone.replace(/\D/g, '').length < 10) && ok;
+  const cons = $('#f-consent').checked; $('#consentErr').classList.toggle('bad', !cons); ok = ok && cons;
+  if (!ok) { $('.fld.bad input', form)?.focus(); return; }
+  const payload = { ...d, vertical: document.body.dataset.v, context: ctx, page: location.href, at: new Date().toISOString() };
+  $('#dlgForm').hidden = true; $('#dlgOk').hidden = false;
+  if (CONFIG.LEAD_ENDPOINT) {
+    try {
+      const r = await fetch(CONFIG.LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+      if (!r.ok) throw 0;
+      $('#dlgOk h2').textContent = 'Request received.'; $('#okMsg').textContent = `Thanks, ${d.name.split(' ')[0]}. We will reply to ${d.email} soon.`;
+    } catch { $('#dlgOk h2').textContent = 'That did not go through.'; $('#okMsg').textContent = `Please email ${CONFIG.CONTACT_EMAIL} and we will pick it up from there.`; }
+  } else {
+    const body = `Name: ${d.name}\nEmail: ${d.email}\nCompany: ${d.company}\nPhone: ${d.phone}\nInterested in: ${d.interests}\n${dlg.dataset.volLabel}: ${d.volume}\nIndustry: ${d.industry}\n${ctx ? 'Context: ' + ctx + '\n' : ''}\n${d.message || ''}`;
+    $('#dlgOk h2').textContent = 'Request ready to send.';
+    $('#okMsg').textContent = `Your email app should open with the details filled in. If it does not, write to ${CONFIG.CONTACT_EMAIL}.`;
+    location.href = `mailto:${CONFIG.CONTACT_EMAIL}?subject=${encodeURIComponent(dlg.dataset.subject + ' ' + d.company)}&body=${encodeURIComponent(body)}`;
+  }
+  form.reset();
+});
+$('#f-consent').addEventListener('change', e => $('#consentErr').classList.toggle('bad', !e.target.checked));
+})();
+
+/* CR Telecom — Products vertical (Voice, SMS, RCS, WhatsApp). */
+(() => {
+'use strict';
+const { $, $$, reduce, ic, inr, rupee, esc, sleep, toast, countTo, DAY_MS, fmtDate, seeded, todayStart, niceScale, short, smooth, tabKeys } = window.CR;
+
+/* Meta's published India list rates (INR, excl. GST). Verify against Meta's current rate card before launch. */
+const RATES = { marketing: 0.8631, utility: 0.115, authentication: 0.115, service: 0.115, freeService: 1000 };
+const key = c => (c === 'whatsapp' ? 'wa' : c);
+const CH = {
+  voice: { n: 'Voice', icon: 'voice', color: 'var(--voice)' },
+  sms: { n: 'SMS', icon: 'sms', color: 'var(--sms)' },
+  rcs: { n: 'RCS', icon: 'rcs', color: 'var(--rcs)' },
+  wa: { n: 'WhatsApp', icon: 'wa', color: 'var(--wa)' }
+};
+
 /* ================= Deep links into tabs ================= */
 document.addEventListener('click', e => {
   const a = e.target.closest('[data-open-ch]');
   if (a) selectTab(a.dataset.openCh);
   const s = e.target.closest('[data-open-sol]');
   if (s) selectSol(s.dataset.openSol);
-  const m = e.target.closest('[data-modal]');
-  if (m) { e.preventDefault(); openModal(m.dataset.modal, m.dataset.ctx); }
-  if (e.target.closest('[data-soon]')) toast('This preview shows the channel views. Reports, Billing and Settings are not part of it.');
 });
 
 /* ================= Hero console ================= */
@@ -1240,10 +1414,6 @@ const META = { // rates drift slightly over longer windows; f scales the "vs pre
   90: { dur: '02:33', ans: 66, opt: .6, rr: 60, rc: 16, wr: 77, dr: 98.6, f: 1.75 }
 };
 const GROWTH = { 30: [.88, 1.04], 60: [.78, 1.04], 90: [.68, 1.06] }; // earlier weeks were smaller
-const DAY_MS = 86400000;
-const fmtDate = d => d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
-const seeded = seed => { let s = seed >>> 0; return () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296; };
-const todayStart = () => { const d = new Date(); d.setHours(0, 0, 0, 0); return d; };
 const spanOf = r => `${fmtDate(new Date(+todayStart() - (r - 1) * DAY_MS))} – ${fmtDate(todayStart())}`;
 const dataCache = {};
 function getData(r) {
@@ -1284,12 +1454,6 @@ function renderKpis() {
 
 /* ---- Chart: auto-scaling axis, dates from today, hover tooltip ---- */
 const CW = 380, CHT = 132, PX0 = 30, PX1 = 374, PY0 = 8, PY1 = 108;
-function niceScale(maxV) {
-  const pow = Math.pow(10, Math.floor(Math.log10(maxV / 4)));
-  const step = [1, 2, 2.5, 5, 10].map(m => m * pow).find(s => s * 4 >= maxV * 1.04);
-  return { step, max: step * 4 };
-}
-const short = v => v >= 1000 ? (+(v / 1000).toFixed(1)) + 'k' : String(v);
 function drawChart() {
   const svg = $('#chart'), d = getData(range), n = d.n, keys = state === 'all' ? KEYS : [state];
   const { step, max } = niceScale(Math.max(...keys.flatMap(k => d.series[k])));
@@ -1324,15 +1488,6 @@ function drawChart() {
     tip.style.left = left + 'px'; tip.style.top = Math.max(4, e.clientY - cr.top - 62) + 'px'; tip.style.opacity = 1;
   });
   hit.addEventListener('pointerleave', () => { tip.style.opacity = 0; cross.setAttribute('opacity', 0); $$('.dot', svg).forEach(c => c.setAttribute('opacity', 0)); });
-}
-function smooth(pts) {
-  let d = `M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
-  for (let i = 0; i < pts.length - 1; i++) {
-    const p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
-    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6], c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
-    d += ` C${c1[0].toFixed(1)},${c1[1].toFixed(1)} ${c2[0].toFixed(1)},${c2[1].toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
-  }
-  return d;
 }
 
 /* ---- Date-range dropdown (keyboard accessible listbox) ---- */
@@ -1762,54 +1917,12 @@ function drawEst() {
 }
 $$('#est input').forEach(i => i.addEventListener('input', drawEst)); drawEst();
 
-/* ================= Modal / lead form ================= */
-const dlg = $('#dlg'), form = $('#leadForm');
-let ctx = '';
-function openModal(type, c) {
-  ctx = c || '';
-  if (type === 'login' && CONFIG.CONSOLE_URL) { location.href = CONFIG.CONSOLE_URL; return; }
-  $('#dlgForm').hidden = false; $('#dlgOk').hidden = true;
-  $('#dlgTitle').textContent = type === 'login' ? 'Request console access.' : "Let's plan your launch.";
-  $('#dlgSub').textContent = type === 'login' ? 'Tell us who you are and we will set up your access.' : "Share a few details and we'll come back with the channels, registrations and timeline that fit.";
-  $$('.fld', form).forEach(f => f.classList.remove('bad'));
-  if (!dlg.open) dlg.showModal();
-  setTimeout(() => $('#f-name').focus(), 60);
-}
-const closeModal = () => dlg.open && dlg.close();
-$('#dlgX').addEventListener('click', closeModal); $('#okClose').addEventListener('click', closeModal);
-dlg.addEventListener('click', e => { if (e.target === dlg) closeModal(); });
-function bad(id, on) { $('#' + id).closest('.fld').classList.toggle('bad', on); return !on; }
-form.addEventListener('submit', async e => {
-  e.preventDefault();
-  const d = Object.fromEntries(new FormData(form)); d.channels = $$('input[name=ch]:checked', form).map(i => i.value).join(', ') || 'Not specified';
-  let ok = true;
-  ok = bad('f-name', !d.name.trim()) && ok;
-  ok = bad('f-email', !/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(d.email)) && ok;
-  ok = bad('f-co', !d.company.trim()) && ok;
-  ok = bad('f-ph', d.phone.replace(/\D/g, '').length < 10) && ok;
-  const cons = $('#f-consent').checked; $('#consentErr').classList.toggle('bad', !cons); ok = ok && cons;
-  if (!ok) { $('.fld.bad input', form)?.focus(); return; }
-  const payload = { ...d, context: ctx, page: location.href, at: new Date().toISOString() };
-  $('#dlgForm').hidden = true; $('#dlgOk').hidden = false;
-  if (CONFIG.LEAD_ENDPOINT) {
-    try {
-      const r = await fetch(CONFIG.LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-      if (!r.ok) throw 0;
-      $('#dlgOk h2').textContent = 'Request received.'; $('#okMsg').textContent = `Thanks, ${d.name.split(' ')[0]}. We will reply to ${d.email} soon.`;
-    } catch { $('#dlgOk h2').textContent = 'That did not go through.'; $('#okMsg').textContent = `Please email ${CONFIG.CONTACT_EMAIL} and we will pick it up from there.`; }
-  } else {
-    const body = `Name: ${d.name}\nEmail: ${d.email}\nCompany: ${d.company}\nPhone: ${d.phone}\nChannels: ${d.channels}\nVolume: ${d.volume}\nIndustry: ${d.industry}\n${ctx ? 'Interested in: ' + ctx + '\n' : ''}\n${d.message || ''}`;
-    $('#dlgOk h2').textContent = 'Request ready to send.';
-    $('#okMsg').textContent = `Your email app should open with the details filled in. If it does not, write to ${CONFIG.CONTACT_EMAIL}.`;
-    location.href = `mailto:${CONFIG.CONTACT_EMAIL}?subject=${encodeURIComponent('CR Telecom enquiry from ' + d.company)}&body=${encodeURIComponent(body)}`;
-  }
-  form.reset();
-});
-$('#f-consent').addEventListener('change', e => $('#consentErr').classList.toggle('bad', !e.target.checked));
-
 /* ================= Init ================= */
 initVoice(); initSms(); initRcs(); initWa(); renderSol(); drawCmp();
-if (location.hash === '#sms' || location.hash === '#rcs' || location.hash === '#voice' || location.hash === '#wa') selectTab(location.hash.slice(1));
+/* links from other pages: index.html#sms etc. */
+const h = location.hash.slice(1);
+if (['voice', 'sms', 'rcs', 'wa'].includes(h)) { selectTab(h); setTimeout(() => $('#channels').scrollIntoView(), 60); }
+if (['bfsi', 'ecom', 'logi', 'health', 'edu', 'travel'].includes(h)) { selectSol(h); setTimeout(() => $('#solutions').scrollIntoView(), 60); }
 })();
 
 </script>
