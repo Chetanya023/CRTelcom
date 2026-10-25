@@ -1,0 +1,1930 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>CR Telecom — Voice, SMS, RCS and WhatsApp for business</title>
+<meta name="description" content="CR Telecom helps businesses in India reach customers on Voice, SMS, RCS and WhatsApp from one platform, with DLT-ready onboarding, fallback routing and a developer-friendly API.">
+<meta name="theme-color" content="#0A3CD0">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CR Telecom — Powering your business conversations">
+<meta property="og:description" content="CR Telecom helps businesses in India reach customers on Voice, SMS, RCS and WhatsApp from one platform, with DLT-ready onboarding, fallback routing and a developer-friendly API.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%20%20%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%228%22%20y1=%220%22%20x2=%2256%22%20y2=%2264%22%20gradientUnits=%22userSpaceOnUse%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%233A93FF%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%230A3CD0%22/%3E%3C/linearGradient%3E%3C/defs%3E%20%20%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2215%22%20fill=%22url(%23g)%22/%3E%20%20%3Cg%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-width=%227.5%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%3E%20%20%20%20%3Cpath%20d=%22M31%2022.4A13.4%2013.4%200%201%200%2031%2041.6%22/%3E%20%20%20%20%3Cpath%20d=%22M41%2021.5V43M41%2021.5h5.4a5.6%205.6%200%200%201%200%2011.2H41M47.2%2032.7%2053%2043%22/%3E%20%20%3C/g%3E%3Cg%20fill=%22none%22%20stroke=%22%238FE6FF%22%20stroke-width=%222.6%22%20stroke-linecap=%22round%22%3E%3Cpath%20d=%22M44.5%2011.5a7%207%200%200%201%207%207%22/%3E%3Cpath%20d=%22M44.5%206.5a12%2012%200%200%201%2012%2012%22/%3E%3C/g%3E%3Ccircle%20cx=%2244.5%22%20cy=%2218.5%22%20r=%220%22%20fill=%22%238FE6FF%22/%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============ Tokens ============ */
+:root{
+  --ink:#0A1633; --ink-2:#34425F; --ink-3:#5B6885;
+  --blue:#0A66FF; --blue-600:#0753D6; --blue-50:#EAF2FF; --blue-100:#D6E6FF;
+  --navy:#0B1F4F; --navy-2:#12306F; --deep:#08142F;
+  --mist:#F4F8FF; --white:#fff; --line:#DDE6F5; --line-2:#EAF0FA;
+  --voice:#2B7BFF; --voice-ink:#1457D8; --voice-50:#EAF2FF;
+  --sms:#0E9F86;   --sms-ink:#0A7766;   --sms-50:#E4F6F2;
+  --rcs:#6C4DE6;   --rcs-ink:#5636D1;   --rcs-50:#EFEBFD;
+  --wa:#22AD55;    --wa-ink:#168443;    --wa-50:#E6F7EC;
+  --seo:#6C4DE6;   --seo-ink:#5636D1;   --seo-50:#EFEBFD;
+  --web:#C13FA0;   --web-ink:#A02A83;   --web-50:#FBEAF6;
+  --ads:#EE5F10;   --ads-ink:#B8430A;   --ads-50:#FFEDE2;
+  --obd:#2B7BFF;   --obd-ink:#1457D8;   --obd-50:#EAF2FF;
+  --warn:#B86E00; --warn-50:#FFF4E0; --bad:#C0392B;
+  --r-s:8px; --r-m:14px; --r-l:22px; --r-xl:30px;
+  --sh-1:0 1px 2px rgba(10,22,51,.05),0 10px 28px -14px rgba(10,50,140,.2);
+  --sh-2:0 34px 70px -30px rgba(8,40,130,.5),0 10px 24px -10px rgba(8,40,130,.22);
+  --f-display:"Bricolage Grotesque","Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --f-body:"Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --hdr:72px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hdr) + 16px);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--f-body);font-size:16px;line-height:1.6;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,svg{display:block;max-width:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;line-height:1.1;font-weight:700;color:var(--ink)}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+:focus-visible{outline:3px solid #7FB0FF;outline-offset:2px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;background:var(--navy);color:#fff;padding:10px 16px;border-radius:10px;z-index:100;transition:top .2s}
+.skip:focus{top:12px;text-decoration:none}
+.wrap{width:min(1280px,100% - 48px);margin-inline:auto}
+.ic{width:1em;height:1em;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* ============ Buttons ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;height:46px;padding:0 22px;border-radius:13px;border:1.5px solid transparent;font:600 15px/1 var(--f-body);white-space:nowrap;transition:transform .15s,background .15s,border-color .15s,box-shadow .15s}
+.btn:hover{text-decoration:none}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 22px -10px rgba(10,102,255,.75)}
+.btn-primary:hover{background:var(--blue-600)}
+.btn-ghost{background:#fff;color:var(--blue);border-color:#B9D2FF}
+.btn-ghost:hover{border-color:var(--blue);background:var(--blue-50)}
+.btn-light{background:#fff;color:var(--navy)}
+.btn-light:hover{background:var(--blue-50)}
+.btn-outline-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.btn-outline-light:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.btn-sm{height:38px;padding:0 16px;font-size:14px;border-radius:11px}
+.btn .ic{font-size:16px}
+
+/* ============ Header ============ */
+.hdr{position:sticky;top:0;z-index:50;height:var(--hdr);background:rgba(255,255,255,.88);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+.hdr.scrolled{border-color:var(--line);box-shadow:0 8px 24px -18px rgba(10,40,120,.4)}
+.hdr .wrap{height:100%;display:flex;align-items:center;gap:12px}
+.logo{display:flex;align-items:center;gap:11px;color:var(--ink);font-family:var(--f-display);font-weight:800;font-size:21px;letter-spacing:-.02em;line-height:1}
+.logo:hover{text-decoration:none}
+.logo svg{width:40px;height:40px}
+.logo small{display:block;font:600 11px/1 var(--f-body);letter-spacing:.34em;color:var(--navy-2);margin-top:5px;padding-left:1px}
+.nav{display:flex;align-items:center;gap:2px;margin-left:auto}
+.nav>li{position:relative}
+.nav-link{display:flex;align-items:center;gap:5px;height:40px;padding:0 10px;border:0;background:none;border-radius:10px;color:var(--ink);font:500 15px/1 var(--f-body)}
+.nav-link:hover{background:var(--blue-50);text-decoration:none}
+.nav-link .ic{font-size:14px;transition:transform .2s}
+.nav-link[aria-expanded="true"] .ic{transform:rotate(180deg)}
+.nav-link.cur{color:var(--blue);position:relative}
+.nav-link.cur::after{content:"";position:absolute;left:14px;right:14px;bottom:2px;height:2px;border-radius:2px;background:var(--blue)}
+.panel{position:absolute;top:calc(100% + 10px);left:-12px;min-width:540px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh-2);padding:10px;display:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}
+.panel.one{min-width:320px;grid-template-columns:minmax(0,1fr)}
+.nav li.open>.panel{display:grid}
+.pi{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:12px;color:var(--ink);border:0;background:none;text-align:left;width:100%}
+.pi:hover{background:var(--mist);text-decoration:none}
+.pi .b{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:#fff;font-size:19px;flex:none}
+.pi b{display:block;font-size:14.5px;line-height:1.3}
+.pi span{display:block;font-size:13px;color:var(--ink-3);line-height:1.4;margin-top:2px}
+.pi .b.n{background:var(--blue-50);color:var(--blue)}
+.hdr-actions{display:flex;align-items:center;gap:6px;margin-left:4px}
+.hdr-actions .login{height:40px;padding:0 14px;border:0;background:none;border-radius:10px;font-weight:600;font-size:15px}
+.hdr-actions .login:hover{background:var(--blue-50)}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);background:#fff;border-radius:12px;align-items:center;justify-content:center;font-size:22px;margin-left:auto}
+.mnav{display:none;position:fixed;inset:var(--hdr) 0 0 0;background:#fff;z-index:49;overflow:auto;padding:12px 24px 32px}
+.mnav.open{display:block}
+.mnav details{border-bottom:1px solid var(--line-2)}
+.mnav summary{list-style:none;padding:16px 4px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav details[open] summary .ic{transform:rotate(180deg)}
+.mnav .sub{padding:0 0 12px}
+.mnav .sub a,.mnav .sub button{display:block;width:100%;text-align:left;border:0;background:none;padding:10px 4px;color:var(--ink-2);font-size:15px}
+.mnav>a{display:block;padding:16px 4px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--line-2)}
+.mnav .ctas{display:grid;gap:10px;margin-top:22px}
+
+/* ============ Hero ============ */
+.hero{position:relative;overflow:hidden;padding:44px 0 76px;background:
+  radial-gradient(900px 520px at 80% 18%,rgba(10,102,255,.15),transparent 62%),
+  radial-gradient(600px 400px at 0% 0%,rgba(108,77,230,.07),transparent 60%),
+  linear-gradient(180deg,#F1F7FF 0%,#FBFDFF 100%)}
+
+.hero-grid{display:grid;grid-template-columns:minmax(0,4.2fr) minmax(0,7.8fr);gap:20px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:var(--blue-50);color:var(--blue-600);font-weight:600;font-size:14px;margin-bottom:22px}
+.pill i{width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px rgba(10,102,255,.18)}
+.hero h1{font-size:clamp(38px,3.9vw,56px);line-height:1;letter-spacing:-.035em;font-weight:700}
+.hero h1 span{display:block;color:var(--blue)}
+.hero .lead{margin-top:22px;font-size:clamp(17px,1.5vw,19.5px);line-height:1.6;color:var(--ink-2);max-width:34em}
+.ticks{display:flex;flex-wrap:wrap;gap:10px 24px;margin:26px 0 30px;font-size:15px;color:var(--ink-2)}
+.ticks li{display:flex;align-items:center;gap:8px}
+.ticks .ic{width:20px;height:20px;padding:3px;border-radius:50%;background:var(--blue);color:#fff;stroke-width:3}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+
+.stage{position:relative;padding:112px 8px 108px 22px;min-width:0}
+.orbit{position:absolute;inset:0;pointer-events:none;z-index:0}
+.orbit path{fill:none;stroke:#9DBEF5;stroke-width:1.2;stroke-dasharray:4 6}
+.bub{position:absolute;z-index:6;width:78px;height:78px;border-radius:50%;border:0;display:grid;place-items:center;color:#fff;box-shadow:0 14px 30px -10px rgba(10,40,130,.45),0 0 0 6px rgba(255,255,255,.85);transition:transform .25s cubic-bezier(.3,1.4,.5,1),box-shadow .25s}
+.bub .ic{width:30px;height:30px}
+.bub small{display:block;font:600 11px/1 var(--f-body);margin-top:3px;letter-spacing:.01em}
+.bub:hover{transform:scale(1.08)}
+.bub[aria-pressed="true"]{transform:scale(1.14);box-shadow:0 18px 34px -10px rgba(10,40,130,.55),0 0 0 6px #fff,0 0 0 9px currentColor}
+.bub.voice{background:var(--voice);color:var(--voice)}
+.bub.sms{background:var(--sms);color:var(--sms)}
+.bub.rcs{background:var(--rcs);color:var(--rcs)}
+.bub.wa{background:var(--wa);color:var(--wa)}
+.bub>span{color:#fff;display:flex;flex-direction:column;align-items:center}
+/* bubbles live in clear zones: top row (RCS, WhatsApp, Voice) and bottom-left (SMS) so nothing covers the console or phone */
+.bub.rcs{left:5%;top:8px}
+.bub.wa{left:36%;top:2px}
+.bub.voice{right:5%;top:10px}
+.bub.sms{left:5%;bottom:10px}
+.stage .chips-m{display:none}
+
+.console{position:relative;z-index:2;display:grid;grid-template-columns:136px minmax(0,1fr);width:calc(100% - 156px);background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--sh-2);border:1px solid rgba(180,205,250,.6);min-height:408px}
+.side{background:linear-gradient(180deg,var(--navy) 0%,#0A1A42 100%);padding:14px 10px;color:#C5D3F2;display:flex;flex-direction:column;gap:3px}
+.side .mini{display:flex;align-items:center;gap:7px;color:#fff;font:700 12px/1 var(--f-display);padding:2px 6px 14px;letter-spacing:.01em}
+.side .mini svg{width:22px;height:22px}
+.side button{display:flex;align-items:center;gap:9px;height:32px;padding:0 9px;border:0;background:none;border-radius:8px;color:inherit;font-size:11.5px;font-weight:500;text-align:left;transition:background .15s,color .15s}
+.side button .ic{font-size:14px}
+.side button:hover{background:rgba(255,255,255,.07);color:#fff}
+.side button[aria-current="true"]{background:var(--blue);color:#fff;font-weight:600}
+.side button.dim{opacity:.5;cursor:default}
+.side .sp{flex:1}
+.mainp{padding:14px 52px 12px 16px;min-width:0;display:flex;flex-direction:column;gap:10px;background:#fff}
+.mh{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.mh h2{font-size:15px;letter-spacing:-.01em}
+.mh .tag{display:flex;align-items:center;gap:6px;font-size:10.5px;color:var(--ink-3)}
+.mh .tag b{font-weight:600;color:var(--ink-2);padding:4px 9px;border:1px solid var(--line);border-radius:7px}
+.rng{position:relative}
+.rng>button{display:flex;align-items:center;gap:6px;height:26px;padding:0 8px 0 10px;border:1px solid var(--line);border-radius:8px;background:#fff;font:600 10.5px/1 var(--f-body);color:var(--ink-2);transition:border-color .15s,background .15s}
+.rng>button:hover,.rng>button[aria-expanded="true"]{border-color:var(--blue);background:var(--blue-50);color:var(--blue-600)}
+.rng>button .ic{font-size:12px;stroke-width:2.4;transition:transform .2s}
+.rng>button[aria-expanded="true"] .ic{transform:rotate(180deg)}
+.rng ul{position:absolute;right:0;top:calc(100% + 6px);z-index:20;width:182px;margin:0;padding:5px;list-style:none;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 22px 40px -14px rgba(8,40,130,.4);animation:feedIn .18s ease both}
+.rng ul[hidden]{display:none}
+.rng li{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:8px;padding:8px 10px;border-radius:8px;cursor:pointer;outline-offset:-2px}
+.rng li .ro{font:600 11.5px/1.2 var(--f-body);color:var(--ink)}
+.rng li small{grid-column:1;font-size:9.5px;color:var(--ink-3);margin-top:2px}
+.rng li .ic{grid-column:2;grid-row:1/3;font-size:14px;color:var(--blue);stroke-width:2.8;opacity:0}
+.rng li:hover,.rng li:focus-visible{background:var(--mist)}
+.rng li[aria-selected="true"]{background:var(--blue-50)}
+.rng li[aria-selected="true"] .ic{opacity:1}
+#chart .yl{text-anchor:end}
+#chart.in{animation:chartIn .35s ease both}
+@keyframes chartIn{from{opacity:0}to{opacity:1}}
+.mh .tag em{font-style:normal;padding:3px 7px;border-radius:6px;background:var(--warn-50);color:var(--warn);font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.kpi{padding:9px 10px;border:1px solid var(--line-2);border-radius:10px;background:#fff;box-shadow:0 4px 12px -8px rgba(10,50,140,.25);min-width:0}
+.kpi small{display:block;font-size:10px;color:var(--ink-3);line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kpi b{display:block;font:700 19px/1.15 var(--f-display);letter-spacing:-.02em;margin:3px 0 1px;font-variant-numeric:tabular-nums}
+.kpi i{font-style:normal;font-size:10px;font-weight:600;color:var(--wa-ink)}
+.kpi i.dn{color:var(--bad)}
+.chart-card{border:1px solid var(--line-2);border-radius:12px;padding:10px 12px 6px;position:relative}
+.chart-card header{display:flex;align-items:center;justify-content:space-between;margin-bottom:2px}
+.chart-card h3{font:600 11px/1 var(--f-body);letter-spacing:0;color:var(--ink-2)}
+.legend{display:flex;gap:10px;font-size:9.5px;color:var(--ink-3)}
+.legend span{display:flex;align-items:center;gap:4px}
+.legend i{width:7px;height:7px;border-radius:50%}
+#chart{width:100%;height:auto;overflow:visible}
+#chart .grid{stroke:var(--line-2);stroke-width:1}
+#chart text{font:500 8.5px var(--f-body);fill:var(--ink-3)}
+#chart .ln{fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:opacity .35s,stroke-width .35s}
+#chart .ar{transition:opacity .35s}
+.tip{position:absolute;pointer-events:none;background:var(--deep);color:#fff;border-radius:9px;padding:7px 9px;font-size:10px;line-height:1.5;opacity:0;transition:opacity .12s;z-index:3;white-space:nowrap;box-shadow:0 10px 24px -8px rgba(0,0,0,.5)}
+.tip b{display:block;font-size:10px;margin-bottom:1px}
+.tip span{display:flex;align-items:center;gap:6px}
+.tip i{width:6px;height:6px;border-radius:50%}
+.feed{display:grid;gap:0;font-size:10.5px;min-height:62px;overflow:hidden}
+.feed li{display:grid;grid-template-columns:8px minmax(0,1fr) auto auto;gap:8px;align-items:center;padding:4px 2px;border-top:1px solid var(--line-2);animation:feedIn .4s ease both}
+.feed li i{width:7px;height:7px;border-radius:50%}
+.feed li span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink-2)}
+.feed li em{font-style:normal;font-weight:600;color:var(--wa-ink)}
+.feed li time{color:var(--ink-3);font-size:9.5px}
+@keyframes feedIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+.phone{position:absolute;z-index:5;right:0;bottom:92px;width:200px;height:400px;border-radius:36px;background:#0A0F1F;padding:7px;box-shadow:0 40px 60px -24px rgba(5,20,70,.6),0 0 0 1.5px #2B3350 inset,0 0 0 1px rgba(255,255,255,.08)}
+.phone .scr{position:relative;height:100%;border-radius:30px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.phone .notch{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:62px;height:17px;border-radius:12px;background:#0A0F1F;z-index:3}
+.sbar{display:flex;justify-content:space-between;padding:9px 18px 0;font:600 9px/1 var(--f-body);color:var(--ink);height:26px}
+.chead{display:flex;align-items:center;gap:7px;padding:8px 11px 8px;border-bottom:1px solid var(--line-2);background:#fff}
+.chead .av{width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font:700 9px var(--f-display)}
+.chead b{display:block;font-size:10.5px;line-height:1.2;display:flex;align-items:center;gap:3px}
+.chead b .ic{width:11px;height:11px;color:var(--wa-ink);stroke-width:2.6}
+.chead small{display:block;font-size:8.5px;color:var(--ink-3)}
+.msgs{flex:1;min-height:0;overflow:hidden;padding:10px 9px;display:flex;flex-direction:column;gap:6px;justify-content:flex-start;background:#F3F6FB}
+.msgs.wa{background:#EAF3E7}
+.msg{max-width:88%;padding:7px 9px 14px;border-radius:10px;font-size:10px;line-height:1.4;position:relative;animation:pop .4s cubic-bezier(.3,1.3,.5,1) both;animation-delay:calc(var(--i,0)*.6s);box-shadow:0 1px 1px rgba(10,22,51,.08)}
+.msg time{position:absolute;right:7px;bottom:3px;font-size:7.5px;color:var(--ink-3)}
+.msg.in{background:#fff;border-top-left-radius:3px;align-self:flex-start}
+.msg.out{background:#D9F7C5;border-top-right-radius:3px;align-self:flex-end}
+.msgs.sms .msg.in{background:#E7EBF2}
+.msgs.sms .msg.out{background:var(--blue);color:#fff}
+.msgs.sms .msg.out time{color:#D5E4FF}
+.msgs.rcs .msg.out{background:var(--rcs);color:#fff}
+.msgs.rcs .msg.out time{color:#E4DDFF}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.94)}to{opacity:1;transform:none}}
+.rcard{align-self:flex-start;width:92%;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px -2px rgba(10,22,51,.18);animation:pop .4s both;animation-delay:calc(var(--i,0)*.6s)}
+.rcard .m{height:74px;background:linear-gradient(135deg,#7B5CF0,#3E7BFF 60%,#5CD4FF);display:grid;place-items:center;color:#fff}
+.rcard .m .ic{width:30px;height:30px;stroke-width:1.5}
+.rcard .t{padding:8px 9px 4px}
+.rcard .t b{display:block;font-size:10.5px;line-height:1.25}
+.rcard .t span{display:block;font-size:9px;color:var(--ink-3);margin-top:2px}
+.rcard .a{display:grid;gap:4px;padding:5px 9px 9px}
+.rcard .a span{display:block;text-align:center;padding:5px;border-radius:7px;border:1px solid #D9D0FA;color:var(--rcs-ink);font-size:9px;font-weight:600}
+.sug{display:flex;gap:5px;flex-wrap:wrap;animation:pop .4s both;animation-delay:calc(var(--i,0)*.6s)}
+.sug span{padding:4px 9px;border-radius:999px;border:1px solid #D9D0FA;background:#fff;color:var(--rcs-ink);font-size:8.5px;font-weight:600}
+.composer{display:flex;align-items:center;gap:6px;padding:7px 9px 12px;background:#fff;border-top:1px solid var(--line-2)}
+.composer input{flex:1;min-width:0;height:26px;border:1px solid var(--line);border-radius:999px;padding:0 10px;font-size:9.5px;background:#F7F9FD;outline:none}
+.composer input:focus{border-color:var(--blue);background:#fff}
+.composer button{width:26px;height:26px;border:0;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;flex:none}
+.composer button .ic{font-size:12px;stroke-width:2.4}
+.call{flex:1;display:flex;flex-direction:column;align-items:center;background:linear-gradient(180deg,#0F2766,#091536);color:#fff;padding:26px 14px 18px;text-align:center}
+.call .av{width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;font:700 18px var(--f-display);margin-top:6px}
+.call b{font:700 14px var(--f-display);margin-top:10px;display:flex;align-items:center;gap:4px}
+.call b .ic{color:#7DE3FF;width:13px;height:13px;stroke-width:2.6}
+.call small{font-size:9.5px;color:#A9BEE9;margin-top:3px}
+.wave{display:flex;align-items:center;gap:3px;height:34px;margin:18px 0 6px}
+.wave i{width:3px;border-radius:2px;background:#7DE3FF;height:6px;animation:wv 1s ease-in-out infinite}
+.wave i:nth-child(2n){animation-delay:.15s}.wave i:nth-child(3n){animation-delay:.32s}.wave i:nth-child(5n){animation-delay:.5s}
+@keyframes wv{0%,100%{height:6px}50%{height:28px}}
+.call .timer{font:600 12px var(--f-mono);color:#CFE0FF;margin-bottom:14px;font-variant-numeric:tabular-nums}
+.call .row{display:flex;gap:26px;margin-top:auto}
+.call .row button{width:46px;height:46px;border-radius:50%;border:0;color:#fff;display:grid;place-items:center}
+.call .row .ic{font-size:20px}
+.call .acc{background:#1FBF63}.call .dec{background:#E5484D}
+.call .acc.on{background:#E5484D}
+.call .acc.on .ic{transform:rotate(135deg)}
+.call.live .wave i{animation-play-state:running}
+.call:not(.live) .wave i{animation-play-state:paused;height:6px}
+
+/* ============ Channel strip ============ */
+.strip{margin-top:-34px;position:relative;z-index:8}
+.strip-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:var(--sh-1);overflow:hidden}
+.chan{position:relative;display:flex;gap:16px;padding:28px 26px 26px;border:0;background:#fff;text-align:left;color:var(--ink);transition:background .2s}
+.chan+.chan{border-left:1px solid var(--line-2)}
+.chan:hover{background:var(--c50);text-decoration:none}
+.chan .b{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;color:#fff;flex:none;font-size:26px}
+.chan h3{font-size:21px;margin-bottom:6px}
+.chan p{font-size:14.5px;color:var(--ink-3);line-height:1.5}
+.chan .more{display:flex;align-items:center;justify-content:space-between;margin-top:14px;font-weight:600;font-size:14px;color:var(--ci)}
+.chan .more i{width:26px;height:26px;border-radius:50%;background:var(--c50);display:grid;place-items:center}
+.chan .more .ic{font-size:13px;stroke-width:2.4}
+.chan.voice{--c50:var(--voice-50);--ci:var(--voice-ink)}.chan.sms{--c50:var(--sms-50);--ci:var(--sms-ink)}
+.chan.rcs{--c50:var(--rcs-50);--ci:var(--rcs-ink)}.chan.wa{--c50:var(--wa-50);--ci:var(--wa-ink)}
+.chan .txt{flex:1;min-width:0}
+
+/* ============ Sections ============ */
+.sec{padding:96px 0}
+.sec.alt{background:var(--mist)}
+.sec-h{max-width:720px;margin-bottom:44px}
+.sec-h h2{font-size:clamp(32px,3.9vw,50px);letter-spacing:-.03em}
+.sec-h p{margin-top:16px;font-size:18px;color:var(--ink-2);line-height:1.6;max-width:36em}
+
+.pillars{padding:84px 0 20px}
+.pillars-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:48px;align-items:center}
+.pillars h2{font-size:clamp(30px,3.4vw,44px)}
+.pillars .three{display:grid;grid-template-columns:repeat(3,1fr)}
+.pl{display:flex;gap:16px;padding:6px 26px}
+.pl+.pl{border-left:1px solid var(--line)}
+.pl .b{width:48px;height:48px;border-radius:50%;background:var(--blue-50);color:var(--blue);display:grid;place-items:center;font-size:22px;flex:none}
+.pl h3{font-size:17px;margin-bottom:6px;letter-spacing:-.01em}
+.pl p{font-size:14.5px;color:var(--ink-3);line-height:1.55}
+
+/* ---- Channel deep-dive ---- */
+.tabs{display:inline-flex;gap:6px;padding:6px;background:var(--mist);border:1px solid var(--line);border-radius:18px;margin-bottom:34px;flex-wrap:wrap}
+.tab{display:flex;align-items:center;gap:9px;height:46px;padding:0 20px 0 14px;border:0;border-radius:13px;background:none;font-weight:600;font-size:15px;color:var(--ink-2);transition:background .2s,color .2s,box-shadow .2s}
+.tab .d{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:15px}
+.tab:hover{background:#fff}
+.tab[aria-selected="true"]{background:#fff;color:var(--ink);box-shadow:0 6px 16px -8px rgba(10,50,140,.4),0 0 0 1px var(--line)}
+.cpanel{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:56px;align-items:start}
+.cpanel[hidden]{display:none}
+.cpanel h3{font-size:clamp(28px,3vw,38px);letter-spacing:-.03em}
+.cpanel .intro{margin-top:14px;font-size:17.5px;color:var(--ink-2);max-width:32em}
+.checks{margin:26px 0;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;font-size:15.5px;color:var(--ink-2);line-height:1.5}
+.checks .ic{width:22px;height:22px;padding:4px;border-radius:50%;margin-top:1px;stroke-width:3;color:#fff}
+.uc{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.uc span{padding:7px 14px;border-radius:999px;font-size:13.5px;font-weight:600}
+.note{border-radius:var(--r-m);padding:16px 18px;font-size:14.5px;line-height:1.55;color:var(--ink-2);border-left:4px solid var(--nc)}
+.note b{display:block;color:var(--ink);margin-bottom:3px}
+.cpanel.voice{--c:var(--voice);--c50:var(--voice-50);--ci:var(--voice-ink)}
+.cpanel.sms{--c:var(--sms);--c50:var(--sms-50);--ci:var(--sms-ink)}
+.cpanel.rcs{--c:var(--rcs);--c50:var(--rcs-50);--ci:var(--rcs-ink)}
+.cpanel.wa{--c:var(--wa);--c50:var(--wa-50);--ci:var(--wa-ink)}
+.cpanel .checks .ic{background:var(--c)}
+.cpanel .uc span{background:var(--c50);color:var(--ci)}
+.cpanel .note{background:var(--c50);--nc:var(--c)}
+.widget{background:var(--c50);border-radius:var(--r-xl);padding:26px;border:1px solid color-mix(in srgb,var(--c) 18%,#fff)}
+.widget h4{font:700 15px/1.2 var(--f-body);letter-spacing:0;margin-bottom:4px}
+.widget .sub{font-size:13.5px;color:var(--ink-3);margin-bottom:18px}
+.wgrid{display:grid;grid-template-columns:minmax(0,1fr) 224px;gap:20px;align-items:start}
+.fld{display:grid;gap:5px;margin-bottom:12px}
+.fld label{font-size:12.5px;font-weight:600;color:var(--ink-2)}
+.fld input,.fld select,.fld textarea{width:100%;height:40px;padding:0 12px;border:1.5px solid var(--line);border-radius:10px;background:#fff;font-size:14.5px;outline:none;transition:border-color .15s,box-shadow .15s}
+.fld textarea{height:auto;padding:10px 12px;resize:vertical;min-height:84px}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--c,var(--blue));box-shadow:0 0 0 4px color-mix(in srgb,var(--c,var(--blue)) 18%,transparent)}
+.seg{display:inline-flex;padding:4px;background:#fff;border:1px solid var(--line);border-radius:12px;gap:3px;margin-bottom:16px;flex-wrap:wrap}
+.seg button{border:0;background:none;padding:7px 13px;border-radius:9px;font-size:13px;font-weight:600;color:var(--ink-2)}
+.seg button[aria-pressed="true"]{background:var(--c);color:#fff}
+.mini-phone{width:224px;height:380px;border-radius:32px;background:#0A0F1F;padding:6px;box-shadow:0 26px 44px -22px rgba(5,20,70,.55)}
+.mini-phone .scr{height:100%;border-radius:27px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.stat{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:14px;font-size:12.5px;color:var(--ink-2)}
+.stat span{display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:8px;background:#fff;border:1px solid var(--line)}
+.stat b{font-variant-numeric:tabular-nums}
+.stat .ok{color:var(--wa-ink)}.stat .warn{color:var(--warn)}
+.tmpl{font:500 12.5px/1.6 var(--f-mono);background:#fff;border:1px dashed color-mix(in srgb,var(--c) 40%,#fff);border-radius:12px;padding:12px;color:var(--ink-2);margin-bottom:14px;word-break:break-word}
+.tmpl mark{background:var(--c50);color:var(--ci);padding:1px 5px;border-radius:5px;font-weight:600}
+.ivr-keys{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:auto;width:100%}
+.ivr-keys button{height:44px;border:1px solid #CFE0FF;background:#fff;border-radius:10px;font:700 14px var(--f-mono);color:var(--voice-ink)}
+.ivr-keys button:hover{background:var(--voice);color:#fff;border-color:var(--voice)}
+.ivr-say{background:rgba(255,255,255,.1);border-radius:10px;padding:9px 10px;font-size:9.8px;line-height:1.45;color:#EAF1FF;text-align:left;margin:8px 0;min-height:76px;width:100%}
+.ivr-say em{display:inline-flex;align-items:center;gap:4px;font-style:normal;font-weight:700;color:#0A1633;background:#7DE3FF;border-radius:6px;padding:1px 6px;margin-top:5px}
+
+/* ---- Orchestrator ---- */
+.orch{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:40px;align-items:start}
+.hops{display:grid;gap:10px;margin:0 0 20px}
+.hop{display:grid;grid-template-columns:auto 44px minmax(0,1fr) auto auto;gap:12px;align-items:center;padding:12px 14px;background:#fff;border:1.5px solid var(--line);border-radius:16px;transition:border-color .25s,box-shadow .25s,background .25s}
+.hop .mv{display:grid;gap:2px}
+.hop .mv button{width:26px;height:20px;border:0;border-radius:6px;background:var(--mist);color:var(--ink-3);display:grid;place-items:center}
+.hop .mv button:hover:not(:disabled){background:var(--blue-100);color:var(--blue)}
+.hop .mv button:disabled{opacity:.35;cursor:default}
+.hop .mv .ic{font-size:12px;stroke-width:2.6}
+.hop .b{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:20px}
+.hop b{font-size:15.5px;display:block;line-height:1.2}
+.hop small{color:var(--ink-3);font-size:12.5px}
+.hop .sw{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink-2);cursor:pointer;user-select:none}
+.hop .sw input{appearance:none;width:34px;height:20px;border-radius:999px;background:#CAD6EC;position:relative;transition:background .2s;cursor:pointer}
+.hop .sw input::after{content:"";position:absolute;left:2px;top:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .2s;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.hop .sw input:checked{background:var(--bad)}
+.hop .sw input:checked::after{transform:translateX(14px)}
+.hop .st{min-width:92px;text-align:center;font-size:12px;font-weight:700;padding:6px 10px;border-radius:999px;background:var(--mist);color:var(--ink-3)}
+.hop.try{border-color:var(--blue);box-shadow:0 0 0 4px rgba(10,102,255,.14)}
+.hop.try .st{background:var(--blue-50);color:var(--blue)}
+.hop.fail{background:#FFF7F6}.hop.fail .st{background:#FDE5E2;color:var(--bad)}
+.hop.ok{border-color:var(--wa);background:#F4FCF7;box-shadow:0 0 0 4px rgba(34,173,85,.15)}.hop.ok .st{background:var(--wa);color:#fff}
+.hop.na{opacity:.5}
+.console-log{background:var(--deep);border-radius:var(--r-l);padding:20px 22px;color:#C9D8F5;font:500 13px/1.8 var(--f-mono);min-height:288px;overflow:hidden}
+.console-log .top{display:flex;gap:6px;margin-bottom:14px}
+.console-log .top i{width:10px;height:10px;border-radius:50%;background:#2C3E6B}
+.console-log p{white-space:pre-wrap;animation:feedIn .3s both}
+.console-log .t{color:#6F86B8}.console-log .g{color:#5FE39A}.console-log .r{color:#FF8C84}.console-log .c{color:#7DE3FF}
+.verdict{margin-top:14px;font-size:14px;color:var(--ink-2)}
+
+/* ---- Solutions ---- */
+.sol{display:grid;grid-template-columns:260px minmax(0,1fr);gap:40px;align-items:start}
+.sol-list{display:grid;gap:4px;position:sticky;top:calc(var(--hdr) + 20px)}
+.sol-list button{text-align:left;border:0;background:none;padding:14px 16px;border-radius:14px;font-weight:600;font-size:16px;color:var(--ink-2);display:flex;justify-content:space-between;align-items:center;transition:background .2s}
+.sol-list button:hover{background:var(--mist)}
+.sol-list button[aria-selected="true"]{background:var(--blue-50);color:var(--blue-600)}
+.sol-list .ic{opacity:0;transition:opacity .2s,transform .2s;transform:translateX(-4px);color:var(--blue)}
+.sol-list button[aria-selected="true"] .ic{opacity:1;transform:none}
+.sol-panel{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:34px 36px;box-shadow:var(--sh-1)}
+.sol-panel h3{font-size:30px;margin-bottom:8px}
+.sol-panel>h3+p{color:var(--ink-2);font-size:16.5px;max-width:38em;margin-bottom:28px}
+.jr{position:relative;display:grid;gap:0;margin-left:6px}
+.jr li{position:relative;display:grid;grid-template-columns:110px minmax(0,1fr);gap:18px;padding:0 0 22px 26px;border-left:2px solid var(--line)}
+.jr li:last-child{border-color:transparent;padding-bottom:0}
+.jr li::before{content:"";position:absolute;left:-7px;top:3px;width:12px;height:12px;border-radius:50%;background:var(--dc);box-shadow:0 0 0 4px #fff}
+.jr .when{font-size:13.5px;font-weight:600;color:var(--ink-3);padding-top:1px}
+.jr .what b{display:flex;align-items:center;gap:9px;font-size:16px;margin-bottom:3px;flex-wrap:wrap}
+.jr .what p{font-size:14.5px;color:var(--ink-3);line-height:1.5}
+.cc{display:inline-flex;align-items:center;gap:5px;padding:3px 10px 3px 8px;border-radius:999px;font-size:12px;font-weight:700}
+.cc .ic{font-size:12px;stroke-width:2.4}
+.cc.voice{background:var(--voice-50);color:var(--voice-ink)}.cc.sms{background:var(--sms-50);color:var(--sms-ink)}
+.cc.rcs{background:var(--rcs-50);color:var(--rcs-ink)}.cc.wa{background:var(--wa-50);color:var(--wa-ink)}
+.sol-note{margin-top:26px;padding-top:20px;border-top:1px dashed var(--line);font-size:14px;color:var(--ink-3)}
+
+/* ---- Developers ---- */
+.dev{background:linear-gradient(180deg,#0A1B45 0%,#071230 100%);color:#fff;position:relative;overflow:hidden}
+.dev::before{content:"";position:absolute;right:-200px;top:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(10,102,255,.35),transparent 65%);pointer-events:none}
+.dev h2,.dev h3{color:#fff}
+.dev .sec-h p{color:#B9C9EC}
+.dev-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:start;position:relative}
+.dev ul.feat{display:grid;gap:18px}
+.dev ul.feat li{display:flex;gap:14px}
+.dev ul.feat .b{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.08);display:grid;place-items:center;color:#7DE3FF;font-size:19px;flex:none}
+.dev ul.feat b{display:block;font-size:16px}
+.dev ul.feat span{display:block;font-size:14.5px;color:#9FB3DC;line-height:1.5}
+.code{background:#050C20;border:1px solid rgba(255,255,255,.1);border-radius:20px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.7)}
+.code-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.08);flex-wrap:wrap}
+.code-bar .ch,.code-bar .lg{display:flex;gap:4px}
+.code-bar button{border:0;background:none;color:#8FA5D3;padding:7px 12px;border-radius:9px;font-size:13px;font-weight:600}
+.code-bar button:hover{color:#fff}
+.code-bar button[aria-pressed="true"]{background:rgba(255,255,255,.1);color:#fff}
+.code-bar .lg button{font:500 12px var(--f-mono)}
+pre.src{margin:0;padding:20px 22px;font:500 13px/1.75 var(--f-mono);color:#D4E1FF;overflow:auto;max-height:340px;tab-size:2}
+pre.src .k{color:#7DE3FF}.pre .s,pre.src .s{color:#9BE7B1}.pre .n,pre.src .n{color:#FFB86B}.pre .c,pre.src .c{color:#6F86B8}
+.code-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap}
+.code-foot small{color:#7F95C4;font-size:12.5px}
+.resp{white-space:pre-wrap;border-top:1px solid rgba(255,255,255,.08);padding:16px 22px;background:#030816;font:500 13px/1.7 var(--f-mono);color:#BFD0F5;min-height:150px}
+.resp .st{color:#5FE39A;font-weight:700}
+.resp .ph{color:#6F86B8}
+
+/* ---- Compliance ---- */
+.cmp{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:44px;align-items:start}
+.ctl{background:var(--mist);border:1px solid var(--line);border-radius:var(--r-xl);padding:28px;position:sticky;top:calc(var(--hdr) + 20px)}
+.ctl h3{font-size:22px;margin-bottom:6px}
+.ctl>p{font-size:14.5px;color:var(--ink-3);margin-bottom:20px}
+.ctl .grp{margin-bottom:20px}
+.ctl .grp>b{display:block;font-size:13.5px;margin-bottom:9px}
+.cchips{display:flex;flex-wrap:wrap;gap:8px}
+.cchips button{display:flex;align-items:center;gap:7px;height:40px;padding:0 15px 0 11px;border-radius:12px;border:1.5px solid var(--line);background:#fff;font-weight:600;font-size:14px;color:var(--ink-2);transition:all .15s}
+.cchips button .ic{font-size:16px}
+.cchips button[aria-pressed="true"]{border-color:var(--c);background:var(--c50);color:var(--ci)}
+.cchips button.voice{--c:var(--voice);--c50:var(--voice-50);--ci:var(--voice-ink)}.cchips button.sms{--c:var(--sms);--c50:var(--sms-50);--ci:var(--sms-ink)}
+.cchips button.rcs{--c:var(--rcs);--c50:var(--rcs-50);--ci:var(--rcs-ink)}.cchips button.wa{--c:var(--wa);--c50:var(--wa-50);--ci:var(--wa-ink)}
+.cchips button.plain{--c:var(--blue);--c50:var(--blue-50);--ci:var(--blue-600);padding:0 15px}
+.prog{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin:10px 0 6px}
+.prog i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--blue),#5CD4FF);transition:width .4s}
+.prog-l{font-size:13px;color:var(--ink-3);display:flex;justify-content:space-between}
+.cres{display:grid;gap:22px}
+.cgrp{border:1px solid var(--line);border-radius:var(--r-l);overflow:hidden;background:#fff}
+.cgrp>header{display:flex;align-items:center;gap:12px;padding:16px 20px;background:var(--c50)}
+.cgrp>header .b{width:34px;height:34px;border-radius:50%;background:var(--c);display:grid;place-items:center;color:#fff;font-size:17px}
+.cgrp>header h4{font-size:18px}
+.cgrp>header small{margin-left:auto;font-size:12.5px;color:var(--ci);font-weight:600}
+.cgrp.voice{--c:var(--voice);--c50:var(--voice-50);--ci:var(--voice-ink)}.cgrp.sms{--c:var(--sms);--c50:var(--sms-50);--ci:var(--sms-ink)}
+.cgrp.rcs{--c:var(--rcs);--c50:var(--rcs-50);--ci:var(--rcs-ink)}.cgrp.wa{--c:var(--wa);--c50:var(--wa-50);--ci:var(--wa-ink)}
+.step{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:14px;padding:16px 20px;border-top:1px solid var(--line-2);align-items:start;cursor:pointer}
+.step:hover{background:#FBFDFF}
+.step input{appearance:none;width:24px;height:24px;border-radius:8px;border:2px solid #B9C7E2;margin:0;position:relative;cursor:pointer;transition:all .15s;flex:none}
+.step input:checked{background:var(--c);border-color:var(--c)}
+.step input:checked::after{content:"";position:absolute;left:6px;top:2px;width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.step b{display:block;font-size:15.5px;line-height:1.35}
+.step p{font-size:14px;color:var(--ink-3);line-height:1.5;margin-top:3px}
+.step.done b{color:var(--ink-3);text-decoration:line-through;text-decoration-color:#B9C7E2}
+.step .who{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;white-space:nowrap;background:var(--mist);color:var(--ink-2)}
+.step .who.help{background:var(--blue-50);color:var(--blue-600)}
+.cwarn{display:flex;gap:12px;padding:14px 18px;border-radius:14px;background:var(--warn-50);color:#6B4300;font-size:14px;line-height:1.5}
+.cwarn .ic{font-size:20px;color:var(--warn);margin-top:1px}
+.cempty{padding:46px 24px;text-align:center;border:2px dashed var(--line);border-radius:var(--r-l);color:var(--ink-3)}
+
+/* ---- Pricing ---- */
+.models{display:grid;grid-template-columns:1fr 1.12fr 1fr;gap:18px;align-items:stretch;margin-bottom:56px}
+.model{background:#fff;border:1px solid var(--line);border-radius:var(--r-l);padding:30px 28px;display:flex;flex-direction:column}
+.model h3{font-size:24px;margin-bottom:6px}
+.model>p{font-size:15px;color:var(--ink-3);margin-bottom:20px}
+.model ul{display:grid;gap:11px;margin-bottom:26px;font-size:15px;color:var(--ink-2)}
+.model li{display:flex;gap:10px}
+.model li .ic{color:var(--blue);font-size:18px;stroke-width:3;margin-top:3px}
+.model .btn{margin-top:auto}
+.model.hot{background:linear-gradient(165deg,var(--navy),#0B2A78);color:#fff;border:0;box-shadow:var(--sh-2);margin:-14px 0}
+.model.hot h3{color:#fff}.model.hot>p{color:#B9C9EC}.model.hot ul{color:#DCE7FF}.model.hot li .ic{color:#7DE3FF}
+.model .tagx{display:inline-block;align-self:flex-start;padding:4px 11px;border-radius:999px;background:rgba(125,227,255,.16);color:#7DE3FF;font-size:12px;font-weight:700;margin-bottom:12px}
+.est{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:0;background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-1)}
+.est .in{padding:36px 38px}
+.est .in h3{font-size:26px;margin-bottom:8px}
+.est .in>p{font-size:15px;color:var(--ink-3);margin-bottom:26px}
+.rg{margin-bottom:22px}
+.rg .rl{display:flex;justify-content:space-between;align-items:baseline;font-size:14px;font-weight:600;margin-bottom:8px}
+.rg .rl output{font:700 16px var(--f-display);color:var(--c);font-variant-numeric:tabular-nums}
+.rg input[type=range]{width:100%;accent-color:var(--c);height:6px;cursor:pointer}
+.rg.mk{--c:var(--rcs)}.rg.ut{--c:var(--wa)}.rg.au{--c:var(--sms)}.rg.sv{--c:var(--voice)}
+.est .out{background:var(--mist);padding:36px 38px;border-left:1px solid var(--line);display:flex;flex-direction:column}
+.est .out small{font-size:13px;color:var(--ink-3)}
+.est .big{font:700 clamp(36px,4vw,52px)/1 var(--f-display);letter-spacing:-.03em;margin:6px 0 4px;font-variant-numeric:tabular-nums}
+.est .brk{margin:22px 0;display:grid;gap:10px}
+.est .brk div{display:flex;justify-content:space-between;gap:10px;font-size:14px;color:var(--ink-2);padding-bottom:10px;border-bottom:1px solid var(--line)}
+.est .brk b{font-variant-numeric:tabular-nums}
+.est .fine{font-size:12.5px;color:var(--ink-3);line-height:1.55;margin-top:auto}
+
+/* ---- FAQ ---- */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:56px;align-items:start}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;padding:22px 4px;font:600 18px/1.35 var(--f-display);letter-spacing:-.01em;display:flex;justify-content:space-between;gap:18px;cursor:pointer;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .ic{font-size:20px;color:var(--blue);transition:transform .25s;flex:none}
+.faq details[open] summary .ic{transform:rotate(45deg)}
+.faq .ans{padding:0 4px 24px;color:var(--ink-2);font-size:16px;line-height:1.65;max-width:42em}
+.faq .ans p+p{margin-top:10px}
+
+/* ---- CTA / footer ---- */
+.cta{padding:0 0 96px}
+.cta-box{position:relative;overflow:hidden;border-radius:36px;padding:64px 56px;background:linear-gradient(120deg,var(--navy) 0%,#0A47C9 100%);color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px;align-items:center}
+.cta-box::after{content:"";position:absolute;right:-120px;top:-160px;width:520px;height:520px;border-radius:50%;border:1.5px dashed rgba(255,255,255,.25);box-shadow:0 0 0 70px rgba(255,255,255,.03),0 0 0 140px rgba(255,255,255,.02);pointer-events:none}
+.cta-box h2{color:#fff;font-size:clamp(30px,3.8vw,50px);max-width:16em}
+.cta-box p{margin-top:14px;color:#C6D6F8;font-size:18px;max-width:30em}
+.cta-box .acts{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+.ftr{background:var(--deep);color:#9FB3DC;padding:64px 0 32px}
+.ftr-grid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:32px}
+.ftr .logo{color:#fff}.ftr .logo small{color:#9FB3DC}
+.ftr p{font-size:14.5px;line-height:1.6;margin-top:16px;max-width:26em}
+.ftr h4{font:700 14px var(--f-body);color:#fff;letter-spacing:0;margin-bottom:14px}
+.ftr li{margin-bottom:9px}
+.ftr a,.ftr button.lk{color:#9FB3DC;font-size:14.5px;border:0;background:none;padding:0;text-align:left}
+.ftr a:hover,.ftr button.lk:hover{color:#fff;text-decoration:none}
+.ftr-bot{margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13.5px}
+
+/* ---- Modal / toast ---- */
+dialog{border:0;padding:0;border-radius:var(--r-xl);width:min(640px,100% - 24px);max-height:calc(100dvh - 24px);box-shadow:0 60px 120px -30px rgba(5,20,70,.6);color:var(--ink)}
+dialog::backdrop{background:rgba(6,16,45,.62);backdrop-filter:blur(5px)}
+dialog[open]{animation:dlg .28s cubic-bezier(.3,1.2,.5,1)}
+@keyframes dlg{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+.dlg-in{padding:34px 36px 32px;position:relative}
+.dlg-x{position:absolute;right:16px;top:16px;width:40px;height:40px;border-radius:12px;border:0;background:var(--mist);display:grid;place-items:center;font-size:18px}
+.dlg-x:hover{background:var(--blue-100)}
+.dlg-in h2{font-size:30px;margin-bottom:8px;padding-right:44px}
+.dlg-in>p{color:var(--ink-3);margin-bottom:22px}
+.frow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}
+.fld .err{display:none;font-size:12.5px;color:var(--bad);font-weight:600}
+.fld.bad input,.fld.bad select{border-color:var(--bad)}
+.fld.bad .err{display:block}
+.fchips{display:flex;flex-wrap:wrap;gap:8px}
+.fchips label{cursor:pointer}
+.fchips input{position:absolute;opacity:0;pointer-events:none}
+.fchips span{display:flex;align-items:center;gap:7px;height:38px;padding:0 14px;border-radius:11px;border:1.5px solid var(--line);font-size:14px;font-weight:600;color:var(--ink-2);transition:all .15s}
+.fchips input:checked+span{background:var(--blue-50);border-color:var(--blue);color:var(--blue-600)}
+.fchips input:focus-visible+span{outline:3px solid #7FB0FF;outline-offset:2px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--ink-3);margin:6px 0 20px}
+.consent input{margin-top:3px;width:17px;height:17px;accent-color:var(--blue)}
+.ok-state{text-align:center;padding:30px 0 10px}
+.ok-state .tick{width:68px;height:68px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;margin:0 auto 18px;font-size:34px}
+.ok-state .tick .ic{stroke-width:3}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,30px);background:var(--deep);color:#fff;padding:13px 20px;border-radius:14px;font-size:14.5px;font-weight:500;opacity:0;pointer-events:none;transition:all .3s;z-index:90;box-shadow:0 20px 40px -12px rgba(0,0,0,.5);max-width:calc(100% - 32px)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ============ Responsive ============ */
+@media (max-width:1180px){
+  .nav-link{padding:0 10px}
+  .hdr .wrap{gap:14px}
+  .ftr-grid{grid-template-columns:1.2fr repeat(2,1fr)}
+  .pl{padding:6px 16px}
+}
+@media (max-width:1060px){
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:34px}
+  .hero{padding-top:32px}
+  .stage{padding:8px 0 24px}
+  .orbit,.bub{display:none}
+  .console{width:calc(100% - 80px)}
+  .mainp{padding-right:16px}
+  .strip-grid{grid-template-columns:repeat(2,1fr)}
+  .chan:nth-child(3){border-left:0}
+  .chan:nth-child(n+3){border-top:1px solid var(--line-2)}
+  .pillars-grid,.cpanel,.orch,.sol,.dev-grid,.cmp,.faq-grid{grid-template-columns:minmax(0,1fr)}
+  .cpanel{gap:34px}
+  .sol-list{position:static;grid-template-columns:repeat(3,1fr)}
+  .ctl{position:static}
+  .models{grid-template-columns:minmax(0,1fr)}
+  .model.hot{margin:0}
+  .est{grid-template-columns:minmax(0,1fr)}
+  .est .out{border-left:0;border-top:1px solid var(--line)}
+  .cta-box{grid-template-columns:minmax(0,1fr);padding:48px 34px}
+}
+@media (max-width:760px){
+  .wrap,.hero .wrap{width:calc(100% - 32px)}
+  .sec{padding:68px 0}
+  .console{grid-template-columns:minmax(0,1fr);width:100%}
+  .side{display:none}
+  .stage .chips-m{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .phone{position:relative;right:auto;bottom:auto;margin:-24px auto 0;width:min(260px,100%)}
+  .chips-m{margin-bottom:14px}
+  .strip{margin-top:-20px}
+  .strip-grid{grid-template-columns:minmax(0,1fr)}
+  .chan+.chan{border-left:0;border-top:1px solid var(--line-2)}
+  .pillars .three{grid-template-columns:minmax(0,1fr);gap:22px}
+  .pl{padding:0}.pl+.pl{border-left:0}
+  .wgrid{grid-template-columns:minmax(0,1fr)}
+  .mini-phone{margin:0 auto}
+  .widget{padding:20px}
+  .tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+  .tab{padding:0 12px 0 8px;font-size:14px}
+  .hop{grid-template-columns:auto 40px minmax(0,1fr);}
+  .hop .sw,.hop .st{grid-column:2/-1}
+  .hop .st{justify-self:start}
+  .sol-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sol-panel{padding:24px 20px}
+  .jr li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .est .in,.est .out{padding:26px 22px}
+  .frow{grid-template-columns:minmax(0,1fr)}
+  .dlg-in{padding:28px 20px 24px}
+  .ftr-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ftr-grid>:first-child{grid-column:1/-1}
+  .cta-box{padding:40px 24px;border-radius:26px}
+  .step{grid-template-columns:28px minmax(0,1fr)}
+  .step .who{grid-column:2;justify-self:start}
+  .kpi b{font-size:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
+
+/* ============ Vertical switcher (Products | Digital Marketing) ============ */
+.vsw{display:flex;gap:3px;padding:4px;background:var(--mist);border:1px solid var(--line);border-radius:14px;margin-left:2px;flex:none}
+.vs{display:flex;align-items:center;gap:8px;height:36px;padding:0 14px;border-radius:10px;font:600 14px/1 var(--f-body);color:var(--ink-2);white-space:nowrap;transition:background .2s,color .2s,box-shadow .2s}
+.vs:hover{text-decoration:none;background:#fff;color:var(--ink)}
+.vs i{width:8px;height:8px;border-radius:50%;background:var(--vc);opacity:.5;transition:opacity .2s,box-shadow .2s}
+.vs.vp{--vc:var(--blue)}.vs.vm{--vc:var(--ads)}
+.vs[aria-current="page"]{background:#fff;color:var(--ink);box-shadow:0 5px 14px -8px rgba(10,50,140,.5),0 0 0 1px var(--line)}
+.vs[aria-current="page"] i{opacity:1;box-shadow:0 0 0 4px color-mix(in srgb,var(--vc) 22%,transparent)}
+.mvsw{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:4px;background:var(--mist);border:1px solid var(--line);border-radius:14px;margin:6px 0 10px}
+.mvsw .vs{justify-content:center;height:44px;padding:0 8px;font-size:14px}
+
+/* ============ Bridge band (Products -> Digital Marketing) ============ */
+.bridge{padding:0 0 84px}
+.bridge-box{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:center;padding:52px 56px;border-radius:32px;background:linear-gradient(125deg,#FFF5EC 0%,#F4F8FF 58%,#fff 100%);border:1px solid var(--line)}
+.bridge-tag{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:var(--ads-50);color:var(--ads-ink);font-weight:700;font-size:13px;margin-bottom:16px}
+.bridge-tag i{width:7px;height:7px;border-radius:50%;background:var(--ads)}
+.bridge h2{font-size:clamp(28px,3.3vw,42px);margin-bottom:14px}
+.bridge-txt>p:not(.bridge-tag){font-size:17px;color:var(--ink-2);max-width:34em}
+.bridge-chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 26px}
+.bridge-chips a{display:inline-flex;align-items:center;gap:7px;height:38px;padding:0 14px 0 11px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:600;font-size:14px;color:var(--ink-2);transition:border-color .15s,color .15s}
+.bridge-chips a:hover{text-decoration:none;border-color:var(--ads);color:var(--ads-ink)}
+.bridge-chips .ic{font-size:16px}
+.bridge-vis{display:flex;align-items:center;justify-content:center}
+.bv-node{display:grid;justify-items:center;gap:4px;text-align:center;min-width:96px}
+.bv-node span{width:64px;height:64px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;font-size:28px;box-shadow:0 16px 28px -14px var(--c)}
+.bv-node b{font-size:15px;margin-top:6px}
+.bv-node small{font-size:12.5px;color:var(--ink-3);line-height:1.3}
+.bv-link{flex:1;min-width:20px;max-width:52px;border-top:2px dashed #9DBEF5;margin-bottom:46px}
+@media (max-width:1180px){
+  .vs{padding:0 11px;font-size:13.5px}
+}
+@media (max-width:1060px){
+  .bridge-box{grid-template-columns:minmax(0,1fr);padding:40px 34px}
+}
+@media (max-width:760px){
+  .vsw{display:none}
+  .bridge-box{padding:32px 22px;border-radius:26px}
+  .bv-node{min-width:78px}.bv-node span{width:54px;height:54px;font-size:24px}
+}
+
+/* header adapts progressively so the switcher + nav never collide */
+.vs .sh{display:none}
+.mvsw .vs .lg{display:inline!important}.mvsw .vs .sh{display:none!important}
+@media (max-width:1340px){
+  .vs .lg{display:none}.vs .sh{display:inline}
+  .vs{padding:0 12px}
+  .nav-link{padding:0 9px;font-size:14.5px}
+  .hdr-actions .login{padding:0 10px}
+}
+@media (max-width:1230px){
+  .nav,.hdr-actions{display:none}
+  .burger{display:flex}
+  .vs .lg{display:inline}.vs .sh{display:none}
+}
+/* the logo must never be squeezed by a crowded header */
+.logo{flex:none}
+.logo svg{flex:none;width:40px;height:40px}
+@media (max-width:420px){
+  .bv-node{min-width:0}.bv-link{min-width:10px}
+  .bridge-box{padding:28px 18px}
+}
+@media (max-width:420px){
+  .bridge .btn{white-space:normal;text-align:center;height:auto;min-height:46px;padding:12px 18px;line-height:1.25}
+}
+
+</style>
+</head>
+<body data-v="products">
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ======== Icon sprite ======== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="lg" x1="8" y1="0" x2="56" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3A93FF"/><stop offset="1" stop-color="#0A3CD0"/></linearGradient>
+    <symbol id="mark" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="15" fill="url(#lg)"/>
+      <g fill="none" stroke="#fff" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"><path d="M31 22.4A13.4 13.4 0 1 0 31 41.6"/><path d="M41 21.5V43M41 21.5h5.4a5.6 5.6 0 0 1 0 11.2H41M47.2 32.7 53 43"/></g>
+      <g fill="none" stroke="#8FE6FF" stroke-width="2.6" stroke-linecap="round"><path d="M44.5 11.5a7 7 0 0 1 7 7"/><path d="M44.5 6.5a12 12 0 0 1 12 12"/></g>
+    </symbol>
+    <symbol id="i-voice" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-sms" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></symbol>
+    <symbol id="i-rcs" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><rect x="7" y="6.5" width="10" height="4.5" rx="1"/><path d="M7 14h6"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3 21l1.7-4.9A9 9 0 1 1 8 19.3z"/><path d="M9 8.6c.2-.5.7-.6 1-.2l.8 1.2c.2.3.1.6-.1.9l-.5.6c.7 1.2 1.7 2.1 3 2.7l.7-.6c.3-.2.6-.2.9 0l1.3.8c.4.3.3.8-.1 1.2-.9.9-2.3 1-3.5.4-2.4-1-4.2-2.8-5-5.2-.2-.8 0-1.4.5-1.8z"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M7 16v-5M12 16V6M17 16v-8"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 6h8M18 6h2M4 12h2M12 12h8M4 18h10M20 18h0"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.4 8 8 9 4.6-1 8-4 8-9V6z"/><path d="m9 12 2.2 2.2L15 10"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M4 20 20 4M4 20h6M4 20v-6M14 4h6v6"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3 2 20h20z"/><path d="M12 10v5M12 18h.01"/></symbol>
+    <symbol id="i-hook" viewBox="0 0 24 24"><path d="M5 12a7 7 0 0 1 14 0"/><circle cx="5" cy="14" r="2"/><circle cx="19" cy="14" r="2"/><circle cx="12" cy="19" r="2"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 6h6a3 3 0 0 1 0 6h-4a3 3 0 0 0 0 6h6"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m21 16-5-5-8 8"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14-4L4 9M4 4v5h5M4 13a8 8 0 0 0 14 4l2-2M20 20v-5h-5"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M16 7l3 3"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-web" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></symbol>
+    <symbol id="i-ads" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15 9a4 4 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11"/></symbol>
+    <symbol id="i-obd" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M16 3h5v5M21 3l-6 6"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.2l-5.5 3 1-6.2L3 9.6l6.2-.9z"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  </defs>
+</svg>
+
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="CR Telecom home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mark"/></svg>
+      <span>CR<small>TELECOM</small></span>
+    </a>
+    <nav class="vsw" aria-label="Business verticals">
+      <a class="vs vp" href="index.html" aria-current="page"><i></i>Products</a>
+      <a class="vs vm" href="digital-marketing.html"><i></i><span class="lg">Digital Marketing</span><span class="sh">Marketing</span></a>
+    </nav>
+    <ul class="nav" id="nav">
+      <li>
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Products <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <div class="panel">
+          <a class="pi" href="#channels" data-open-ch="voice"><span class="b" style="background:var(--voice)"><svg class="ic"><use href="#i-voice"/></svg></span><span><b>Voice</b><span>IVR, click-to-call and outbound campaigns</span></span></a>
+          <a class="pi" href="#channels" data-open-ch="sms"><span class="b" style="background:var(--sms)"><svg class="ic"><use href="#i-sms"/></svg></span><span><b>SMS</b><span>DLT-ready transactional and promotional SMS</span></span></a>
+          <a class="pi" href="#channels" data-open-ch="rcs"><span class="b" style="background:var(--rcs)"><svg class="ic"><use href="#i-rcs"/></svg></span><span><b>RCS</b><span>Verified, rich and interactive messages</span></span></a>
+          <a class="pi" href="#channels" data-open-ch="wa"><span class="b" style="background:var(--wa)"><svg class="ic"><use href="#i-wa"/></svg></span><span><b>WhatsApp</b><span>Business Platform templates and chat</span></span></a>
+          <a class="pi" href="#orchestration"><span class="b n"><svg class="ic"><use href="#i-route"/></svg></span><span><b>Smart fallback</b><span>One send, the best channel wins</span></span></a>
+          <a class="pi" href="#developers"><span class="b n"><svg class="ic"><use href="#i-code"/></svg></span><span><b>APIs and webhooks</b><span>One integration for all four channels</span></span></a>
+        </div>
+      </li><li>
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Solutions <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <div class="panel">
+          <a class="pi" href="#solutions" data-open-sol="bfsi"><span class="b n"><svg class="ic"><use href="#i-shield"/></svg></span><span><b>Banking and finance</b><span>OTPs, alerts, EMI and KYC</span></span></a>
+          <a class="pi" href="#solutions" data-open-sol="ecom"><span class="b n"><svg class="ic"><use href="#i-card"/></svg></span><span><b>E-commerce and retail</b><span>Orders, carts and COD checks</span></span></a>
+          <a class="pi" href="#solutions" data-open-sol="logi"><span class="b n"><svg class="ic"><use href="#i-route"/></svg></span><span><b>Logistics</b><span>Pickup, delivery and NDR</span></span></a>
+          <a class="pi" href="#solutions" data-open-sol="health"><span class="b n"><svg class="ic"><use href="#i-target"/></svg></span><span><b>Healthcare</b><span>Appointments and reports</span></span></a>
+          <a class="pi" href="#solutions" data-open-sol="edu"><span class="b n"><svg class="ic"><use href="#i-bolt"/></svg></span><span><b>Education</b><span>Admissions, fees and results</span></span></a>
+          <a class="pi" href="#solutions" data-open-sol="travel"><span class="b n"><svg class="ic"><use href="#i-scale"/></svg></span><span><b>Travel and hospitality</b><span>Bookings, delays and feedback</span></span></a>
+        </div>
+      </li><li>
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Developers <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <div class="panel one">
+          <a class="pi" href="#developers"><span class="b n"><svg class="ic"><use href="#i-code"/></svg></span><span><b>API quickstart</b><span>Send your first message</span></span></a>
+          <a class="pi" href="#developers"><span class="b n"><svg class="ic"><use href="#i-hook"/></svg></span><span><b>Webhooks and receipts</b><span>Delivery events in real time</span></span></a>
+          <a class="pi" href="#compliance"><span class="b n"><svg class="ic"><use href="#i-shield"/></svg></span><span><b>India compliance checklist</b><span>DLT, WABA, RCS and number series</span></span></a>
+        </div>
+      </li><li>
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <div class="panel one">
+          <a class="pi" href="#compliance"><span class="b n"><svg class="ic"><use href="#i-shield"/></svg></span><span><b>Readiness checker</b><span>What to register before you send</span></span></a>
+          <a class="pi" href="#faq"><span class="b n"><svg class="ic"><use href="#i-sms"/></svg></span><span><b>Questions and answers</b><span>DLT, templates, number series</span></span></a>
+          <button class="pi" data-modal="contact"><span class="b n"><svg class="ic"><use href="#i-voice"/></svg></span><span><b>Talk to an expert</b><span>Get help choosing channels</span></span></button>
+        </div>
+      </li><li><a class="nav-link" href="#pricing">Pricing</a></li>
+    </ul>
+    <div class="hdr-actions">
+      <button class="login" data-modal="login">Login</button>
+      <button class="btn btn-primary btn-sm" data-modal="contact">Get started <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<nav class="mnav" id="mnav" aria-label="Mobile">
+  <div class="mvsw"><a class="vs vp" href="index.html" aria-current="page"><i></i>Products</a><a class="vs vm" href="digital-marketing.html"><i></i><span class="lg">Digital Marketing</span><span class="sh">Marketing</span></a></div>
+  <details><summary>Products <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><div class="sub">
+    <a href="#channels" data-open-ch="voice">Voice</a><a href="#channels" data-open-ch="sms">SMS</a><a href="#channels" data-open-ch="rcs">RCS</a><a href="#channels" data-open-ch="wa">WhatsApp</a><a href="#orchestration">Smart fallback</a></div></details>
+  <details><summary>Solutions <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><div class="sub">
+    <a href="#solutions" data-open-sol="bfsi">Banking and finance</a><a href="#solutions" data-open-sol="ecom">E-commerce and retail</a><a href="#solutions" data-open-sol="logi">Logistics</a><a href="#solutions" data-open-sol="health">Healthcare</a><a href="#solutions" data-open-sol="edu">Education</a><a href="#solutions" data-open-sol="travel">Travel and hospitality</a></div></details>
+  <details><summary>Developers <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><div class="sub">
+    <a href="#developers">API quickstart</a><a href="#compliance">India compliance checklist</a></div></details>
+  <details><summary>Resources <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><div class="sub">
+    <a href="#compliance">Readiness checker</a><a href="#faq">Questions and answers</a></div></details>
+  <a href="#pricing">Pricing</a>
+  <div class="ctas"><button class="btn btn-ghost" data-modal="login">Login</button><button class="btn btn-primary" data-modal="contact">Get started</button></div>
+</nav>
+
+<main id="main">
+<!-- ======== Hero ======== -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="pill"><i></i>Business communications for India</p>
+      <h1>Powering Your <span>Business Conversations</span></h1>
+      <p class="lead">Reliable, scalable and easy-to-integrate communication solutions for modern businesses. Connect with your customers across Voice, SMS, RCS and WhatsApp, all in one place.</p>
+      <ul class="ticks">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Fast onboarding</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Developer friendly</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>24/7 support</li>
+      </ul>
+      <div class="hero-cta">
+        <button class="btn btn-primary" data-modal="contact">Get started for free <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <a class="btn btn-ghost" href="#pricing">View plans</a>
+      </div>
+    </div>
+
+    <div class="stage" id="stage">
+      <svg class="orbit" viewBox="0 0 700 520" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M70 42C190 6 330 0 380 20S560 6 640 44"/><path d="M62 92C6 200 8 340 70 462"/><path d="M130 496C300 536 520 520 660 380"/>
+      </svg>
+      <div class="chips-m cchips" id="mChips" role="group" aria-label="Choose a channel to preview">
+        <button class="plain" data-ch="all" aria-pressed="true">All</button>
+        <button class="voice" data-ch="voice" aria-pressed="false"><svg class="ic"><use href="#i-voice"/></svg>Voice</button>
+        <button class="sms" data-ch="sms" aria-pressed="false"><svg class="ic"><use href="#i-sms"/></svg>SMS</button>
+        <button class="rcs" data-ch="rcs" aria-pressed="false"><svg class="ic"><use href="#i-rcs"/></svg>RCS</button>
+        <button class="wa" data-ch="whatsapp" aria-pressed="false"><svg class="ic"><use href="#i-wa"/></svg>WhatsApp</button>
+      </div>
+      <button class="bub wa" data-ch="whatsapp" aria-pressed="false" aria-label="Preview WhatsApp"><span><svg class="ic"><use href="#i-wa"/></svg><small>WhatsApp</small></span></button>
+      <button class="bub rcs" data-ch="rcs" aria-pressed="false" aria-label="Preview RCS"><span><svg class="ic"><use href="#i-rcs"/></svg><small>RCS</small></span></button>
+      <button class="bub sms" data-ch="sms" aria-pressed="false" aria-label="Preview SMS"><span><svg class="ic"><use href="#i-sms"/></svg><small>SMS</small></span></button>
+      <button class="bub voice" data-ch="voice" aria-pressed="false" aria-label="Preview Voice"><span><svg class="ic"><use href="#i-voice"/></svg><small>Voice</small></span></button>
+
+      <div class="console" role="group" aria-label="Sample console">
+        <div class="side" id="side">
+          <div class="mini"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mark"/></svg>CR TELECOM</div>
+          <button data-ch="all" aria-current="true"><svg class="ic"><use href="#i-home"/></svg>Dashboard</button>
+          <button data-ch="voice"><svg class="ic"><use href="#i-voice"/></svg>Voice</button>
+          <button data-ch="sms"><svg class="ic"><use href="#i-sms"/></svg>SMS</button>
+          <button data-ch="rcs"><svg class="ic"><use href="#i-rcs"/></svg>RCS</button>
+          <button data-ch="whatsapp"><svg class="ic"><use href="#i-wa"/></svg>WhatsApp</button>
+          <span class="sp"></span>
+          <button class="dim" data-soon title="Not part of this preview"><svg class="ic"><use href="#i-chart"/></svg>Reports</button>
+          <button class="dim" data-soon title="Not part of this preview"><svg class="ic"><use href="#i-card"/></svg>Billing</button>
+          <button class="dim" data-soon title="Not part of this preview"><svg class="ic"><use href="#i-sliders"/></svg>Settings</button>
+        </div>
+        <div class="mainp">
+          <div class="mh"><h2 id="cTitle">Dashboard</h2><div class="tag"><em>Sample data</em>
+            <div class="rng" id="rng">
+              <button type="button" id="rngBtn" aria-haspopup="listbox" aria-expanded="false" aria-controls="rngMenu" aria-label="Date range"><span id="rngLbl">Last 7 days</span><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+              <ul id="rngMenu" role="listbox" aria-label="Date range" hidden></ul>
+            </div>
+          </div></div>
+          <div class="kpis" id="kpis"></div>
+          <div class="chart-card" id="chartCard">
+            <header><h3>Communication volume</h3>
+              <div class="legend"><span><i style="background:var(--voice)"></i>Voice</span><span><i style="background:var(--sms)"></i>SMS</span><span><i style="background:var(--rcs)"></i>RCS</span><span><i style="background:var(--wa)"></i>WhatsApp</span></div>
+            </header>
+            <svg id="chart" viewBox="0 0 380 128" role="img" aria-label="Line chart of sample communication volume across the last seven days"></svg>
+            <div class="tip" id="tip"></div>
+          </div>
+          <ul class="feed" id="feed" aria-label="Live activity sample"></ul>
+        </div>
+      </div>
+
+      <div class="phone" aria-label="Customer phone preview">
+        <div class="scr" id="pScr"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Channel strip ======== -->
+<section class="strip" aria-label="Channels">
+  <div class="wrap">
+    <div class="strip-grid">
+      <a class="chan voice" href="#channels" data-open-ch="voice"><span class="b" style="background:var(--voice)"><svg class="ic"><use href="#i-voice"/></svg></span><span class="txt"><h3>Voice</h3><p>Crystal clear calls, IVR and click-to-call with call logs and recordings.</p><span class="more">Learn more<i><svg class="ic"><use href="#i-arrow"/></svg></i></span></span></a>
+      <a class="chan sms" href="#channels" data-open-ch="sms"><span class="b" style="background:var(--sms)"><svg class="ic"><use href="#i-sms"/></svg></span><span class="txt"><h3>SMS</h3><p>Fast, reliable and DLT-compliant messaging at scale.</p><span class="more">Learn more<i><svg class="ic"><use href="#i-arrow"/></svg></i></span></span></a>
+      <a class="chan rcs" href="#channels" data-open-ch="rcs"><span class="b" style="background:var(--rcs)"><svg class="ic"><use href="#i-rcs"/></svg></span><span class="txt"><h3>RCS</h3><p>Rich, interactive messages from a verified sender.</p><span class="more">Learn more<i><svg class="ic"><use href="#i-arrow"/></svg></i></span></span></a>
+      <a class="chan wa" href="#channels" data-open-ch="wa"><span class="b" style="background:var(--wa)"><svg class="ic"><use href="#i-wa"/></svg></span><span class="txt"><h3>WhatsApp</h3><p>Build stronger relationships with the WhatsApp Business Platform.</p><span class="more">Learn more<i><svg class="ic"><use href="#i-arrow"/></svg></i></span></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Pillars ======== -->
+<section class="pillars" aria-labelledby="pl-h">
+  <div class="wrap pillars-grid">
+    <h2 id="pl-h">Communication that scales with your growth</h2>
+    <div class="three">
+      <div class="pl"><span class="b"><svg class="ic"><use href="#i-target"/></svg></span><div><h3>Built to be delivered</h3><p>Compliance checks before you send, delivery receipts after, and fallback when a channel fails.</p></div></div>
+      <div class="pl"><span class="b"><svg class="ic"><use href="#i-scale"/></svg></span><div><h3>Flexible and scalable</h3><p>Start with one use case. Add channels and volume without changing your integration.</p></div></div>
+      <div class="pl"><span class="b"><svg class="ic"><use href="#i-shield"/></svg></span><div><h3>Secure and compliant</h3><p>Aligned to TRAI, DLT and Meta rules, with role-based access and audit trails.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Channels ======== -->
+<section class="sec" id="channels" aria-labelledby="ch-h">
+  <div class="wrap">
+    <div class="sec-h"><h2 id="ch-h">Four channels. Try each one.</h2><p>Every demo below works. Press keys on the IVR, edit an SMS, build an RCS card or switch a WhatsApp template category.</p></div>
+    <div class="tabs" role="tablist" aria-label="Channels" id="chTabs">
+      <button class="tab" role="tab" id="t-voice" aria-controls="p-voice" aria-selected="true" data-ch="voice"><span class="d" style="background:var(--voice)"><svg class="ic"><use href="#i-voice"/></svg></span>Voice</button>
+      <button class="tab" role="tab" id="t-sms" aria-controls="p-sms" aria-selected="false" tabindex="-1" data-ch="sms"><span class="d" style="background:var(--sms)"><svg class="ic"><use href="#i-sms"/></svg></span>SMS</button>
+      <button class="tab" role="tab" id="t-rcs" aria-controls="p-rcs" aria-selected="false" tabindex="-1" data-ch="rcs"><span class="d" style="background:var(--rcs)"><svg class="ic"><use href="#i-rcs"/></svg></span>RCS</button>
+      <button class="tab" role="tab" id="t-wa" aria-controls="p-wa" aria-selected="false" tabindex="-1" data-ch="wa"><span class="d" style="background:var(--wa)"><svg class="ic"><use href="#i-wa"/></svg></span>WhatsApp</button>
+    </div>
+
+    <!-- Voice -->
+    <div class="cpanel voice" role="tabpanel" id="p-voice" aria-labelledby="t-voice">
+      <div>
+        <h3>Voice that connects, routes and automates.</h3>
+        <p class="intro">Inbound numbers, IVR, click-to-call and outbound campaigns on one platform, with call recordings and live reports.</p>
+        <ul class="checks">
+          <li><svg class="ic"><use href="#i-check"/></svg>Cloud IVR with drag-and-drop call flows in English, Hindi and regional languages</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Click-to-call and number masking for sales, delivery and support teams</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Outbound voice broadcast and voice OTP with consent-aware campaigns</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Call logs and recordings you can export or push to your CRM</li>
+        </ul>
+        <div class="uc"><span>Support IVR</span><span>Lead callbacks</span><span>Collections reminders</span><span>Voice OTP</span><span>Delivery calls</span></div>
+        <div class="note"><b>India number series</b>Promotional calls must come from 140-series numbers. Service and transactional calls are moving to the 1600 series for banks, insurers and other regulated entities. We map your use case to the right series before launch.</div>
+      </div>
+      <div class="widget" id="w-voice"></div>
+    </div>
+
+    <!-- SMS -->
+    <div class="cpanel sms" role="tabpanel" id="p-sms" aria-labelledby="t-sms" hidden>
+      <div>
+        <h3>SMS that arrives first and stays compliant.</h3>
+        <p class="intro">Transactional, service and promotional SMS over your own approved headers and templates, with a delivery receipt for every message.</p>
+        <ul class="checks">
+          <li><svg class="ic"><use href="#i-check"/></svg>DLT-ready onboarding: entity, headers and templates handled alongside you</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Two-way and short-link SMS, with whitelisted URLs and click tracking</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Delivery reports and webhooks for every message</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Unicode and regional-language support with a live segment counter</li>
+        </ul>
+        <div class="uc"><span>OTP</span><span>Payment alerts</span><span>Order updates</span><span>Reminders</span><span>Promotions</span></div>
+        <div class="note"><b>Why messages get blocked</b>Every commercial SMS in India must match a registered sender header and message template on a TRAI-approved DLT platform. A message that doesn't match is stopped before it reaches the handset.</div>
+      </div>
+      <div class="widget" id="w-sms"></div>
+    </div>
+
+    <!-- RCS -->
+    <div class="cpanel rcs" role="tabpanel" id="p-rcs" aria-labelledby="t-rcs" hidden>
+      <div>
+        <h3>RCS gives SMS a brand, a face and buttons.</h3>
+        <p class="intro">A verified sender, rich cards, carousels and quick replies inside the default messaging app on supported phones, with SMS fallback built in.</p>
+        <ul class="checks">
+          <li><svg class="ic"><use href="#i-check"/></svg>Verified business profile with your name, logo and brand colour</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Rich cards, carousels, suggested replies and one-tap actions</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Read receipts and click reporting on every campaign</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Automatic SMS fallback when a device can't receive RCS</li>
+        </ul>
+        <div class="uc"><span>Order tracking</span><span>Product carousels</span><span>Appointment cards</span><span>Offers</span><span>Support</span></div>
+        <div class="note"><b>Set expectations early</b>RCS reach depends on the device, app and network. Brand verification and carrier launch approvals can take several weeks, so we start them first and keep SMS as the safety net.</div>
+      </div>
+      <div class="widget" id="w-rcs"></div>
+    </div>
+
+    <!-- WhatsApp -->
+    <div class="cpanel wa" role="tabpanel" id="p-wa" aria-labelledby="t-wa" hidden>
+      <div>
+        <h3>WhatsApp, where your customers already are.</h3>
+        <p class="intro">Official WhatsApp Business Platform access for templates, two-way chat, buttons and automation, with a shared inbox for your team.</p>
+        <ul class="checks">
+          <li><svg class="ic"><use href="#i-check"/></svg>Business verification and number onboarding support</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Template creation with approval status tracked in one place</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Buttons, lists and flows that turn replies into actions</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Chatbot with live-agent handoff and a shared team inbox</li>
+        </ul>
+        <div class="uc"><span>Order updates</span><span>OTP</span><span>Reminders</span><span>Support</span><span>Re-engagement</span></div>
+        <div class="note"><b>How WhatsApp is billed</b>Meta charges per delivered message by category (marketing, utility, authentication and service) and approves every template. Customers must opt in before you message them.</div>
+      </div>
+      <div class="widget" id="w-wa"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Orchestration ======== -->
+<section class="sec alt" id="orchestration" aria-labelledby="or-h">
+  <div class="wrap">
+    <div class="sec-h"><h2 id="or-h">Send once. Reach them somewhere.</h2><p>Customers aren't all on the same channel. Set a priority order once and the next channel takes over when one can't deliver. Reorder the chain, mark a channel unreachable and watch what happens.</p></div>
+    <div class="orch">
+      <div>
+        <ol class="hops" id="hops" aria-label="Channel priority order" style="list-style:none;padding:0"></ol>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn btn-primary" id="orchGo"><svg class="ic" aria-hidden="true"><use href="#i-send"/></svg>Send test message</button>
+          <button class="btn btn-ghost" id="orchReset"><svg class="ic" aria-hidden="true"><use href="#i-refresh"/></svg>Reset</button>
+        </div>
+        <p class="verdict" id="orchVerdict" aria-live="polite">Simulation only. Real timing depends on each channel and operator.</p>
+      </div>
+      <div class="console-log" id="orchLog" aria-live="polite"><div class="top"><i></i><i></i><i></i></div><p class="t">Waiting for a message...</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Solutions ======== -->
+<section class="sec" id="solutions" aria-labelledby="so-h">
+  <div class="wrap">
+    <div class="sec-h"><h2 id="so-h">Built around how your customers move.</h2><p>Pick an industry to see a typical customer journey and which channel does each job best.</p></div>
+    <div class="sol">
+      <div class="sol-list" role="tablist" aria-label="Industries" id="solTabs"></div>
+      <div class="sol-panel" id="solPanel" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Developers ======== -->
+<section class="sec dev" id="developers" aria-labelledby="dv-h">
+  <div class="wrap dev-grid">
+    <div>
+      <div class="sec-h" style="margin-bottom:34px"><h2 id="dv-h">One integration. Four channels.</h2><p>The same authentication, request shape, webhooks and delivery receipts whether you send a call, a text or a WhatsApp template.</p></div>
+      <ul class="feat">
+        <li><span class="b"><svg class="ic"><use href="#i-box"/></svg></span><div><b>Sandbox first</b><span>Test flows and templates without sending real messages.</span></div></li>
+        <li><span class="b"><svg class="ic"><use href="#i-hook"/></svg></span><div><b>Unified webhooks</b><span>Sent, delivered, read, failed and replied events in one format.</span></div></li>
+        <li><span class="b"><svg class="ic"><use href="#i-route"/></svg></span><div><b>Fallback in the request</b><span>Describe the backup channel in the same call. No extra code.</span></div></li>
+        <li><span class="b"><svg class="ic"><use href="#i-key"/></svg></span><div><b>Keys and roles</b><span>Separate keys per environment, with role-based access for your team.</span></div></li>
+      </ul>
+    </div>
+    <div class="code" id="codeBox">
+      <div class="code-bar">
+        <div class="ch" role="group" aria-label="Channel" id="codeCh">
+          <button data-c="sms" aria-pressed="true">SMS</button><button data-c="wa" aria-pressed="false">WhatsApp</button><button data-c="rcs" aria-pressed="false">RCS</button><button data-c="voice" aria-pressed="false">Voice</button>
+        </div>
+        <div class="lg" role="group" aria-label="Language" id="codeLg">
+          <button data-l="curl" aria-pressed="true">cURL</button><button data-l="node" aria-pressed="false">Node</button><button data-l="py" aria-pressed="false">Python</button>
+        </div>
+      </div>
+      <pre class="src" id="codeSrc" tabindex="0" aria-label="Sample request"></pre>
+      <div class="code-foot"><small>Illustrative request. Final endpoints and field names will follow the API reference.</small><button class="btn btn-sm btn-primary" id="runCode"><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg>Run in sandbox</button></div>
+      <div class="resp" id="codeResp" aria-live="polite"><span class="ph">// Response appears here</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Compliance ======== -->
+<section class="sec" id="compliance" aria-labelledby="cm-h">
+  <div class="wrap">
+    <div class="sec-h"><h2 id="cm-h">Launch compliant, not just fast.</h2><p>India's rules differ by channel. Tell us what you plan to send and see what to register, who does it and what to expect.</p></div>
+    <div class="cmp">
+      <div class="ctl">
+        <h3>Your plan</h3><p>Choose what applies. The checklist updates as you go.</p>
+        <div class="grp"><b>Channels</b><div class="cchips" id="cmCh" role="group" aria-label="Channels">
+          <button class="sms" data-v="sms" aria-pressed="true"><svg class="ic"><use href="#i-sms"/></svg>SMS</button>
+          <button class="voice" data-v="voice" aria-pressed="false"><svg class="ic"><use href="#i-voice"/></svg>Voice</button>
+          <button class="wa" data-v="wa" aria-pressed="true"><svg class="ic"><use href="#i-wa"/></svg>WhatsApp</button>
+          <button class="rcs" data-v="rcs" aria-pressed="false"><svg class="ic"><use href="#i-rcs"/></svg>RCS</button>
+        </div></div>
+        <div class="grp"><b>What will you send?</b><div class="cchips" id="cmType" role="group" aria-label="Message type">
+          <button class="plain" data-v="svc" aria-pressed="true">OTPs and alerts</button>
+          <button class="plain" data-v="promo" aria-pressed="false">Promotions</button>
+          <button class="plain" data-v="both" aria-pressed="false">Both</button>
+        </div></div>
+        <div class="grp"><b>Are you a bank, insurer or other regulated financial entity?</b><div class="cchips" id="cmFin" role="group" aria-label="Regulated entity">
+          <button class="plain" data-v="no" aria-pressed="true">No</button>
+          <button class="plain" data-v="yes" aria-pressed="false">Yes</button>
+        </div></div>
+        <div class="prog" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="cmProg"><i></i></div>
+        <div class="prog-l"><span id="cmCount">0 of 0 done</span><span>Tick items as you complete them</span></div>
+      </div>
+      <div class="cres" id="cmRes" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Pricing ======== -->
+<section class="sec alt" id="pricing" aria-labelledby="pr-h">
+  <div class="wrap">
+    <div class="sec-h"><h2 id="pr-h">Pricing that follows your traffic.</h2><p>Rates depend on channel, volume, route and use case, so we quote against what you actually send. No rate card to decode.</p></div>
+    <div class="models">
+      <article class="model"><h3>Start</h3><p>For teams validating a first use case.</p>
+        <ul><li><svg class="ic"><use href="#i-check"/></svg>Console and sandbox access</li><li><svg class="ic"><use href="#i-check"/></svg>Prepaid balance, pay as you use</li><li><svg class="ic"><use href="#i-check"/></svg>Guided DLT and WhatsApp setup</li></ul>
+        <button class="btn btn-ghost" data-modal="contact" data-ctx="Start plan">Get a quote</button></article>
+      <article class="model hot"><span class="tagx">Most teams land here</span><h3>Grow</h3><p>For products with steady, growing volume.</p>
+        <ul><li><svg class="ic"><use href="#i-check"/></svg>Volume-based rates across channels</li><li><svg class="ic"><use href="#i-check"/></svg>Fallback routing and advanced reports</li><li><svg class="ic"><use href="#i-check"/></svg>Onboarding for DLT, WhatsApp and RCS in parallel</li><li><svg class="ic"><use href="#i-check"/></svg>Named contact and priority support</li></ul>
+        <button class="btn btn-light" data-modal="contact" data-ctx="Grow plan">Talk to sales</button></article>
+      <article class="model"><h3>Scale</h3><p>For high-throughput or regulated traffic.</p>
+        <ul><li><svg class="ic"><use href="#i-check"/></svg>Custom throughput and routes</li><li><svg class="ic"><use href="#i-check"/></svg>1600-series and BFSI use-case support</li><li><svg class="ic"><use href="#i-check"/></svg>Security review and service levels</li></ul>
+        <button class="btn btn-ghost" data-modal="contact" data-ctx="Scale plan">Plan a rollout</button></article>
+    </div>
+
+    <div class="est" id="est">
+      <div class="in">
+        <h3>Estimate your WhatsApp fees</h3>
+        <p>Move the sliders to see what Meta charges for your monthly mix. Platform fees are quoted separately.</p>
+        <div class="rg mk"><div class="rl"><label for="r-mk">Marketing messages</label><output id="o-mk" for="r-mk"></output></div><input id="r-mk" type="range" min="0" max="200000" step="1000" value="20000"></div>
+        <div class="rg ut"><div class="rl"><label for="r-ut">Utility messages</label><output id="o-ut" for="r-ut"></output></div><input id="r-ut" type="range" min="0" max="200000" step="1000" value="30000"></div>
+        <div class="rg au"><div class="rl"><label for="r-au">Authentication (OTP) messages</label><output id="o-au" for="r-au"></output></div><input id="r-au" type="range" min="0" max="200000" step="1000" value="10000"></div>
+        <div class="rg sv"><div class="rl"><label for="r-sv">Service replies (customer-started chats)</label><output id="o-sv" for="r-sv"></output></div><input id="r-sv" type="range" min="0" max="50000" step="500" value="5000"></div>
+      </div>
+      <div class="out">
+        <small>Estimated Meta fees per month</small>
+        <div class="big" id="e-total">₹0</div>
+        <label style="display:flex;gap:8px;align-items:center;font-size:13.5px;color:var(--ink-2);cursor:pointer"><input type="checkbox" id="e-gst" style="accent-color:var(--blue);width:16px;height:16px"> Include 18% GST</label>
+        <div class="brk" id="e-brk"></div>
+        <p class="fine">Based on Meta's published India list rates: ₹0.8631 per marketing message, ₹0.115 per utility, authentication and service message. The first 1,000 service messages per number each month are free from 1 October 2026. Rates change, so confirm on Meta's current rate card. Platform and channel fees are not included.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FAQ ======== -->
+<section class="sec" id="faq" aria-labelledby="fq-h">
+  <div class="wrap faq-grid">
+    <div class="sec-h" style="margin:0"><h2 id="fq-h">Questions we hear first.</h2><p>Plain answers on the rules that trip up most first launches.</p><button class="btn btn-primary" style="margin-top:26px" data-modal="contact">Ask us something else</button></div>
+    <div class="faq">
+      <details open><summary>What is DLT and do I need it? <svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="ans"><p>DLT is the TRAI-mandated registry for commercial SMS in India. You register your business (entity), your sender headers and every message template on an operator-run DLT portal. Messages that don't match a registered header and template are blocked.</p><p>If you plan to send SMS, it's the first thing to start because approvals take time.</p></div></details>
+      <details><summary>Do WhatsApp and RCS need DLT? <svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="ans"><p>WhatsApp messages follow Meta's rules: a verified business, an approved template for business-initiated messages and customer opt-in. RCS follows Google and carrier verification. Regulators and operators are still aligning on traceability for RCS, so we check current requirements with you before launch.</p></div></details>
+      <details><summary>SMS, RCS or WhatsApp: which should I use? <svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="ans"><p>Use SMS for anything that must reach every phone, like OTPs. Use WhatsApp where customers already chat and you want two-way conversations. Use RCS for rich, branded messages on supported Android devices. Most teams combine them and let fallback handle the rest.</p></div></details>
+      <details><summary>What are 140, 1600 and 1800 numbers? <svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="ans"><p>The 140 series is for promotional and telemarketing calls. The 1600 series is for service and transactional calls, and TRAI has directed banks, insurers and similar regulated entities to move those calls onto it. 1800 numbers are toll-free numbers for inbound calls. We help match your use case to the right series.</p></div></details>
+      <details><summary>How long does onboarding take? <svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="ans"><p>It depends on the channel. SMS registrations and template approvals typically take days. WhatsApp verification and template approval can take days to a couple of weeks. RCS brand and carrier approvals can take several weeks. We run them in parallel so the slowest channel doesn't hold the others back.</p></div></details>
+      <details><summary>Can I use my own sender name and WhatsApp number? <svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="ans"><p>Yes. Sender headers are registered under your business on DLT, and your WhatsApp number is verified under your own Meta business account. A number that is already active on the WhatsApp app needs to be moved to the Business Platform first, and we'll walk you through that.</p></div></details>
+      <details><summary>What happens when a message can't be delivered? <svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="ans"><p>You get a failed event with a reason through your webhook. If you've set a fallback order, such as WhatsApp then RCS then SMS, the next channel is tried automatically.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Bridge to Digital Marketing ======== -->
+<section class="bridge" aria-labelledby="br-h">
+  <div class="wrap"><div class="bridge-box">
+    <div class="bridge-txt">
+      <p class="bridge-tag"><i></i>New vertical</p>
+      <h2 id="br-h">Need more people to message?</h2>
+      <p>Our Digital Marketing team builds the websites, search presence and campaigns that fill your pipeline, including OBD and IVR voice campaigns. The platform you just explored follows up on every lead.</p>
+      <div class="bridge-chips"><a href="digital-marketing.html#seo"><svg class="ic"><use href="#i-search"/></svg>SEO</a><a href="digital-marketing.html#web"><svg class="ic"><use href="#i-web"/></svg>Website building</a><a href="digital-marketing.html#ads"><svg class="ic"><use href="#i-ads"/></svg>Ads and social</a><a href="digital-marketing.html#obd"><svg class="ic"><use href="#i-obd"/></svg>OBD and IVR</a></div>
+      <a class="btn btn-primary" href="digital-marketing.html">Explore Digital Marketing <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="bridge-vis" aria-hidden="true">
+      <div class="bv-node" style="--c:var(--ads)"><span><svg class="ic"><use href="#i-ads"/></svg></span><b>Found</b><small>SEO and ads</small></div>
+      <div class="bv-link"></div>
+      <div class="bv-node" style="--c:var(--web)"><span><svg class="ic"><use href="#i-web"/></svg></span><b>Converted</b><small>Website and forms</small></div>
+      <div class="bv-link"></div>
+      <div class="bv-node" style="--c:var(--wa)"><span><svg class="ic"><use href="#i-wa"/></svg></span><b>Followed up</b><small>WhatsApp, SMS, voice</small></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ======== CTA ======== -->
+<section class="cta" aria-labelledby="ct-h">
+  <div class="wrap"><div class="cta-box">
+    <div><h2 id="ct-h">Ready to talk to your customers where they are?</h2><p>Tell us what you want to send. We'll map the channels, the registrations and a realistic launch plan.</p></div>
+    <div class="acts"><button class="btn btn-light" data-modal="contact">Get started for free <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button><a class="btn btn-outline-light" href="#compliance">Check readiness</a></div>
+  </div></div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div><a class="logo" href="#top"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mark"/></svg><span>CR<small>TELECOM</small></span></a><p>Business communications and digital marketing for businesses in India.</p></div>
+      <div><h4>Products</h4><ul><li><a href="#voice">Voice</a></li><li><a href="#sms">SMS</a></li><li><a href="#rcs">RCS</a></li><li><a href="#wa">WhatsApp</a></li><li><a href="#orchestration">Smart fallback</a></li></ul></div>
+      <div><h4>Digital Marketing</h4><ul><li><a href="digital-marketing.html#seo">SEO</a></li><li><a href="digital-marketing.html#web">Website building</a></li><li><a href="digital-marketing.html#ads">Ads and social</a></li><li><a href="digital-marketing.html#obd">OBD and IVR</a></li><li><a href="digital-marketing.html#plans">Plan builder</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="#developers">API quickstart</a></li><li><a href="#compliance">Messaging compliance</a></li><li><a href="digital-marketing.html#rules">Campaign rules</a></li><li><a href="#faq">Products FAQs</a></li><li><a href="digital-marketing.html#faq">Marketing FAQs</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><button class="lk" data-modal="contact">Contact us</button></li><li><a href="#pricing">Products pricing</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of service</a></li></ul></div>
+    </div>
+    <div class="ftr-bot"><span>© 2026 CR Telecom. All rights reserved.</span><span>WhatsApp is a trademark of Meta Platforms, Inc. RCS is delivered via carrier and Google networks.</span></div>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlgTitle" data-title="Let's plan your launch." data-sub="Share a few details and we'll come back with the channels, registrations and timeline that fit." data-subject="CR Telecom enquiry from" data-vol-label="Expected monthly volume">
+  <div class="dlg-in">
+    <button class="dlg-x" id="dlgX" aria-label="Close dialog"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+    <div id="dlgForm">
+      <h2 id="dlgTitle">Let's plan your launch.</h2>
+      <p id="dlgSub">Share a few details and we'll come back with the channels, registrations and timeline that fit.</p>
+      <form id="leadForm" novalidate>
+        <div class="frow">
+          <div class="fld"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required><span class="err">Enter your name.</span></div>
+          <div class="fld"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err">Enter a valid work email.</span></div>
+        </div>
+        <div class="frow">
+          <div class="fld"><label for="f-co">Company</label><input id="f-co" name="company" autocomplete="organization" required><span class="err">Enter your company name.</span></div>
+          <div class="fld"><label for="f-ph">Mobile number</label><input id="f-ph" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91" required><span class="err">Enter a valid mobile number.</span></div>
+        </div>
+        <div class="fld"><label id="f-chl">What do you want to start with?</label>
+          <div class="fchips" role="group" aria-labelledby="f-chl"><label><input type="checkbox" name="ch" value="Voice"><span>Voice</span></label><label><input type="checkbox" name="ch" value="SMS"><span>SMS</span></label><label><input type="checkbox" name="ch" value="RCS"><span>RCS</span></label><label><input type="checkbox" name="ch" value="WhatsApp"><span>WhatsApp</span></label></div></div>
+        <div class="frow">
+          <div class="fld"><label for="f-vol">Expected monthly volume</label><select id="f-vol" name="volume"><option>Not sure yet</option><option>Under 10,000</option><option>10,000 to 1 lakh</option><option>1 lakh to 10 lakh</option><option>Over 10 lakh</option></select></div>
+          <div class="fld"><label for="f-ind">Industry</label><select id="f-ind" name="industry"><option>Other</option><option>Banking and finance</option><option>E-commerce and retail</option><option>Logistics</option><option>Healthcare</option><option>Education</option><option>Travel and hospitality</option></select></div>
+        </div>
+        
+        <div class="fld"><label for="f-msg">Anything we should know?</label><textarea id="f-msg" name="message" placeholder="For example: OTPs for a lending app, about 2 lakh a month."></textarea></div>
+        <label class="consent"><input type="checkbox" id="f-consent" required><span>I agree to be contacted by CR Telecom about its services. See the <a href="privacy.html">privacy policy</a>.</span></label>
+        <div class="fld" id="consentErr" style="margin:-10px 0 14px"><span class="err">Please confirm so we can contact you.</span></div>
+        <button class="btn btn-primary" type="submit" style="width:100%">Send request <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </form>
+    </div>
+    <div id="dlgOk" class="ok-state" hidden>
+      <div class="tick"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></div>
+      <h2 style="padding:0">Request ready to send.</h2>
+      <p id="okMsg" style="color:var(--ink-3);margin:10px auto 22px;max-width:28em"></p>
+      <button class="btn btn-ghost" id="okClose">Back to the site</button>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* CR Telecom — shared core (header, menus, modal, helpers). Loaded on every page. */
+(() => {
+'use strict';
+
+/* ================= Config — edit before launch ================= */
+const CONFIG = {
+  CONTACT_EMAIL: 'hello@crtelecom.com', // lead requests open an email to this address until LEAD_ENDPOINT is set
+  LEAD_ENDPOINT: '',                    // e.g. a Formspree / Netlify / your API URL that accepts JSON POST
+  CONSOLE_URL: ''                       // e.g. 'https://console.crtelecom.com' — enables the Login button
+};
+
+/* ================= Helpers ================= */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const ic = (id, cls = '') => `<svg class="ic ${cls}" aria-hidden="true"><use href="#i-${id}"/></svg>`;
+const inr = n => Math.round(n).toLocaleString('en-IN');
+const rupee = (n, d = 0) => '₹' + n.toLocaleString('en-IN', { minimumFractionDigits: d, maximumFractionDigits: d });
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const sleep = ms => new Promise(r => setTimeout(r, reduce ? Math.min(ms, 30) : ms));
+let toastT;
+function toast(msg) {
+  const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 3200);
+}
+function countTo(el, target, fmt, dur = 800) {
+  if (reduce) { el.textContent = fmt(target); return; }
+  const t0 = performance.now();
+  const step = t => {
+    const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+    el.textContent = fmt(target * e);
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+/* chart + sample-data helpers shared by both dashboards */
+const DAY_MS = 86400000;
+const fmtDate = d => d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
+const seeded = seed => { let s = seed >>> 0; return () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296; };
+const todayStart = () => { const d = new Date(); d.setHours(0, 0, 0, 0); return d; };
+function niceScale(maxV) {
+  const pow = Math.pow(10, Math.floor(Math.log10(maxV / 4)));
+  const step = [1, 2, 2.5, 5, 10].map(m => m * pow).find(s => s * 4 >= maxV * 1.04);
+  return { step, max: step * 4 };
+}
+const short = v => v >= 1000 ? (+(v / 1000).toFixed(1)) + 'k' : String(v);
+function smooth(pts) {
+  let d = `M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
+  for (let i = 0; i < pts.length - 1; i++) {
+    const p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6], c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    d += ` C${c1[0].toFixed(1)},${c1[1].toFixed(1)} ${c2[0].toFixed(1)},${c2[1].toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
+  }
+  return d;
+}
+/* keyboard-accessible tab helper: arrows / Home / End move between tabs */
+function tabKeys(list, onPick, horizontal = true) {
+  list.forEach((t, i) => t.addEventListener('keydown', e => {
+    const next = horizontal ? 'ArrowRight' : 'ArrowDown', prev = horizontal ? 'ArrowLeft' : 'ArrowUp';
+    let n = null;
+    if (e.key === next || e.key === (horizontal ? 'ArrowDown' : 'ArrowRight')) n = (i + 1) % list.length;
+    else if (e.key === prev || e.key === (horizontal ? 'ArrowUp' : 'ArrowLeft')) n = (i - 1 + list.length) % list.length;
+    else if (e.key === 'Home') n = 0; else if (e.key === 'End') n = list.length - 1;
+    if (n !== null) { e.preventDefault(); onPick(list[n]); }
+  }));
+}
+window.CR = { CONFIG, $, $$, reduce, ic, inr, rupee, esc, sleep, toast, countTo, DAY_MS, fmtDate, seeded, todayStart, niceScale, short, smooth, tabKeys };
+
+/* ================= Header, menus ================= */
+const hdr = $('#hdr');
+const onScroll = () => hdr.classList.toggle('scrolled', scrollY > 8);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+const navItems = $$('#nav > li').filter(li => $('.panel', li));
+function closeMenus(except) {
+  navItems.forEach(li => { if (li !== except) { li.classList.remove('open'); $('.nav-link', li).setAttribute('aria-expanded', 'false'); } });
+}
+navItems.forEach(li => {
+  const btn = $('.nav-link', li);
+  const open = () => { closeMenus(li); li.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); };
+  const close = () => { li.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); };
+  const hoverable = matchMedia('(hover:hover)').matches;
+  btn.addEventListener('click', () => (li.classList.contains('open') && !hoverable) ? close() : open());
+  let ht;
+  if (hoverable) {
+    li.addEventListener('mouseenter', () => { clearTimeout(ht); open(); });
+    li.addEventListener('mouseleave', () => { ht = setTimeout(close, 140); });
+  }
+  $('.panel', li).addEventListener('click', e => { if (e.target.closest('a,button')) close(); });
+});
+document.addEventListener('click', e => { if (!e.target.closest('#nav')) closeMenus(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeMenus(); closeMobile(); } });
+
+const burger = $('#burger'), mnav = $('#mnav');
+function closeMobile() { mnav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
+burger.addEventListener('click', () => {
+  const o = mnav.classList.toggle('open');
+  burger.setAttribute('aria-expanded', o); document.body.style.overflow = o ? 'hidden' : '';
+});
+mnav.addEventListener('click', e => { if (e.target.closest('a,button.btn')) closeMobile(); });
+
+/* ================= Shared click hooks ================= */
+document.addEventListener('click', e => {
+  const m = e.target.closest('[data-modal]');
+  if (m) { e.preventDefault(); openModal(m.dataset.modal, m.dataset.ctx); }
+  const s = e.target.closest('[data-soon]');
+  if (s) toast(s.getAttribute('data-soon') || 'This preview shows the main views only. Reports, Billing and Settings are not part of it.');
+});
+
+/* ================= Modal / lead form ================= */
+const dlg = $('#dlg'), form = $('#leadForm');
+let ctx = '';
+function openModal(type, c) {
+  ctx = c || '';
+  if (type === 'login' && CONFIG.CONSOLE_URL) { location.href = CONFIG.CONSOLE_URL; return; }
+  $('#dlgForm').hidden = false; $('#dlgOk').hidden = true;
+  $('#dlgTitle').textContent = type === 'login' ? 'Request console access.' : dlg.dataset.title;
+  $('#dlgSub').textContent = type === 'login' ? 'Tell us who you are and we will set up your access.' : dlg.dataset.sub;
+  $$('.fld', form).forEach(f => f.classList.remove('bad'));
+  if (!dlg.open) dlg.showModal();
+  setTimeout(() => $('#f-name').focus(), 60);
+}
+const closeModal = () => dlg.open && dlg.close();
+$('#dlgX').addEventListener('click', closeModal); $('#okClose').addEventListener('click', closeModal);
+dlg.addEventListener('click', e => { if (e.target === dlg) closeModal(); });
+function bad(id, on) { $('#' + id).closest('.fld').classList.toggle('bad', on); return !on; }
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(form)); d.interests = $$('input[name=ch]:checked', form).map(i => i.value).join(', ') || 'Not specified';
+  let ok = true;
+  ok = bad('f-name', !d.name.trim()) && ok;
+  ok = bad('f-email', !/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(d.email)) && ok;
+  ok = bad('f-co', !d.company.trim()) && ok;
+  ok = bad('f-ph', d.phone.replace(/\D/g, '').length < 10) && ok;
+  const cons = $('#f-consent').checked; $('#consentErr').classList.toggle('bad', !cons); ok = ok && cons;
+  if (!ok) { $('.fld.bad input', form)?.focus(); return; }
+  const payload = { ...d, vertical: document.body.dataset.v, context: ctx, page: location.href, at: new Date().toISOString() };
+  $('#dlgForm').hidden = true; $('#dlgOk').hidden = false;
+  if (CONFIG.LEAD_ENDPOINT) {
+    try {
+      const r = await fetch(CONFIG.LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+      if (!r.ok) throw 0;
+      $('#dlgOk h2').textContent = 'Request received.'; $('#okMsg').textContent = `Thanks, ${d.name.split(' ')[0]}. We will reply to ${d.email} soon.`;
+    } catch { $('#dlgOk h2').textContent = 'That did not go through.'; $('#okMsg').textContent = `Please email ${CONFIG.CONTACT_EMAIL} and we will pick it up from there.`; }
+  } else {
+    const body = `Name: ${d.name}\nEmail: ${d.email}\nCompany: ${d.company}\nPhone: ${d.phone}\nInterested in: ${d.interests}\n${dlg.dataset.volLabel}: ${d.volume}\nIndustry: ${d.industry}\n${ctx ? 'Context: ' + ctx + '\n' : ''}\n${d.message || ''}`;
+    $('#dlgOk h2').textContent = 'Request ready to send.';
+    $('#okMsg').textContent = `Your email app should open with the details filled in. If it does not, write to ${CONFIG.CONTACT_EMAIL}.`;
+    location.href = `mailto:${CONFIG.CONTACT_EMAIL}?subject=${encodeURIComponent(dlg.dataset.subject + ' ' + d.company)}&body=${encodeURIComponent(body)}`;
+  }
+  form.reset();
+});
+$('#f-consent').addEventListener('change', e => $('#consentErr').classList.toggle('bad', !e.target.checked));
+})();
+
+/* CR Telecom — Products vertical (Voice, SMS, RCS, WhatsApp). */
+(() => {
+'use strict';
+const { $, $$, reduce, ic, inr, rupee, esc, sleep, toast, countTo, DAY_MS, fmtDate, seeded, todayStart, niceScale, short, smooth, tabKeys } = window.CR;
+
+/* Meta's published India list rates (INR, excl. GST). Verify against Meta's current rate card before launch. */
+const RATES = { marketing: 0.8631, utility: 0.115, authentication: 0.115, service: 0.115, freeService: 1000 };
+const key = c => (c === 'whatsapp' ? 'wa' : c);
+const CH = {
+  voice: { n: 'Voice', icon: 'voice', color: 'var(--voice)' },
+  sms: { n: 'SMS', icon: 'sms', color: 'var(--sms)' },
+  rcs: { n: 'RCS', icon: 'rcs', color: 'var(--rcs)' },
+  wa: { n: 'WhatsApp', icon: 'wa', color: 'var(--wa)' }
+};
+
+/* ================= Deep links into tabs ================= */
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-open-ch]');
+  if (a) selectTab(a.dataset.openCh);
+  const s = e.target.closest('[data-open-sol]');
+  if (s) selectSol(s.dataset.openSol);
+});
+
+/* ================= Hero console ================= */
+const TITLES = { all: 'Dashboard', voice: 'Voice', sms: 'SMS', rcs: 'RCS', wa: 'WhatsApp' };
+const FEED = {
+  voice: [['IVR · collections reminder', 'Answered'], ['Click-to-call · sales', 'Answered'], ['Voice OTP', 'Delivered'], ['Outbound · appointment', 'No answer']],
+  sms: [['OTP · login', 'Delivered'], ['Payment received', 'Delivered'], ['Delivery OTP', 'Delivered'], ['EMI due reminder', 'Delivered']],
+  rcs: [['offer_carousel', 'Read'], ['booking_card', 'Delivered'], ['delivery_tracker', 'Read']],
+  wa: [['order_shipped', 'Read'], ['appointment_reminder', 'Delivered'], ['payment_link', 'Read'], ['feedback_request', 'Delivered']]
+};
+let state = 'all', range = 7;
+const RANGES = { 7: 'Last 7 days', 30: 'Last 30 days', 60: 'Last 60 days', 90: 'Last 90 days' };
+const KEYS = ['voice', 'sms', 'rcs', 'wa'];
+
+/* ---- Sample data engine: every range is generated, KPI totals always equal the chart sums ---- */
+const BASE7 = { // Mon..Sun, the original 7-day sample
+  voice: [1700, 1900, 1750, 1950, 1800, 1750, 1608],
+  sms: [3100, 3350, 3200, 3600, 3400, 3100, 2710],
+  rcs: [1100, 1250, 1200, 1350, 1300, 1250, 1180],
+  wa: [2300, 2500, 2400, 2650, 2700, 2400, 2280]
+};
+const META = { // rates drift slightly over longer windows; f scales the "vs previous period" deltas
+  7: { dur: '02:41', ans: 68, opt: .4, rr: 64, rc: 18, wr: 81, dr: 98.7, f: 1 },
+  30: { dur: '02:38', ans: 67, opt: .5, rr: 62, rc: 17, wr: 79, dr: 98.5, f: 1.2 },
+  60: { dur: '02:35', ans: 66, opt: .5, rr: 61, rc: 17, wr: 78, dr: 98.4, f: 1.45 },
+  90: { dur: '02:33', ans: 66, opt: .6, rr: 60, rc: 16, wr: 77, dr: 98.6, f: 1.75 }
+};
+const GROWTH = { 30: [.88, 1.04], 60: [.78, 1.04], 90: [.68, 1.06] }; // earlier weeks were smaller
+const spanOf = r => `${fmtDate(new Date(+todayStart() - (r - 1) * DAY_MS))} – ${fmtDate(todayStart())}`;
+const dataCache = {};
+function getData(r) {
+  if (dataCache[r]) return dataCache[r];
+  const today = todayStart(), n = r === 7 ? 7 : 30, bucket = r === 7 ? 1 : r / 30, rand = seeded(r * 7919);
+  const labels = [], full = [], series = { voice: [], sms: [], rcs: [], wa: [] };
+  for (let k = 0; k < n; k++) {
+    const end = new Date(+today - (n - 1 - k) * bucket * DAY_MS), start = new Date(+end - (bucket - 1) * DAY_MS);
+    labels.push(r === 7 ? end.toLocaleDateString('en-IN', { weekday: 'short' }) : fmtDate(end));
+    full.push(r === 7 ? end.toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short' }) : bucket > 1 ? `${fmtDate(start)} – ${fmtDate(end)}` : end.toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short' }));
+    KEYS.forEach(c => {
+      if (r === 7) { series[c].push(BASE7[c][(end.getDay() + 6) % 7]); return; }
+      const avg = BASE7[c].reduce((a, b) => a + b, 0) / 7, g = GROWTH[r], t = k / (n - 1);
+      const trend = g[0] + (g[1] - g[0]) * t, dow = bucket === 1 ? ((end.getDay() === 0 || end.getDay() === 6) ? .86 : 1.03) : 1;
+      series[c].push(Math.round(avg * bucket * trend * dow * (.94 + rand() * .12)));
+    });
+  }
+  const sum = {}; KEYS.forEach(c => { sum[c] = series[c].reduce((a, b) => a + b, 0); });
+  return (dataCache[r] = { labels, full, series, sum, n, bucket });
+}
+const fmtK = { int: v => inr(v), pct1: v => v.toFixed(1) + '%', pct0: v => Math.round(v) + '%' };
+function kpiSpecs(c) {
+  const S = getData(range).sum, m = META[range], f = m.f;
+  const dl = (b, dec = 0) => (b < 0 ? '-' : '+') + Math.abs(b * f).toFixed(dec) + '%';
+  return {
+    all: [['Total messages', S.sms + S.rcs + S.wa, 'int', dl(12)], ['Voice calls', S.voice, 'int', dl(8)], ['Delivery rate', m.dr, 'pct1', dl(1.2, 1)]],
+    voice: [['Calls', S.voice, 'int', dl(8)], ['Avg. duration', m.dur, 'txt', dl(4)], ['Answered', m.ans, 'pct0', dl(3)]],
+    sms: [['Sent', S.sms, 'int', dl(9)], ['Delivery rate', m.dr, 'pct1', dl(1.2, 1)], ['Opt-outs', m.opt, 'pct1', dl(-.1, 1), true]],
+    rcs: [['Sent', S.rcs, 'int', dl(21)], ['Read rate', m.rr, 'pct0', dl(5)], ['Click rate', m.rc, 'pct0', dl(2)]],
+    wa: [['Sent', S.wa, 'int', dl(14)], ['Read rate', m.wr, 'pct0', dl(3)], ['Replies', Math.round(S.wa * .1985), 'int', dl(11)]]
+  }[c];
+}
+function renderKpis() {
+  const specs = kpiSpecs(state);
+  $('#kpis').innerHTML = specs.map(k => `<div class="kpi"><small>${k[0]}</small><b>${k[2] === 'txt' ? k[1] : ''}</b><i class="${k[3].startsWith('-') && !k[4] ? 'dn' : ''}" title="Compared with the previous ${range} days">${k[3].startsWith('-') ? '↓' : '↑'} ${k[3].replace(/^[+-]/, '')}</i></div>`).join('');
+  $$('#kpis .kpi').forEach((el, i) => { const k = specs[i]; if (k[2] !== 'txt') countTo($('b', el), k[1], fmtK[k[2]]); });
+}
+
+/* ---- Chart: auto-scaling axis, dates from today, hover tooltip ---- */
+const CW = 380, CHT = 132, PX0 = 30, PX1 = 374, PY0 = 8, PY1 = 108;
+function drawChart() {
+  const svg = $('#chart'), d = getData(range), n = d.n, keys = state === 'all' ? KEYS : [state];
+  const { step, max } = niceScale(Math.max(...keys.flatMap(k => d.series[k])));
+  const px = i => PX0 + (PX1 - PX0) * i / (n - 1), py = v => PY1 - (PY1 - PY0) * v / max;
+  let h = '';
+  for (let g = 0; g <= 4; g++) { const y = py(g * step); h += `<line class="grid" x1="${PX0}" x2="${PX1}" y1="${y}" y2="${y}"/>${g ? `<text class="yl" x="${PX0 - 5}" y="${y + 3}">${short(g * step)}</text>` : ''}`; }
+  for (let i = 0; i < 7; i++) { const idx = Math.round(i * (n - 1) / 6); h += `<text x="${px(idx)}" y="${CHT - 5}" text-anchor="${i === 0 ? 'start' : i === 6 ? 'end' : 'middle'}">${d.labels[idx]}</text>`; }
+  keys.forEach(k => {
+    const line = smooth(d.series[k].map((v, i) => [px(i), py(v)]));
+    if (state !== 'all') h += `<path class="ar" d="${line} L${PX1},${PY1} L${PX0},${PY1} Z" fill="${CH[k].color}" opacity=".12"/>`;
+    h += `<path class="ln" data-k="${k}" d="${line}" stroke="${CH[k].color}" style="stroke-width:${state === 'all' ? 2 : 2.8}"/>`;
+  });
+  h += `<line id="cross" x1="0" x2="0" y1="${PY0}" y2="${PY1}" stroke="#9DB3DB" stroke-dasharray="3 3" opacity="0"/>`;
+  keys.forEach(k => { h += `<circle class="dot" data-k="${k}" r="3.2" fill="#fff" stroke="${CH[k].color}" stroke-width="2" opacity="0"/>`; });
+  h += `<rect id="hit" x="0" y="0" width="${CW}" height="${CHT}" fill="transparent"/>`;
+  svg.innerHTML = h;
+  if (!reduce) {
+    $$('.ln', svg).forEach((p, i) => {
+      const len = p.getTotalLength(); p.style.strokeDasharray = len;
+      p.animate([{ strokeDashoffset: len }, { strokeDashoffset: 0 }], { duration: 950, delay: 80 + i * 110, easing: 'cubic-bezier(.3,.7,.2,1)', fill: 'both' })
+        .finished.then(() => { p.style.strokeDasharray = 'none'; }).catch(() => {});
+    });
+  }
+  const tip = $('#tip'), card = $('#chartCard'), hit = $('#hit'), cross = $('#cross');
+  hit.addEventListener('pointermove', e => {
+    const r = svg.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * CW;
+    const i = Math.max(0, Math.min(n - 1, Math.round((x - PX0) / ((PX1 - PX0) / (n - 1)))));
+    cross.setAttribute('x1', px(i)); cross.setAttribute('x2', px(i)); cross.setAttribute('opacity', 1);
+    $$('.dot', svg).forEach(c => { const k = c.dataset.k; c.setAttribute('opacity', 1); c.setAttribute('cx', px(i)); c.setAttribute('cy', py(d.series[k][i])); });
+    tip.innerHTML = `<b>${d.full[i]}</b>` + keys.map(k => `<span><i style="background:${CH[k].color}"></i>${CH[k].n}: ${inr(d.series[k][i])}</span>`).join('');
+    const cr = card.getBoundingClientRect(); let left = e.clientX - cr.left + 12; if (left > cr.width - 150) left = e.clientX - cr.left - 150;
+    tip.style.left = left + 'px'; tip.style.top = Math.max(4, e.clientY - cr.top - 62) + 'px'; tip.style.opacity = 1;
+  });
+  hit.addEventListener('pointerleave', () => { tip.style.opacity = 0; cross.setAttribute('opacity', 0); $$('.dot', svg).forEach(c => c.setAttribute('opacity', 0)); });
+}
+
+/* ---- Date-range dropdown (keyboard accessible listbox) ---- */
+const rngBtn = $('#rngBtn'), rngMenu = $('#rngMenu');
+function renderRangeMenu() {
+  rngMenu.innerHTML = Object.keys(RANGES).map(r => `<li role="option" tabindex="-1" data-r="${r}" aria-selected="${+r === range}"><span class="ro">${RANGES[r]}</span><small>${spanOf(+r)}</small>${ic('check')}</li>`).join('');
+}
+function openRange() { renderRangeMenu(); rngMenu.hidden = false; rngBtn.setAttribute('aria-expanded', 'true'); $('li[aria-selected="true"]', rngMenu).focus(); }
+function closeRange(focusBtn) { rngMenu.hidden = true; rngBtn.setAttribute('aria-expanded', 'false'); if (focusBtn) rngBtn.focus(); }
+function setRange(r) {
+  range = +r; $('#rngLbl').textContent = RANGES[range]; closeRange(true);
+  renderKpis(); drawChart();
+}
+rngBtn.addEventListener('click', () => rngMenu.hidden ? openRange() : closeRange());
+rngBtn.addEventListener('keydown', e => { if (e.key === 'ArrowDown' && rngMenu.hidden) { e.preventDefault(); openRange(); } });
+rngMenu.addEventListener('click', e => { const li = e.target.closest('li[data-r]'); if (li) setRange(li.dataset.r); });
+rngMenu.addEventListener('keydown', e => {
+  const items = $$('li', rngMenu), i = items.indexOf(document.activeElement);
+  if (e.key === 'ArrowDown') { e.preventDefault(); items[(i + 1) % items.length].focus(); }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); items[(i - 1 + items.length) % items.length].focus(); }
+  else if (e.key === 'Home') { e.preventDefault(); items[0].focus(); }
+  else if (e.key === 'End') { e.preventDefault(); items[items.length - 1].focus(); }
+  else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (i > -1) setRange(items[i].dataset.r); }
+  else if (e.key === 'Escape') { e.stopPropagation(); closeRange(true); }
+  else if (e.key === 'Tab') closeRange();
+});
+document.addEventListener('click', e => { if (!rngMenu.hidden && !e.target.closest('#rng')) closeRange(); });
+
+/* feed */
+function maskPhone() { return '+91 9•••• ' + String(Math.floor(1000 + Math.random() * 9000)); }
+function feedRow(c) {
+  const keys = c === 'all' ? Object.keys(FEED) : [c];
+  const k = keys[Math.floor(Math.random() * keys.length)];
+  const f = FEED[k][Math.floor(Math.random() * FEED[k].length)];
+  return `<li><i style="background:${CH[k].color}"></i><span>${f[0]} · ${maskPhone()}</span><em>${f[1]}</em><time>now</time></li>`;
+}
+function resetFeed() { $('#feed').innerHTML = feedRow(state) + feedRow(state) + feedRow(state); }
+function pushFeed() {
+  const f = $('#feed'); f.insertAdjacentHTML('afterbegin', feedRow(state));
+  while (f.children.length > 3) f.lastElementChild.remove();
+  [...f.children].slice(1).forEach(li => { const t = $('time', li); if (t.textContent === 'now') t.textContent = '2s ago'; else if (t.textContent === '2s ago') t.textContent = '5s ago'; else t.textContent = '8s ago'; });
+}
+
+/* phone */
+let callTimer, callSecs = 0;
+function phoneHead(n, sub, ver) {
+  return `<div class="chead"><span class="av">${n[0]}</span><div><b>${esc(n)}${ver ? ic('check') : ''}</b><small>${sub}</small></div></div>`;
+}
+const SB = `<div class="notch"></div><div class="sbar"><span>9:41</span><span>5G</span></div>`;
+const PHONE = {
+  wa: () => SB + phoneHead('Acme Store', 'Business account', true) +
+    `<div class="msgs wa" id="pMsgs"><div class="msg in" style="--i:0">Hello! Your order #12345 has been shipped and will reach you shortly.<time>10:24 AM</time></div><div class="msg out" style="--i:1">Thank you for the update!<time>10:25 AM ✓✓</time></div></div>`,
+  sms: () => SB + phoneHead('AD-ACMEST', 'Text message', false) +
+    `<div class="msgs sms" id="pMsgs"><div class="msg in" style="--i:0">Your OTP for Acme Store login is <b>482915</b>. Valid for 5 minutes. Do not share it with anyone.<time>9:41 AM</time></div><div class="msg in" style="--i:1">Order #12345 is out for delivery today. Track: acme.in/t/Xk3p<time>9:42 AM</time></div></div>`,
+  rcs: () => SB + phoneHead('Acme Store', 'Verified business', true) +
+    `<div class="msgs rcs" id="pMsgs"><div class="rcard" style="--i:0"><div class="m">${ic('image')}</div><div class="t"><b>Order #12345 is out for delivery</b><span>Arriving today, 4 to 6 PM</span></div><div class="a"><span>Track order</span><span>Reschedule</span></div></div><div class="sug" style="--i:1"><span>Call support</span><span>Change address</span></div></div>`
+};
+const COMPOSER = `<form class="composer" id="pForm" autocomplete="off"><input id="pIn" aria-label="Type a reply" placeholder="Type a message..."><button aria-label="Send reply">${ic('send')}</button></form>`;
+const REPLIES = { wa: 'Thanks! We will keep you posted here.', sms: 'Reply received. Thank you.', rcs: 'Thanks! Anything else we can help with?' };
+function stopCall() { clearInterval(callTimer); callTimer = null; callSecs = 0; }
+function renderPhone(c) {
+  stopCall();
+  const scr = $('#pScr'), k = c === 'all' ? 'wa' : c;
+  if (k === 'voice') {
+    scr.innerHTML = SB + `<div class="call" id="call"><div class="av">A</div><b>Acme Store ${ic('check')}</b><small>Verified business call</small><div class="wave">${'<i></i>'.repeat(18)}</div><div class="timer" id="callT">Incoming call...</div><div class="row"><button class="dec" aria-label="Decline call">${ic('voice')}</button><button class="acc" id="callAcc" aria-label="Answer call">${ic('voice')}</button></div></div>`;
+    $('#callAcc').addEventListener('click', e => {
+      const b = e.currentTarget, call = $('#call'), t = $('#callT');
+      if (!callTimer) {
+        call.classList.add('live'); b.classList.add('on'); b.setAttribute('aria-label', 'End call'); callSecs = 0; t.textContent = '00:00';
+        callTimer = setInterval(() => { callSecs++; t.textContent = String(Math.floor(callSecs / 60)).padStart(2, '0') + ':' + String(callSecs % 60).padStart(2, '0'); }, 1000);
+      } else { const s = t.textContent; stopCall(); call.classList.remove('live'); b.classList.remove('on'); b.setAttribute('aria-label', 'Answer call'); t.textContent = 'Call ended ' + s; }
+    });
+    $('.dec', scr).addEventListener('click', () => { stopCall(); $('#call').classList.remove('live'); $('#callT').textContent = 'Call declined'; });
+    return;
+  }
+  scr.innerHTML = PHONE[k]() + COMPOSER;
+  $('#pForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const inp = $('#pIn'), v = inp.value.trim(); if (!v) return;
+    const box = $('#pMsgs'); inp.value = '';
+    box.insertAdjacentHTML('beforeend', `<div class="msg out static" style="animation-delay:0s">${esc(v)}<time>now</time></div>`);
+    setTimeout(() => { box.insertAdjacentHTML('beforeend', `<div class="msg in" style="animation-delay:0s">${REPLIES[k]}<time>now</time></div>`); trim(box); }, 900);
+    trim(box);
+  });
+}
+function trim(box) { while (box.scrollHeight > box.clientHeight + 4 && box.children.length > 2) box.firstElementChild.remove(); }
+
+function setChannel(raw, animate = true) {
+  const c = key(raw); state = c;
+  $$('#side button[data-ch]').forEach(b => b.setAttribute('aria-current', key(b.dataset.ch) === c));
+  $$('.bub').forEach(b => b.setAttribute('aria-pressed', key(b.dataset.ch) === c));
+  $$('#mChips button').forEach(b => b.setAttribute('aria-pressed', key(b.dataset.ch) === c));
+  $('#cTitle').textContent = TITLES[c];
+  renderKpis(); drawChart(); resetFeed(); renderPhone(c);
+}
+$$('#side button[data-ch], .bub, #mChips button').forEach(b => b.addEventListener('click', () => {
+  const c = key(b.dataset.ch);
+  setChannel(b.classList.contains('bub') && state === c ? 'all' : c);
+}));
+setChannel('all');
+let feedT; const stage = $('#stage');
+new IntersectionObserver(es => {
+  clearInterval(feedT);
+  if (es[0].isIntersecting && !reduce) feedT = setInterval(() => { if (!document.hidden) pushFeed(); }, 2800);
+}, { threshold: .2 }).observe(stage);
+
+/* ================= Channel tabs ================= */
+const tabs = $$('#chTabs .tab');
+function selectTab(c, focus) {
+  c = key(c);
+  tabs.forEach(t => { const on = t.dataset.ch === c; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; if (on && focus) t.focus(); });
+  ['voice', 'sms', 'rcs', 'wa'].forEach(k => { $('#p-' + k).hidden = k !== c; });
+}
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => selectTab(t.dataset.ch));
+  t.addEventListener('keydown', e => {
+    let n = null;
+    if (e.key === 'ArrowRight') n = (i + 1) % tabs.length; else if (e.key === 'ArrowLeft') n = (i - 1 + tabs.length) % tabs.length;
+    else if (e.key === 'Home') n = 0; else if (e.key === 'End') n = tabs.length - 1;
+    if (n !== null) { e.preventDefault(); selectTab(tabs[n].dataset.ch, true); }
+  });
+});
+
+/* ---------- Voice IVR demo ---------- */
+function initVoice() {
+  const L = {
+    en: { say: 'Welcome to Acme Insurance. For policy status, press 1. To pay your premium, press 2. To speak to an agent, press 3.',
+      r: { 1: 'Your policy ending 4821 is active. Your next premium is due on 15 November.', 2: 'We have sent a secure payment link to your mobile number.', 3: 'Connecting you to the next available agent. This call may be recorded for quality.', 0: null } },
+    hi: { say: 'Acme बीमा में आपका स्वागत है। पॉलिसी की स्थिति के लिए 1 दबाएं। प्रीमियम भुगतान के लिए 2 दबाएं। एजेंट से बात करने के लिए 3 दबाएं।',
+      r: { 1: 'आपकी पॉलिसी चालू है। अगला प्रीमियम 15 नवंबर को देय है।', 2: 'हमने आपके मोबाइल पर सुरक्षित भुगतान लिंक भेज दिया है।', 3: 'आपको अगले उपलब्ध एजेंट से जोड़ा जा रहा है।', 0: null } }
+  };
+  const FLOW = [['1', 'read policy status'], ['2', 'send payment link by SMS'], ['3', 'transfer to agent queue']];
+  let lang = 'en', last = null;
+  const el = $('#w-voice');
+  function draw() {
+    const d = L[lang];
+    const say = last && d.r[last] ? d.r[last] : d.say;
+    const hand = last === '2' ? `<br><em>${ic('sms')}SMS sent</em>` : last === '3' ? `<br><em>${ic('voice')}Agent queue</em>` : '';
+    el.innerHTML = `<h4>Press a key to route the call</h4><p class="sub">A real IVR flow, running in your browser.</p>
+      <div class="wgrid"><div>
+        <div class="seg" role="group" aria-label="Language"><button data-l="en" aria-pressed="${lang === 'en'}">English</button><button data-l="hi" aria-pressed="${lang === 'hi'}">हिन्दी</button></div>
+        <div class="tmpl" aria-label="Call flow">greeting <span style="opacity:.6">→ say(prompt)</span><br>${FLOW.map(f => last === f[0] ? `<mark>key ${f[0]} → ${f[1]}</mark>` : `key ${f[0]} → ${f[1]}`).join('<br>')}<br>key 0 → repeat menu</div>
+        <div class="stat"><span>Language <b>${lang === 'en' ? 'English' : 'Hindi'}</b></span><span>Recording <b class="ok">On</b></span></div>
+      </div>
+      <div class="mini-phone"><div class="scr"><div class="call" style="padding-top:22px"><div class="av" style="width:44px;height:44px;font-size:15px">A</div><b style="font-size:12.5px">Acme Insurance</b><small>In call</small><div class="ivr-say" aria-live="polite">${d.say === say ? '' : ''}${esc(say)}${hand}</div><div class="ivr-keys"><button data-k="1" aria-label="Press 1">1</button><button data-k="2" aria-label="Press 2">2</button><button data-k="3" aria-label="Press 3">3</button><button data-k="0" aria-label="Press 0 to repeat">0</button></div></div></div></div></div>`;
+    $$('.seg button', el).forEach(b => b.addEventListener('click', () => { lang = b.dataset.l; last = null; draw(); }));
+    $$('.ivr-keys button', el).forEach(b => b.addEventListener('click', () => { last = b.dataset.k === '0' ? null : b.dataset.k; draw(); $(`.ivr-keys button[data-k="${b.dataset.k}"]`, el).focus(); }));
+  }
+  draw();
+}
+
+/* ---------- SMS composer ---------- */
+const GSM = new Set('@£$¥èéùìòÇ\nØø\rÅåΔ_ΦΓΛΩΠΨΣΘΞÆæßÉ !"#¤%&\'()*+,-./0123456789:;<=>?¡ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÑÜ§¿abcdefghijklmnopqrstuvwxyzäöñüà'.split(''));
+const GSM_EXT = new Set('^{}\\[~]|€'.split(''));
+function smsStats(text) {
+  const chars = [...text]; let uni = false, gsmLen = 0;
+  for (const ch of chars) { if (GSM.has(ch)) gsmLen++; else if (GSM_EXT.has(ch)) gsmLen += 2; else { uni = true; } }
+  if (uni) { const n = text.length; return { uni, n, seg: n <= 70 ? 1 : Math.ceil(n / 67), per: n <= 70 ? 70 : 67 }; }
+  return { uni, n: gsmLen, seg: gsmLen <= 160 ? 1 : Math.ceil(gsmLen / 153), per: gsmLen <= 160 ? 160 : 153 };
+}
+function initSms() {
+  const el = $('#w-sms');
+  const T = {
+    en: p => `Dear ${p[0]}, your OTP for ${p[1]} is ${p[2]}. Valid for 5 minutes. Do not share it with anyone. -Acme Store`,
+    hi: p => `प्रिय ${p[0]}, ${p[1]} के लिए आपका OTP ${p[2]} है। 5 मिनट तक मान्य। इसे किसी से साझा न करें। -Acme Store`
+  };
+  const TD = {
+    en: 'Dear {#var#}, your OTP for {#var#} is {#var#}. Valid for 5 minutes. Do not share it with anyone. -Acme Store',
+    hi: 'प्रिय {#var#}, {#var#} के लिए आपका OTP {#var#} है। 5 मिनट तक मान्य। इसे किसी से साझा न करें। -Acme Store'
+  };
+  const v = { name: 'Aarav', purpose: 'login', otp: '482915' }; let lang = 'en';
+  el.innerHTML = `<h4>Compose against a DLT template</h4><p class="sub">Edit the variables and watch the segment count.</p>
+    <div class="wgrid"><div>
+      <div class="seg" role="group" aria-label="Template language"><button data-l="en" aria-pressed="true">English</button><button data-l="hi" aria-pressed="false">हिन्दी</button></div>
+      <div class="tmpl" id="smsT"></div>
+      <div class="fld"><label for="s-n">Customer name</label><input id="s-n" maxlength="30" value="Aarav"></div>
+      <div class="fld"><label for="s-p">Purpose</label><input id="s-p" maxlength="30" value="login"></div>
+      <div class="fld"><label for="s-o">OTP</label><input id="s-o" maxlength="30" value="482915" inputmode="numeric"></div>
+      <div class="stat" id="smsS"></div></div>
+      <div class="mini-phone"><div class="scr"><div class="sbar" style="padding-top:12px"><span>9:41</span><span>5G</span></div>${phoneHead('AD-ACMEST', 'Text message', false)}<div class="msgs sms" id="smsP"></div></div></div></div>`;
+  const draw = () => {
+    const p = [v.name || ' ', v.purpose || ' ', v.otp || ' '];
+    const msg = T[lang](p), st = smsStats(msg);
+    $('#smsT').innerHTML = esc(TD[lang]).replace(/\{#var#\}/g, '<mark>{#var#}</mark>');
+    $('#smsP').innerHTML = `<div class="msg in static">${esc(msg)}<time>9:41 AM</time></div>`;
+    $('#smsS').innerHTML = `<span>Characters <b>${st.n}</b></span><span>Segments <b class="${st.seg > 1 ? 'warn' : 'ok'}">${st.seg}</b></span><span>Encoding <b class="${st.uni ? 'warn' : 'ok'}">${st.uni ? 'Unicode (' + st.per + ' per part)' : 'GSM-7 (' + st.per + ' per part)'}</b></span>`;
+  };
+  $$('.seg button', el).forEach(b => b.addEventListener('click', () => { lang = b.dataset.l; $$('.seg button', el).forEach(x => x.setAttribute('aria-pressed', x === b)); draw(); }));
+  [['s-n', 'name'], ['s-p', 'purpose'], ['s-o', 'otp']].forEach(([id, k]) => $('#' + id).addEventListener('input', e => { v[k] = e.target.value; draw(); }));
+  draw();
+}
+
+/* ---------- RCS builder ---------- */
+function initRcs() {
+  const el = $('#w-rcs'); const s = { mode: 'card', t: 'Order #12345 is out for delivery', d: 'Arriving today, 4 to 6 PM', b1: 'Track order', b2: 'Reschedule' };
+  el.innerHTML = `<h4>Build a message, see the fallback</h4><p class="sub">Switch format and edit the copy. The SMS fallback updates with it.</p>
+    <div class="wgrid"><div>
+      <div class="seg" role="group" aria-label="Message format"><button data-m="text" aria-pressed="false">Text</button><button data-m="card" aria-pressed="true">Rich card</button><button data-m="car" aria-pressed="false">Carousel</button></div>
+      <div class="fld"><label for="r-t">Title</label><input id="r-t" maxlength="60" value="${esc(s.t)}"></div>
+      <div class="fld"><label for="r-d">Description</label><input id="r-d" maxlength="90" value="${esc(s.d)}"></div>
+      <div class="frow" style="gap:0 10px"><div class="fld"><label for="r-b1">Button 1</label><input id="r-b1" maxlength="20" value="${esc(s.b1)}"></div><div class="fld"><label for="r-b2">Button 2</label><input id="r-b2" maxlength="20" value="${esc(s.b2)}"></div></div>
+      <div class="tmpl" id="rFb"></div>
+      <div class="stat"><span>Sender <b class="ok">Verified</b></span><span>Fallback <b>SMS</b></span></div></div>
+      <div class="mini-phone"><div class="scr"><div class="sbar" style="padding-top:12px"><span>9:41</span><span>5G</span></div>${phoneHead('Acme Store', 'Verified business', true)}<div class="msgs rcs" id="rP"></div></div></div></div>`;
+  const card = (t, d, b1, b2, hue) => `<div class="rcard static"><div class="m" style="background:linear-gradient(135deg,hsl(${hue} 80% 62%),hsl(${hue + 50} 85% 60%))">${ic('image')}</div><div class="t"><b>${esc(t)}</b><span>${esc(d)}</span></div><div class="a">${b1 ? `<span>${esc(b1)}</span>` : ''}${b2 ? `<span>${esc(b2)}</span>` : ''}</div></div>`;
+  const draw = () => {
+    const P = $('#rP');
+    if (s.mode === 'text') P.innerHTML = `<div class="msg in static"><b>${esc(s.t)}</b><br>${esc(s.d)}<time>9:41 AM</time></div><div class="sug"><span>${esc(s.b1 || 'Yes')}</span><span>${esc(s.b2 || 'No')}</span></div>`;
+    else if (s.mode === 'card') P.innerHTML = card(s.t, s.d, s.b1, s.b2, 262);
+    else P.innerHTML = `<div class="car">${card(s.t, s.d, s.b1, '', 262)}${card('Offer for you', 'Valid till Sunday', s.b1, '', 190)}${card('New arrivals', 'Fresh this week', s.b1, '', 330)}</div>`;
+    $('#rFb').innerHTML = `Fallback SMS: ${esc(s.t)}. ${esc(s.d)}. ${esc((s.b1 || 'Details').split(' ')[0])}: acme.in/o`;
+  };
+  $$('.seg button', el).forEach(b => b.addEventListener('click', () => { s.mode = b.dataset.m; $$('.seg button', el).forEach(x => x.setAttribute('aria-pressed', x === b)); draw(); }));
+  [['r-t', 't'], ['r-d', 'd'], ['r-b1', 'b1'], ['r-b2', 'b2']].forEach(([id, k]) => $('#' + id).addEventListener('input', e => { s[k] = e.target.value; draw(); }));
+  draw();
+}
+
+/* ---------- WhatsApp template ---------- */
+function initWa() {
+  const el = $('#w-wa'); let cat = 'marketing';
+  const C = {
+    marketing: { name: 'festive_sale_oct', about: 'Offers, launches and re-engagement. Needs clear opt-in and an easy way to opt out.', body: 'Hi Aarav, our festive sale is live with up to 30% off. Tap below to shop your favourites.', footer: 'Reply STOP to opt out', btns: ['Shop now', 'Stop promotions'], img: true, rate: RATES.marketing },
+    utility: { name: 'order_shipped', about: 'Updates tied to something the customer did, like an order, payment or booking.', body: 'Hi Aarav, your order #12345 has shipped and will arrive by Thursday.', footer: '', btns: ['Track order'], img: false, rate: RATES.utility },
+    authentication: { name: 'login_code', about: 'One-time passcodes only. Fixed format with a copy-code button.', body: '<b>482915</b> is your verification code. For your security, do not share this code.', footer: 'This code expires in 10 minutes.', btns: ['Copy code'], img: false, rate: RATES.authentication }
+  };
+  el.innerHTML = `<h4>Pick a template category</h4><p class="sub">The category decides what Meta charges and what you can say.</p>
+    <div class="wgrid"><div>
+      <div class="seg" role="group" aria-label="Template category"><button data-c="marketing" aria-pressed="true">Marketing</button><button data-c="utility" aria-pressed="false">Utility</button><button data-c="authentication" aria-pressed="false">Authentication</button></div>
+      <p id="waAbout" style="font-size:15px;color:var(--ink-2);margin-bottom:14px"></p>
+      <div class="tmpl" id="waName"></div>
+      <div class="stat" id="waStat"></div>
+      <p style="font-size:12.5px;color:var(--ink-3);margin-top:14px">Meta India list rate, excluding GST and platform fees. Confirm on Meta's current rate card.</p></div>
+      <div class="mini-phone"><div class="scr"><div class="sbar" style="padding-top:12px"><span>9:41</span><span>5G</span></div>${phoneHead('Acme Store', 'Business account', true)}<div class="msgs wa" id="waP"></div></div></div></div>`;
+  const draw = () => {
+    const d = C[cat];
+    $('#waAbout').textContent = d.about;
+    $('#waName').innerHTML = `template: <mark>${d.name}</mark><br>category: <mark>${cat}</mark> · language: en`;
+    $('#waStat').innerHTML = `<span>Meta rate <b>${rupee(d.rate, d.rate < .5 ? 3 : 4)} per message</b></span><span>Opt-in <b class="ok">Required</b></span>`;
+    $('#waP').innerHTML = `<div class="msg in static" style="max-width:94%;padding-bottom:16px">${d.img ? `<div class="rcard static" style="width:100%;box-shadow:none;margin:-3px -3px 6px;border-radius:8px 8px 0 0"><div class="m" style="height:60px;background:linear-gradient(135deg,#22AD55,#7FE3A3)">${ic('image')}</div></div>` : ''}${d.body}${d.footer ? `<div style="color:var(--ink-3);font-size:8.5px;margin-top:5px">${d.footer}</div>` : ''}<time>10:24 AM</time></div>${d.btns.map(b => `<div class="msg in static" style="align-self:stretch;max-width:none;text-align:center;color:#0A7FD9;font-weight:600;padding:7px;font-size:10px">${b}</div>`).join('')}`;
+  };
+  $$('.seg button', el).forEach(b => b.addEventListener('click', () => { cat = b.dataset.c; $$('.seg button', el).forEach(x => x.setAttribute('aria-pressed', x === b)); draw(); }));
+  draw();
+}
+
+/* ================= Orchestrator ================= */
+(function orchestrator() {
+  const DEF = ['wa', 'rcs', 'sms', 'voice'];
+  let order = [...DEF], off = {}, running = false;
+  const FAIL = { wa: 'recipient is not reachable on WhatsApp', rcs: 'device cannot receive RCS', sms: 'handset unreachable', voice: 'no answer' };
+  const OK = { wa: 'delivered and read-ready', rcs: 'delivered to RCS inbox', sms: 'delivered to handset', voice: 'call answered' };
+  const list = $('#hops'), log = $('#orchLog'), verdict = $('#orchVerdict');
+  const SIM = 'Simulation only. Real timing depends on each channel and operator.';
+  function render(status = {}) {
+    list.innerHTML = order.map((c, i) => `<li class="hop ${status[c] || ''}" data-c="${c}">
+      <div class="mv"><button aria-label="Move ${CH[c].n} up" data-d="-1" ${i === 0 || running ? 'disabled' : ''}>${ic('up')}</button><button aria-label="Move ${CH[c].n} down" data-d="1" ${i === order.length - 1 || running ? 'disabled' : ''}><svg class="ic" style="transform:rotate(180deg)" aria-hidden="true"><use href="#i-up"/></svg></button></div>
+      <span class="b" style="background:${CH[c].color}">${ic(CH[c].icon)}</span>
+      <div><b>${CH[c].n}</b><small>${i === 0 ? 'First choice' : 'Fallback ' + i}</small></div>
+      <label class="sw"><input type="checkbox" ${off[c] ? 'checked' : ''} ${running ? 'disabled' : ''} aria-label="${CH[c].n} is unreachable for this customer"> Unreachable</label>
+      <span class="st">${{ try: 'Trying...', fail: 'Not reachable', ok: 'Delivered', na: 'Not needed' }[status[c]] || 'Waiting'}</span></li>`).join('');
+  }
+  list.addEventListener('click', e => {
+    const b = e.target.closest('button[data-d]'); if (!b || running) return;
+    const c = b.closest('.hop').dataset.c, i = order.indexOf(c), j = i + +b.dataset.d;
+    [order[i], order[j]] = [order[j], order[i]]; render();
+    $(`.hop[data-c="${c}"] button[data-d="${b.dataset.d}"]:not(:disabled)`, list)?.focus();
+  });
+  list.addEventListener('change', e => { const c = e.target.closest('.hop')?.dataset.c; if (c) off[c] = e.target.checked; });
+  const line = (cls, t, txt) => { const p = document.createElement('p'); p.innerHTML = `<span class="t">${t}</span>  <span class="${cls}">${txt}</span>`; log.appendChild(p); };
+  async function run() {
+    if (running) return; running = true; log.innerHTML = '<div class="top"><i></i><i></i><i></i></div>'; verdict.textContent = 'Sending...';
+    $('#orchGo').disabled = true; let t = 0; const st = {}; render();
+    line('c', 't+0.00s', 'POST /v1/messages  accepted · fallback: ' + order.map(c => CH[c].n).join(' > '));
+    let done = null;
+    for (let i = 0; i < order.length; i++) {
+      const c = order[i]; st[c] = 'try'; render(st); line('t', 't+' + t.toFixed(2) + 's', 'trying ' + CH[c].n + '...'); await sleep(900);
+      t += 0.3 + Math.random() * .9;
+      if (off[c]) { st[c] = 'fail'; render(st); line('r', 't+' + t.toFixed(2) + 's', CH[c].n + ' failed: ' + FAIL[c]); await sleep(350); }
+      else { st[c] = 'ok'; render(st); line('g', 't+' + t.toFixed(2) + 's', CH[c].n + ' ' + OK[c]); done = { c, i }; order.slice(i + 1).forEach(x => st[x] = 'na'); render(st); break; }
+    }
+    if (done) verdict.textContent = `Delivered on ${CH[done.c].n}${done.i ? ' after ' + done.i + ' fallback' + (done.i > 1 ? 's' : '') : ' on the first try'}. In production this arrives as one delivery event with the channel attached.`;
+    else { line('r', 't+' + t.toFixed(2) + 's', 'no channel could deliver'); verdict.textContent = 'No channel could reach this customer. Add another channel to the chain or retry later.'; }
+    running = false; $('#orchGo').disabled = false; render(st);
+  }
+  $('#orchGo').addEventListener('click', run);
+  $('#orchReset').addEventListener('click', () => { if (running) return; order = [...DEF]; off = {}; render(); log.innerHTML = '<div class="top"><i></i><i></i><i></i></div><p class="t">Waiting for a message...</p>'; verdict.textContent = SIM; });
+  render();
+})();
+
+/* ================= Solutions ================= */
+const SOL = {
+  bfsi: { n: 'Banking and finance', h: 'Be the message your customer trusts.', p: 'Money moves fast, so the messages around it must be instant, recognisable and compliant.',
+    s: [['At sign-in', 'sms', 'One-time passcode', 'Transactional SMS from your registered header, with a voice OTP as the backup for failed deliveries.'], ['After a payment', 'wa', 'Instant confirmation', 'A utility template with the amount, reference and a button to download the receipt.'], ['Before an EMI is due', 'wa', 'Reminder with a pay button', 'If it is not read, follow up with an SMS and then a service call.'], ['During KYC', 'rcs', 'Card with a secure upload link', 'A verified sender helps customers trust the link. Falls back to SMS on unsupported phones.']],
+    note: 'Banks, insurers and other regulated entities have been directed to use 1600-series numbers for service and transactional voice calls. Check your regulator for the current deadline.' },
+  ecom: { n: 'E-commerce and retail', h: 'From cart to doorstep, without the silence.', p: 'Keep every order moving and bring back the carts customers left behind.',
+    s: [['Order placed', 'wa', 'Confirmation with a summary', 'Order details and a link to manage the order, in the chat customers already use.'], ['Cash on delivery', 'voice', 'Press 1 to confirm', 'An automated call confirms intent before you ship, so fewer parcels come back.'], ['Out for delivery', 'sms', 'Tracking link and delivery OTP', 'Short, reliable and readable on any phone.'], ['Cart left behind', 'rcs', 'Product carousel with a buy button', 'Rich cards bring the product image back, with SMS as the fallback.']],
+    note: 'Promotional messages need recorded consent and a template approved for promotions.' },
+  logi: { n: 'Logistics', h: 'Fewer failed deliveries, fewer support calls.', p: 'Tell customers what is happening, and let them fix problems without calling you.',
+    s: [['Pickup scheduled', 'sms', 'Window and rider details', 'A short alert with the pickup slot and a contact number.'], ['Out for delivery', 'wa', 'Tracking with one-tap reschedule', 'Buttons let customers pick a new slot without calling support.'], ['Rider nearby', 'voice', 'Masked call between rider and customer', 'Both sides connect without sharing personal numbers.'], ['Delivery failed', 'wa', 'Change address or reschedule', 'Customers respond in the chat and the new instruction flows back to your system.']],
+    note: 'Use masked calling so rider and customer numbers stay private.' },
+  health: { n: 'Healthcare', h: 'Appointments kept, results delivered, privately.', p: 'Reduce no-shows and keep patients informed through the channel they actually read.',
+    s: [['On booking', 'wa', 'Confirmation with location and doctor', 'A utility template with the slot, clinic address and a map link.'], ['Day before', 'voice', 'Reminder call in the patient\'s language', 'Press 1 to confirm or 2 to reschedule. Works for patients who rarely use chat apps.'], ['Report ready', 'sms', 'Secure link, not the result', 'Send a link to a protected page instead of putting results in a message.'], ['After the visit', 'rcs', 'Feedback card', 'Star-rating replies in one tap.']],
+    note: 'Health data is sensitive. Share links rather than results, and follow your consent and privacy obligations.' },
+  edu: { n: 'Education', h: 'Reach students and parents the first time.', p: 'Turn enquiries into admissions and keep families informed all year.',
+    s: [['New enquiry', 'voice', 'Instant callback to the lead', 'Call the lead within minutes, while the interest is fresh.'], ['Admission', 'wa', 'Document checklist and status', 'Share what is pending and send updates as the file moves.'], ['Fee due', 'sms', 'Reminder with a payment link', 'Short, clear and easy to act on.'], ['Results day', 'voice', 'Broadcast to parents', 'A recorded message in the family\'s language reaches those who miss texts.']],
+    note: 'Parent broadcasts are service messages. Keep them separate from promotional campaigns.' },
+  travel: { n: 'Travel and hospitality', h: 'Keep travellers informed at every leg.', p: 'Bookings change, flights slip and drivers get lost. Tell people before they ask.',
+    s: [['Booking confirmed', 'wa', 'E-ticket or voucher as a document', 'The booking lives in the chat, easy to find at the counter.'], ['Delay or gate change', 'sms', 'Short alert with the new time', 'Reaches travellers even with poor data coverage.'], ['Day of travel', 'voice', 'Pickup coordination', 'Connect driver and guest with a masked call.'], ['After the trip', 'rcs', 'Review card', 'Star ratings in one tap, with SMS as the fallback.']],
+    note: 'Use utility templates for transactional updates and keep offers in separate promotional templates.' }
+};
+let solKey = 'bfsi';
+function renderSol() {
+  const d = SOL[solKey];
+  $('#solTabs').innerHTML = Object.entries(SOL).map(([k, v]) => `<button role="tab" id="sol-${k}" aria-selected="${k === solKey}" tabindex="${k === solKey ? 0 : -1}" data-k="${k}">${v.n}${ic('arrow')}</button>`).join('');
+  const p = $('#solPanel'); p.setAttribute('aria-labelledby', 'sol-' + solKey);
+  p.innerHTML = `<h3>${d.h}</h3><p>${d.p}</p><ol class="jr" style="list-style:none;padding:0">${d.s.map(s => `<li style="--dc:${CH[s[1]].color}"><span class="when">${s[0]}</span><div class="what"><b>${s[2]}<span class="cc ${s[1]}">${ic(CH[s[1]].icon)}${CH[s[1]].n}</span></b><p>${s[3]}</p></div></li>`).join('')}</ol><p class="sol-note">${d.note}</p>`;
+  $$('#solTabs button').forEach((b, i, all) => {
+    b.addEventListener('click', () => { solKey = b.dataset.k; renderSol(); $(`#sol-${solKey}`).focus(); });
+    b.addEventListener('keydown', e => {
+      const n = e.key === 'ArrowDown' || e.key === 'ArrowRight' ? (i + 1) % all.length : e.key === 'ArrowUp' || e.key === 'ArrowLeft' ? (i - 1 + all.length) % all.length : null;
+      if (n !== null) { e.preventDefault(); solKey = all[n].dataset.k; renderSol(); $(`#sol-${solKey}`).focus(); }
+    });
+  });
+}
+function selectSol(k) { if (SOL[k]) { solKey = k; renderSol(); } }
+
+/* ================= Developers ================= */
+const API = {
+  sms: ['/v1/sms', { to: '+919876543210', sender: 'ACMEST', template_id: 'DLT_TEMPLATE_ID', variables: { name: 'Aarav', purpose: 'login', otp: '482915' }, fallback: { channel: 'voice' } }, { channel: 'sms', segments: 1 }],
+  wa: ['/v1/whatsapp/messages', { from: 'WABA_PHONE_ID', to: '+919876543210', type: 'template', template: { name: 'order_shipped', language: 'en', variables: ['Aarav', '#12345'] }, fallback: { channel: 'sms', template_id: 'DLT_TEMPLATE_ID' } }, { channel: 'whatsapp', category: 'utility' }],
+  rcs: ['/v1/rcs/messages', { agent_id: 'acme_store', to: '+919876543210', message: { card: { title: 'Order #12345 is out for delivery', description: 'Arriving today, 4 to 6 PM', actions: [{ type: 'url', label: 'Track order', url: 'https://acme.in/t/Xk3p' }] } }, fallback: { channel: 'sms', template_id: 'DLT_TEMPLATE_ID' } }, { channel: 'rcs', capable: true }],
+  voice: ['/v1/calls', { from: 'VIRTUAL_NUMBER', to: '+919876543210', flow_id: 'premium_reminder', language: 'hi', record: true, callback_url: 'https://acme.in/hooks/voice' }, { channel: 'voice', flow: 'premium_reminder' }]
+};
+let apiC = 'sms', apiL = 'curl';
+const escH = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const hl = s => escH(s).replace(/("(?:[^"\\\n]|\\.)*")(\s*:)?|('(?:[^'\\\n]|\\.)*')|((?:^|\s)(?:#|\/\/).*)|\b(\d+(?:\.\d+)?)\b/gm, (m, a, colon, sq, cm, num) => {
+  if (a) return colon ? `<span class="k">${a}</span>${colon}` : `<span class="s">${a}</span>`;
+  if (sq) return `<span class="s">${sq}</span>`; if (cm) return `<span class="c">${cm}</span>`; return `<span class="n">${num}</span>`;
+});
+function codeFor(c, l) {
+  const [path, body] = API[c], url = 'https://api.crtelecom.com' + path, j = JSON.stringify(body, null, 2);
+  if (l === 'curl') return `curl -X POST ${url} \\\n  -H "Authorization: Bearer $CR_API_KEY" \\\n  -H "Content-Type: application/json" \\\n  -d @- <<'EOF'\n${j}\nEOF`;
+  if (l === 'node') return `const res = await fetch("${url}", {\n  method: "POST",\n  headers: {\n    "Authorization": \`Bearer \${process.env.CR_API_KEY}\`,\n    "Content-Type": "application/json",\n  },\n  body: JSON.stringify(${j.replace(/\n/g, '\n  ')}),\n});\n\nconsole.log(await res.json());`;
+  return `import os, requests\n\nres = requests.post(\n    "${url}",\n    headers={"Authorization": f"Bearer {os.environ['CR_API_KEY']}"},\n    json=${j.replace(/\n/g, '\n    ').replace(/true/g, 'True').replace(/false/g, 'False')},\n)\n\nprint(res.json())`;
+}
+function drawCode() {
+  $('#codeSrc').innerHTML = hl(codeFor(apiC, apiL));
+  $$('#codeCh button').forEach(b => b.setAttribute('aria-pressed', b.dataset.c === apiC));
+  $$('#codeLg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.l === apiL));
+  $('#codeResp').innerHTML = '<span class="ph">// Response appears here</span>';
+}
+$$('#codeCh button').forEach(b => b.addEventListener('click', () => { apiC = b.dataset.c; drawCode(); }));
+$$('#codeLg button').forEach(b => b.addEventListener('click', () => { apiL = b.dataset.l; drawCode(); }));
+$('#runCode').addEventListener('click', async () => {
+  const r = $('#codeResp'), id = 'msg_' + Math.random().toString(36).slice(2, 12), extra = API[apiC][2];
+  r.innerHTML = '<span class="ph">// POST ' + API[apiC][0] + ' (sandbox)</span>'; await sleep(450);
+  const res = { id, status: 'queued', ...extra, environment: 'sandbox' };
+  r.innerHTML = `<span class="st">202 Accepted</span>\n${hl(JSON.stringify(res, null, 2))}`; await sleep(900);
+  const ev = { event: apiC === 'voice' ? 'call.completed' : 'message.delivered', id, channel: extra.channel, at: new Date().toISOString() };
+  r.innerHTML += `\n<span class="ph">// webhook to your callback_url</span>\n${hl(JSON.stringify(ev))}`;
+});
+drawCode();
+
+/* ================= Compliance checker ================= */
+const CMP = {
+  sms: { n: 'SMS', small: 'TRAI DLT', steps: [
+    { t: 'Register your business on a DLT portal', d: 'Operator-run, TRAI-approved portals. You become a Principal Entity and will need your company KYC documents.', who: 'Together', time: 'Typically days' },
+    { t: 'Register your sender headers', d: 'Six-character brand names, each filed under the right category: service and transactional, or promotional.', who: 'Together' },
+    { t: 'Register every message template', d: 'Fixed text plus typed variables. Each approved template gets an ID that travels with the message, and a message that does not match is blocked.', who: 'Together', time: 'Typically days' },
+    { t: 'Whitelist links and callback numbers', d: 'URLs and phone numbers you put inside messages need to be registered before they can be sent.', who: 'Together' },
+    { t: 'Record customer consent', d: 'Promotional SMS needs consent on record and must respect DND preferences.', who: 'You', when: s => s.type !== 'svc' }
+  ] },
+  voice: { n: 'Voice', small: 'TRAI number series', steps: [
+    { t: 'Choose the right number series', d: 'Promotional and telemarketing calls use 140-series numbers. Service and transactional calls use a separate series. Mixing them risks blocking.', who: 'Together' },
+    { t: 'Move service calls to the 1600 series', d: 'TRAI has directed banks, insurers and other regulated entities to use 1600-series numbers for service and transactional voice calls. Check your regulator for the current deadline.', who: 'Together', when: s => s.fin === 'yes' },
+    { t: 'Register for promotional calling with consent records', d: 'Promotional voice campaigns need a registered entity, recorded consent and DND scrubbing.', who: 'You', when: s => s.type !== 'svc' },
+    { t: 'Plan call windows and caller identity', d: 'Call only within permitted hours and keep the caller number consistent so customers recognise you.', who: 'You' }
+  ] },
+  wa: { n: 'WhatsApp', small: 'Meta Business Platform', steps: [
+    { t: 'Verify your business with Meta', d: 'Set up a Meta business portfolio and complete business verification with your company documents.', who: 'Together', time: 'Days, sometimes longer' },
+    { t: 'Choose a number for the API', d: 'It must be able to receive a verification code. A number that is active on the WhatsApp app today has to be moved to the Business Platform first.', who: 'Together' },
+    { t: 'Collect and record customer opt-in', d: 'Customers must agree to hear from you on WhatsApp. Keep a record of when and how they agreed.', who: 'You' },
+    { t: 'Submit templates for approval', d: 'Business-initiated messages need an approved template in the right category: marketing, utility or authentication.', who: 'Together', time: 'Plan for a revision or two' },
+    { t: 'Add an opt-out to marketing templates', d: 'An easy way to stop promotions protects your quality rating and your customers.', who: 'You', when: s => s.type !== 'svc' }
+  ] },
+  rcs: { n: 'RCS', small: 'Google and carrier approval', steps: [
+    { t: 'Create your RCS agent profile', d: 'Brand name, logo, colour and a verified contact, shown to customers as your verified sender.', who: 'Together' },
+    { t: 'Complete brand verification', d: 'Have your company documents and website ready for review.', who: 'Together', time: 'Weeks' },
+    { t: 'Get carrier launch approvals', d: 'Each operator approves your agent separately, which is why timelines vary.', who: 'We handle', time: 'Several weeks' },
+    { t: 'Keep an SMS fallback ready', d: 'Not every device can receive RCS, so keep an approved SMS template to fall back to. That means completing the SMS steps too.', who: 'Together' }
+  ], warn: 'Regulators and operators are still aligning on traceability for RCS. We confirm current requirements with you before launch.' }
+};
+const cm = { ch: new Set(['sms', 'wa']), type: 'svc', fin: 'no', done: new Set() };
+function drawCmp() {
+  const order = ['sms', 'voice', 'wa', 'rcs'].filter(c => cm.ch.has(c));
+  const box = $('#cmRes'); let total = 0, done = 0;
+  if (!order.length) { box.innerHTML = '<div class="cempty">Choose at least one channel to see what to register.</div>'; }
+  else {
+    box.innerHTML = order.map(c => {
+      const g = CMP[c], steps = g.steps.filter(s => !s.when || s.when(cm));
+      const cls = c;
+      return `<section class="cgrp ${cls}"><header><span class="b">${ic(CH[c].icon)}</span><h4>${g.n}</h4><small>${g.small}</small></header>${steps.map((s, i) => {
+        const id = `${c}-${s.t}`, ck = cm.done.has(id); total++; if (ck) done++;
+        return `<label class="step ${ck ? 'done' : ''}"><input type="checkbox" data-id="${esc(id)}" ${ck ? 'checked' : ''}><span><b>${s.t}</b><p>${s.d}${s.time ? ' <em style="color:var(--ci);font-style:normal;font-weight:600">' + s.time + '.</em>' : ''}</p></span><span class="who ${s.who !== 'You' ? 'help' : ''}">${s.who === 'You' ? 'You' : s.who === 'We handle' ? 'We handle it' : 'Together'}</span></label>`;
+      }).join('')}${g.warn ? `<div class="cwarn" style="margin:0;border-radius:0">${ic('warn')}<span>${g.warn}</span></div>` : ''}</section>`;
+    }).join('');
+    if (cm.type !== 'svc') box.insertAdjacentHTML('beforeend', `<div class="cwarn">${ic('warn')}<span>Promotional messages and calls need recorded consent. Keep a log of when, how and what each customer agreed to.</span></div>`);
+  }
+  const pct = total ? Math.round(done / total * 100) : 0;
+  $('#cmProg i').style.width = pct + '%'; $('#cmProg').setAttribute('aria-valuenow', pct); $('#cmCount').textContent = `${done} of ${total} done`;
+}
+$('#cmCh').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; const v = b.dataset.v; cm.ch.has(v) ? cm.ch.delete(v) : cm.ch.add(v); b.setAttribute('aria-pressed', cm.ch.has(v)); drawCmp(); });
+['cmType', 'cmFin'].forEach(id => $('#' + id).addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return; cm[id === 'cmType' ? 'type' : 'fin'] = b.dataset.v;
+  $$('button', $('#' + id)).forEach(x => x.setAttribute('aria-pressed', x === b)); drawCmp();
+}));
+$('#cmRes').addEventListener('change', e => { const i = e.target.closest('input[data-id]'); if (!i) return; i.checked ? cm.done.add(i.dataset.id) : cm.done.delete(i.dataset.id); drawCmp(); });
+
+/* ================= Estimator ================= */
+function drawEst() {
+  const mk = +$('#r-mk').value, ut = +$('#r-ut').value, au = +$('#r-au').value, sv = +$('#r-sv').value;
+  $('#o-mk').textContent = inr(mk); $('#o-ut').textContent = inr(ut); $('#o-au').textContent = inr(au); $('#o-sv').textContent = inr(sv);
+  const svBill = Math.max(0, sv - RATES.freeService);
+  const rows = [['Marketing', mk, RATES.marketing], ['Utility', ut, RATES.utility], ['Authentication', au, RATES.authentication], ['Service (after ' + inr(RATES.freeService) + ' free)', svBill, RATES.service]];
+  let sub = rows.reduce((a, r) => a + r[1] * r[2], 0); const gst = $('#e-gst').checked ? sub * .18 : 0;
+  $('#e-brk').innerHTML = rows.map(r => `<div><span>${r[0]} · ${inr(r[1])} × ₹${r[2]}</span><b>${rupee(r[1] * r[2])}</b></div>`).join('') + ($('#e-gst').checked ? `<div><span>GST at 18%</span><b>${rupee(gst)}</b></div>` : '');
+  $('#e-total').textContent = rupee(sub + gst);
+}
+$$('#est input').forEach(i => i.addEventListener('input', drawEst)); drawEst();
+
+/* ================= Init ================= */
+initVoice(); initSms(); initRcs(); initWa(); renderSol(); drawCmp();
+/* links from other pages: index.html#sms etc. */
+const h = location.hash.slice(1);
+if (['voice', 'sms', 'rcs', 'wa'].includes(h)) { selectTab(h); setTimeout(() => $('#channels').scrollIntoView(), 60); }
+if (['bfsi', 'ecom', 'logi', 'health', 'edu', 'travel'].includes(h)) { selectSol(h); setTimeout(() => $('#solutions').scrollIntoView(), 60); }
+})();
+
+</script>
+</body>
+</html>
